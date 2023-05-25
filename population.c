@@ -13,17 +13,17 @@ int main(void)
     {
         n = get_float("Starting population : ");
     }
-    while(n < 9);
+    while (n < 9);
 
     do
     {
         m = get_float("Ending population : ");
     }
-    while(m < n);
+    while (m < n);
 
     //CALCULATE TIME IN YEARS
 
-    float t = (log(m/n)) / 0.08004270767;
+    float t = (log(m / n)) / 0.08004270767;
 
     //FINAL ANSWER
 
