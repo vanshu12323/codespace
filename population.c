@@ -10,7 +10,7 @@ int main(void)
 
     do
     {
-        n = get_int("Start population : ");
+        n = get_int("Starting population : ");
     }
     while(n < 9);
 
@@ -22,7 +22,7 @@ int main(void)
 
     float t = ((12*(float)m)/(float)n - 12) ;
 
-    printf("Population will grow from %i to %i in %i years .\n" , n , m , (int)round(t));
+    printf("Years : %i\n" , (int)round(t));
 
 
 }
