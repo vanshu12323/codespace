@@ -20,7 +20,7 @@ int main(void)
     }
     while(m < n);
 
-    double r = log(13/12);
+    long r = log(13/12);
 
 
 
