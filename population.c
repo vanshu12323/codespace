@@ -22,7 +22,7 @@ int main(void)
 
     float t = ((12*(float)m)/(float)n - 12) ;
 
-    printf("Years : %i\n" , (int)round(t));
+    printf("Years : %i\n", (int)round(t));
 
 
 }
