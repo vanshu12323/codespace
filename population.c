@@ -20,9 +20,13 @@ int main(void)
     }
     while(m < n);
 
-    float r = log(13/12);
+    double r = log(13/12);
+
+
 
     float t = (log(m/n)) / r;
+
+    printf("%.20f\n" , r);
 
     printf("Years: %i", (int)round(t));
 
