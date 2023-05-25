@@ -4,6 +4,7 @@
 
 int main(void)
 {
+    // DECLARE STARTING AND ENDING POPULATION
 
     float n;
     float m;
@@ -20,7 +21,11 @@ int main(void)
     }
     while(m < n);
 
+    //CALCULATE TIME IN YEARS
+
     float t = (log(m/n)) / 0.08004270767;
+
+    //FINAL ANSWER
 
     printf("Years: %i", (int)round(t));
 
