@@ -20,7 +20,7 @@ int main(void)
     }
     while(m < n);
 
-    float t = (log((float)m/(float)n))/0.08004270767;
+    float t = (log(m/n))/0.08004270767;
 
     printf("Years: %i", (int)round(t));
 
