@@ -24,9 +24,9 @@ int main(void)
 
 
 
-    float t = (log(m/n)) / r;
+    float t = (log(m/n)) / (float)r;
 
-    printf("%.20f\n" , r);
+    printf("%.20d\n" , r);
 
     printf("Years: %i", (int)round(t));
 
