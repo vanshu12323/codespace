@@ -20,7 +20,7 @@ int main(void)
     }
     while(m < n);
 
-    while(m < n)
+    while(n < m)
        { n = n + n/3 - n/4;
          t++;
        }
