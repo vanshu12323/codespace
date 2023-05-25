@@ -20,7 +20,7 @@ int main(void)
     }
     while(m < n);
 
-    float t = ((12*(float)m)/(float)n - 12) ;
+    float t =  ;
 
     printf("Years: %i", (int)round(t));
 
