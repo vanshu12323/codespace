@@ -20,9 +20,11 @@ int main(void)
     }
     while(m < n);
 
-    n = n + (n/3) - (n/4);
-        t++;
+    while(m < n)
+       { n = n + n/3 - n/4;
+         t++;
+       }
 
-    printf("Years: %i", t);
+    printf("Years: %d", t);
 
 }
