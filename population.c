@@ -5,8 +5,8 @@
 int main(void)
 {
 
-    float n = 0;
-    float m = 0;
+    float n;
+    float m;
 
     do
     {
