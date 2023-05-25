@@ -10,13 +10,13 @@ int main(void)
 
     do
     {
-        n = get_int("Starting population : ");
+        n = get_float("Starting population : ");
     }
     while(n < 9);
 
     do
     {
-        m = get_int("Ending population : ");
+        m = get_float("Ending population : ");
     }
     while(m < n);
 
