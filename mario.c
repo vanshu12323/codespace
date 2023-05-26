@@ -38,7 +38,7 @@ int main(void)
         }
         for (m = i + 1 ; m <= n ; m++)
         {
-            printf("  ");
+            printf("   ");
         }
         printf("\n");
     }
