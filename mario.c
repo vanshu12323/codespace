@@ -36,10 +36,10 @@ int main(void)
         {
             printf("#");
         }
-        for (m = i + 1 ; m <= n ; m++)
+       /* for (m = i + 1 ; m <= n ; m++)
         {
             printf("");
-        }
+        }*/
         printf("\n");
     }
 }
