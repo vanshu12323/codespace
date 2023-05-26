@@ -22,9 +22,9 @@ int main(void)
     for (i = 1 ; i <= n ; i++)
     {
         for (k = i + 1 ; k <= n ; k++)
-            {
-                printf(" ");
-            }
+        {
+            printf(" ");
+        }
         for (j = 0 ; j < i ; j++)
         {
             printf("#");
