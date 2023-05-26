@@ -5,9 +5,8 @@
 int main(void)
 {
     int n;
-    int i;
-    int j;
-    int k;
+    int i=0;
+    int j=0;
 
     do
     {
@@ -15,16 +14,13 @@ int main(void)
     }
     while (n < 1 || n > 8);
 
-    for(i=0 ; i < n ; i++)
+    for(i=0 ; i >= j ; i++)
     {
-        for(j=0 ; j <= i ; j++)
+        for(j=0 ; j < n ; j++)
         {
-            for(k=0 ; k <= j ; k++)
-            {
-                printf(".");
-            }
-            printf("#");
+            printf(".");
         }
+        printf("#");
         printf("\n");
     }
 }
