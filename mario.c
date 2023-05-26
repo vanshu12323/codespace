@@ -31,14 +31,14 @@ int main(void)
         {
             printf("#");
         }
-        printf(" ");
+        printf("   ");
         for (j = 0 ; j < i ; j++)
         {
             printf("#");
         }
         for (m = i + 1 ; m <= n ; m++)
         {
-            printf("   ");
+            printf(" ");
         }
         printf("\n");
     }
