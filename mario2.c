@@ -14,13 +14,6 @@ int main(void)
     }
     while (n < 1 || n > 8);
 
-    for(i=1 ; i >= j ; i++)
-    {
-        for(j=1 ; j < n ; j++)
-        {
-            printf(".");
-        }
-        printf("#");
-        printf("\n");
-    }
+    
+
 }
