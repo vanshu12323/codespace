@@ -14,9 +14,9 @@ int main(void)
     }
     while (n < 1 || n > 8);
 
-    for(i=0 ; i < n ; i--)
+    for(i=0 ; i < n ; i += 3)
     {
-        for(j=0 ; j <= i ; j++)
+        for(j=0 ; j <= n ; j+=2)
         {
             printf(".");
         }
