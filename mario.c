@@ -9,7 +9,6 @@ int main(void)
     int j;
     int k;
     int l;
-    int m;
 
     //GET INPUT
 
@@ -32,7 +31,7 @@ int main(void)
             printf("#");
         }
         printf("  ");
-        for (j = 0 ; j < i ; j++)
+        for (l = 0 ; l < i ; l++)
         {
             printf("#");
         }
