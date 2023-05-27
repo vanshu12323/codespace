@@ -4,7 +4,7 @@
 
 const int N = 3;
 
-float average(int numbers[]);
+float average(int number[]);
 
 int main(void)
 {
