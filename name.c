@@ -4,6 +4,8 @@
 
 int main(void)
 {
-    string answer = get_string("What's your name? ");
-    printf("Hello, %s\n" , answer)
+    for (int i = 0 ; i <= 3 ; i++)
+    {
+        printf("#");
+    }
 }
