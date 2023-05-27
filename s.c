@@ -4,6 +4,6 @@
 
 int main(void)
 {
-    long number = 4444888;
-    printf("%li" , number[3]);
+    string number = "4444888";
+    printf("%c" , number[3]);
 }
