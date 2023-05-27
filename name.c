@@ -6,7 +6,7 @@ float average(int numbers[]);
 
 int main(void)
 {
-    int answer = average();
+    
 }
 
 float average(int numbers[])
