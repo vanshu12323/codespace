@@ -4,6 +4,13 @@
 
 int main(void)
 {
-    string number = "4444888";
-    printf("%c" , number[3]);
+    string name = get_string("Name? ");
+
+    int n = 0;
+
+    while (name[n] != '\0')
+    {
+        n++;
+    }
+    printf("%i" , n);
 }
