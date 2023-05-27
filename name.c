@@ -17,7 +17,12 @@ int main(void)
     printf("Average: %f" , average(scores));
 }
 
-float average(int numbers[])
+float average(int number[])
 {
-    
+    int sum = 0;
+    for(int n = 0 ; n < N ; n++)
+    {
+        sum += number[n];
+    }
+    return sum / (float) N ;
 }
