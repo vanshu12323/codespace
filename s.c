@@ -1,16 +1,21 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <math.h>
+#include <string.h>
 
 int main(void)
 {
-    string name = get_string("Name? ");
+    string s = get_string("Name? ");
 
-    int n = 0;
-
-    while (name[n] != '\0')
+    for (int i = 0 ; i < strlen(s) ; i++)
     {
-        n++;
+        if (s[i] >= 'a' && s[i] <= 'z')
+        {
+            printf("%c", s[i] - 32);
+        }
+        else
+        {
+            printf("%c" , s[i] );
+        }
     }
-    printf("%i" , n);
 }
