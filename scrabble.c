@@ -49,9 +49,15 @@ int compute_score(string word)
 
         int m = 0;
 
-        for (m = 0 ; character != alphabets[m] ; m++)
+        /*for (m = 0 ; character != alphabets[m] ; m++)
         {
+        }*/
+
+        do
+        {
+            m++;
         }
+        while(character != alphabets[m]);
 
         /*if (character == alphabets[m])
         {
@@ -61,7 +67,7 @@ int compute_score(string word)
         /*if (character == alphabets[m])
         {
             i++;
-        }*?
+        }*/
 
        /* else if (character != alphabets[m])
         {
