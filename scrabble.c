@@ -48,6 +48,12 @@ int compute_score(string word)
         char character = tolower(word[i]);
          int m = 0;
 
+         do
+         {
+            m=0;
+         }
+         while (character != alphabets[m]);
+
         for (m = 0 ; character != alphabets[m] ; m++)
         {
         }
