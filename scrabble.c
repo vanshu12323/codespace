@@ -58,14 +58,15 @@ int compute_score(string word)
             m++;
         }*/
 
-        if (character != alphabets[m])
+        if (character == alphabets[m])
         {
             i++;
         }
-        else if (character != alphabets[m])
+        
+       /* else if (character != alphabets[m])
         {
             m++;
-        }
+        }*/
 
         score += points[m];
     }
