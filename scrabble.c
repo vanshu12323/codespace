@@ -43,6 +43,6 @@ int compute_score(string word)
 
     for (int i = 0 ; i < strlen(word) ; i++)
     {
-        word = tolower(word);
+        
     }
 }
