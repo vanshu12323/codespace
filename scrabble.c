@@ -46,17 +46,22 @@ int compute_score(string word)
     char alphabets[] = {'a' , 'b' , 'c' , 'd' , 'e' , 'f' , 'g' , 'h' , 'i' , 'j' , 'k' , 'l' , 'm' , 'n' , 'o' , 'p' , 'q' , 'r' , 's' , 't' , 'u' , 'v' , 'w' , 'x' , 'y' , 'z'};
 
     int score = 0;
-    char character;
 
     for (int i = 0 ; i < strlen(word) ; i++)
     {
-        character = tolower(word[i]);
+        char character = tolower(word[i]);
 
         int m = 0;
 
-        for (m = 0 ; character != alphabets[m] ; m++)
+       /* for (m = 0 ; character != alphabets[m] ; m++)
         {
+        } */
+
+        do
+        {
+            m++;
         }
+        while (character != alphabets[m] || character <= 'a' || character >= 'z');
 
         score += points[m];
     }

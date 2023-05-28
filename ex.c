@@ -6,14 +6,14 @@
 
 int main(void)
 {
-    string s = "dog'';;";
-   // char dd[] = {'d' , 'g' , 'o'};
-   // char qq = s[2];
-    //printf("%c" , qq);
-    //printf("%i" , dd[2]);
-    for (int i = 0 ; i < strlen(s) ; i++)
-    {
-            printf("%c" , toupper(s[i]) );
-    }
+   int i[] = {1,2,3,4,5,6,7};
+   int j = 0;
 
+   do
+   {
+    j++;
+   }
+   while (j <= i[6]);
+
+   printf("%i" , j);
 }
