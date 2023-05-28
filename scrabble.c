@@ -15,9 +15,9 @@ int main(void)
 
     char a = 'a';
     a = 1;
-    printf("%c", a);
+    printf("%i", a);
 
-    
+
 
 
 
