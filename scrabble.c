@@ -59,10 +59,10 @@ int compute_score(string word)
         }
         while(character != alphabets[m]);
 
-        /*if (character == alphabets[m])
+        if (character != alphabets[m])
         {
-            m++;
-        }*/
+            m += 0;
+        }
 
         /*if (character == alphabets[m])
         {
@@ -76,6 +76,8 @@ int compute_score(string word)
 
         score += points[m];
     }
+
+
 
     return score;
 }
