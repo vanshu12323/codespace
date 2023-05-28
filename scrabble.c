@@ -54,9 +54,9 @@ int compute_score(string word)
         score += points[m]; */
         for (int m = 0 ; character != alphabets[m] ; m++)
         {
-            
+            score += points[m];
         }
-        score += points[m];
+
     }
 
     return score;
