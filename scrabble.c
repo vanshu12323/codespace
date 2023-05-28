@@ -18,7 +18,7 @@ int main(void)
 
     for (int i = 0 , n = strlen(aa) ; i < n ; i++)
     {
-        if (aa >= 'a' && aa <= 'z')
+        if (aa[i] >= 'a' && aa[i] <= 'z')
         {
             printf("%i" , aa[i] += points[i]);
         }
