@@ -54,7 +54,7 @@ int compute_score(string word)
          }
          while (character != alphabets[m]);*/
 
-        for (m = 0 ; character != alphabets[m] ; m++)
+        for (m = 0 ; character != alphabets[m]  character ; m++)
         {
         }
 
