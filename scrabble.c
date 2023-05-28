@@ -52,7 +52,7 @@ int compute_score(string word)
             m++;
         }
         score += points[m]; */
-        for (int m = 2 ; character == alphabets[m] ; m++)
+        for (int m = 0 ; character != alphabets[m] ; m++)
         {
 
         }
