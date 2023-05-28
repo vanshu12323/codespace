@@ -50,14 +50,16 @@ int compute_score(string word)
 
     for (int i = 0 ; i < strlen(word) ; i++)
     {
-         character = tolower(word[i]);
-    }
-    int m = 0;
+        character = tolower(word[i]);
 
-     for (m = 0 ; character != alphabets[m] ; m++)
-    {
-        score += points[m];
+        int m = 0;
+
+        for (m = 0 ; character != alphabets[m] ; m++)
+        {
+            score += points[m];
+        }
     }
+
 
         /*do
         {
