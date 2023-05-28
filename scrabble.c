@@ -61,7 +61,7 @@ int compute_score(string word)
         {
             m += 0;
         }
-
+        
         score += points[m];
     }
 
