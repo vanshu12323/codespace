@@ -48,6 +48,6 @@ int compute_score(string word)
     for (int i = 0 , n = strlen(word) ; i < n ; i++)
     {
             word = tolower(word);
-            printf("%i" , pointd[word]);
+            printf("%i" , points[word]);
         }
 }
