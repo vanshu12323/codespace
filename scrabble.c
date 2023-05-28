@@ -46,10 +46,15 @@ int compute_score(string word)
     for (int i = 0 ; i < strlen(word) ; i++)
     {
         char character = tolower(word[i]);
-        int m = 1;
-        if (character != alphabets[m])
+
+       /* if (character != alphabets[m])
         {
             m++;
+        }
+        score += points[m]; */
+        for (int m = 2 ; character == alphabets[m] ; m++)
+        {
+
         }
         score += points[m];
     }
