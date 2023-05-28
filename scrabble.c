@@ -62,7 +62,7 @@ int compute_score(string word)
         {
             i++;
         }
-        
+
        /* else if (character != alphabets[m])
         {
             m++;
@@ -71,5 +71,5 @@ int compute_score(string word)
         score += points[m];
     }
 
-    return score;
+    return score+1;
 }
