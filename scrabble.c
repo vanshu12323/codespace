@@ -16,7 +16,10 @@ int main(void)
     printf("%s" , a);
     printf("%s" , b);
 
-    
+    char m = 'a';
+    printf("%i", m);
+
+
 
 
 }
