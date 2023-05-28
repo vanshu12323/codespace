@@ -20,7 +20,7 @@ int main(void)
     {
         if ((aa[i] >= 'a' && aa[i] <= 'z') || (aa[i] >= 'A' && aa[i] <= 'Z'))
         {
-            
+            bb
         }
     }
 }
