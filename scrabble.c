@@ -47,9 +47,18 @@ int compute_score(string word)
     {
         char character = tolower(word[i]);
 
-        int m;
-        for (m = 0 ; character != alphabets[m] ; m++)
+        int m = 0;
+        /*for (m = 0 ; character != alphabets[m] ; m++)
         {
+        }*/
+
+        if (character == alphabets[m])
+        {
+            m++;
+        }
+        else
+        {
+            m += 0;
         }
         score += points[m];
     }
