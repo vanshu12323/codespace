@@ -18,7 +18,7 @@ int main(void)
 
     for (int i = 0 , n = strlen(aa) ; i < n ; i++)
     {
-        if (aa[i] >= 'a' && aa[i] <= 'z')
+        if ((aa[i] >= 'a' && aa[i] <= 'z') || (aa[i] >= 'A' && aa[i] <= 'Z'))
         {
             printf("%i " , aa[i]);
         }
