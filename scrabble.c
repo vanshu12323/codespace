@@ -32,6 +32,8 @@ int main(void)
         printf("Tie!\n");
     }
 
+    printf("%i and %i" , score1 , score2 );
+
 }
 
 int compute_score(string word)
