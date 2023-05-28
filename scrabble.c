@@ -63,7 +63,7 @@ int compute_score(string word)
 
         if (character != alphabets[m])
         {
-            m = 0;
+            
         }
 
         /*if (character == alphabets[m])
