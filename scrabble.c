@@ -59,9 +59,7 @@ int compute_score(string word)
 
         do
         {
-            for (m = 0 ; character != alphabets[m] ; m++)
-            {
-            }
+            m++;
         }
         while (character != alphabets[m] || character <= 'a' || character >= 'z');
 
