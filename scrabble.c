@@ -43,6 +43,7 @@ int compute_score(string word)
 
     for (int i = 0 ; i < strlen(word) ; i++)
     {
-        word[i]
+        char character = word[i];
+        
     }
 }

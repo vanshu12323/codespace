@@ -6,5 +6,9 @@
 
 int main(void)
 {
-    
+    string s = "dog";
+    char dd[] = {'d' , 'g' , 'o'};
+    char qq = s[2];
+    printf("%c" , qq);
+    printf("%i" , dd[]);
 }
