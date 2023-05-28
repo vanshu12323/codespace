@@ -64,7 +64,7 @@ int compute_score(string word)
         {
             m++;
         }
-        while(character != alphabets[m] || character >= a || character <= 'z');
+        while(character != alphabets[m] || character >= alphabets[0] || character <= alphabets[25]);
 
         score += points[m];
     }
