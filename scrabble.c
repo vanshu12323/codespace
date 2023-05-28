@@ -10,15 +10,14 @@ int main(void)
     //ASSIGN SCORE TO EACH ALPHABET
     // COMPUTE SCORE AND BASED ON IT PRINT WHETHER A OR B WINS OR IS IT A TIE
 
-    string a = get_string("Player 1: ");
-    string b = get_string("Player 2: ");
+    string aa = get_string("Player 1: ");
+    string bb = get_string("Player 2: ");
 
-    printf("%s" , a);
-    printf("%s" , b);
+    char a = 'a';
+    a = 1;
+    printf("%c", a);
 
-    char m = 'a';
-    printf("%i", m);
-
+    
 
 
 
