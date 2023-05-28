@@ -46,14 +46,23 @@ int compute_score(string word)
     for (int i = 0 ; i < strlen(word) ; i++)
     {
         char character = tolower(word[i]);
-
-        int m = 0;
+         int m = 0;
 
         for (m = 0 ; character != alphabets[m] ; m++)
         {
         }
 
         score += points[m];
+
+        if (character != alphabets[m])
+        {
+            score += 0;
+        }
+
+
+
+    }
+
 
         /*do
         {
@@ -62,10 +71,14 @@ int compute_score(string word)
         while(character != alphabets[m]);*/
 
 
-        if (character == alphabets[m])
+        /* int m = 0;
+
+        for (m = 0 ; character != alphabets[m] ; m++)
         {
-            m += 0;
         }
+
+        score += points[m];
+*/
 
         /*if (character == alphabets[m])
         {
@@ -78,7 +91,7 @@ int compute_score(string word)
         }*/
 
 
-    }
+
 
 
 
