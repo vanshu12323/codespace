@@ -52,12 +52,12 @@ int compute_score(string word)
         char character = tolower(word[i]);
          int m = 0;
 
-        for (m = 0 ; character != alphabets[m] ; m++)
+        for (m = 0 ; character != alphabets[m] || (character >= alphabets[0] && character <= alphabets[25]) ; m++)
         {
-            if (character >= alphabets[0] || character <= alphabets[25])
+            /*if (character >= alphabets[0] || character <= alphabets[25])
             {
                 m+=0;
-            }
+            }*/
         }
 
         /*do
