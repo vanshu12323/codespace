@@ -45,5 +45,6 @@ int compute_score(string word)
     {
         char character = word[i];
         
+        score += points[m];
     }
 }
