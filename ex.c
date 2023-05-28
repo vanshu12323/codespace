@@ -7,9 +7,10 @@
 int main(void)
 {
     string s = "dog";
-    char dd[] = {'d' , 'g' , 'o'};
-    char qq = s[2];
-    printf("%c" , qq);
-    printf("%i" , dd[]);
-    
+   // char dd[] = {'d' , 'g' , 'o'};
+   // char qq = s[2];
+    //printf("%c" , qq);
+    //printf("%i" , dd[2]);
+    printf("%s" , toupper(s));
+
 }
