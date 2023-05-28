@@ -56,7 +56,7 @@ int compute_score(string word)
         {
             if (character >= 'a' && character <= 'z')
             {
-                m+=0;
+                m--;
             }
         }
 
