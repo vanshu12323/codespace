@@ -59,9 +59,9 @@ int compute_score(string word)
         }*/
         if (character != alphabets[m])
         {
-            m += 0;
+            i++;
         }
-        
+
         score += points[m];
     }
 
