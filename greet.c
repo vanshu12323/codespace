@@ -10,6 +10,6 @@ int main(int argc , string argv[])
    }
    else
    {
-    printf("");
+    printf("Hello , %s" , argv[1]);
    }
 }
