@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <math.h>
 
-int main(void)
+int main(int argc , string argv[])
 {
     string name = get_string("What's your name? ");
     printf("Hello , %s" , name);
