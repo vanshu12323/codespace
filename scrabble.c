@@ -47,11 +47,7 @@ int compute_score(string word)
 
     for (int i = 0 , n = strlen(word) ; i < n ; i++)
     {
-        if (word[i] <= 'A' && word[i] >= 'Z')
-        {
             word = tolower(word);
             
         }
-    }
-
 }
