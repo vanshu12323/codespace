@@ -52,11 +52,11 @@ int compute_score(string word)
         char character = tolower(word[i]);
          int m = 0;
 
-        for (m = 0 ; character != alphabets[m] ; m+= 0)
+        for (m = 0 ; character != alphabets[m] ; m++)
         {
             if (character >= 'a' || character <= 'z')
             {
-                m++;
+                m+=0;
             }
         }
 
