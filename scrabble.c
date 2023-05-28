@@ -12,6 +12,10 @@ int main(void)
 
     string a = get_string("Player 1: ");
     string b = get_string("Player 2: ");
+
+    printf("%s" , a);
+    printf("%s" , b);
+
     
 
 
