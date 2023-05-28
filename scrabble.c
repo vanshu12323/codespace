@@ -52,7 +52,7 @@ int compute_score(string word)
         {
             if (character == alphabets[m])
             {
-                score += points[m];
+                score += 0;
             }
             else
             {
