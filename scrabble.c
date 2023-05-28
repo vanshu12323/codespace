@@ -46,8 +46,8 @@ int compute_score(string word)
     for (int i = 0 ; i < strlen(word) ; i++)
     {
         char character = tolower(word[i]);
-        int m = 0;
-        if (character == alphabets[m])
+        int m = 1;
+        if (character != alphabets[m])
         {
             m++;
         }
