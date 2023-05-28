@@ -52,7 +52,7 @@ int compute_score(string word)
         char character = tolower(word[i]);
          int m = 0;
 
-        for (m = 0 ; character != alphabets[m] || (character >= alphabets[0] && character <= alphabets[25]) ; m++)
+        for (m = 0 ; character != alphabets[m] ; m++)
         {
             /*if (character >= alphabets[0] || character <= alphabets[25])
             {
