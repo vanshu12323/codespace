@@ -56,7 +56,7 @@ int compute_score(string word)
         {
             m++;
         }
-        else
+        else if (character != alphabets[m])
         {
             m += 0;
         }
