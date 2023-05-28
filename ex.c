@@ -6,6 +6,7 @@
 
 int main(void)
 {
-    string word = "CAT";
-    
+    string s = "CAT";
+    printf("%i %i %i" , s[0] , s[1] , s[2]);
+
 }
