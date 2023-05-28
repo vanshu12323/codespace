@@ -20,7 +20,7 @@ int main(void)
     {
         if (aa[i] >= 'a' && aa[i] <= 'z')
         {
-            printf("%i" , aa[i] += points[i]);
+            printf("%i " , aa[i]);
         }
     }
 }
