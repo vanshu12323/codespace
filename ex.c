@@ -6,7 +6,7 @@
 
 int main(void)
 {
-    string *s[] = {"CAT" , "RAT" , "MAT"};
+    char *s[] = {"CAT" , "RAT" , "MAT"};
     int n[] = {1 , 2, 3};
 
     s[n[k]];
