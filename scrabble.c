@@ -36,6 +36,10 @@ int main(void)
 
 }
 
+
+
+
+
 int compute_score(string word)
 {
     int points[] = {1 , 3 , 3 , 2 , 1 , 4 , 2 , 4 , 1 , 8 , 5 , 1 , 3 , 1 , 1 , 3 , 10 , 1 , 1 , 1 , 1 , 4 , 4 , 8 , 4 , 10};
@@ -48,56 +52,11 @@ int compute_score(string word)
         char character = tolower(word[i]);
          int m = 0;
 
-         /*do
-         {
-            score=0;
-         }
-         while (character != alphabets[m]);*/
-
-        for ((m = 0 ; character != alphabets[m] || (character >= 'a' )) && (character <= 'z') ; m++)
+        for (m = 0 ; character != alphabets[m] || (character >= 'a' || character <= 'z') ; m++)
         {
         }
 
         score += points[m];
-
-        /*if (character != alphabets[m])
-        {
-            score += 0;
-        }*/
     }
-
-
-        /*do
-        {
-            m++;
-        }
-        while(character != alphabets[m]);*/
-
-
-        /* int m = 0;
-
-        for (m = 0 ; character != alphabets[m] ; m++)
-        {
-        }
-
-        score += points[m];
-*/
-
-        /*if (character == alphabets[m])
-        {
-            i++;
-        }*/
-
-       /* else if (character != alphabets[m])
-        {
-            m++;
-        }*/
-
-
-
-
-
-
-
     return score;
 }
