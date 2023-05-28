@@ -4,8 +4,12 @@
 
 int main(int argc , string argv[])
 {
-   /* string name = get_string("What's your name? ");
-    printf("Hello , %s" , name); */
-
-    printf("Hello , %s %s" , argv[1] , argv[2]);
+   if (argc != 2)
+   {
+    printf("Missing command-line Argument");
+   }
+   else
+   {
+    printf("");
+   }
 }
