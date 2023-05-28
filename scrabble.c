@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <string.h>
+#include <ctype.h>
 
 int main(void)
 {
@@ -15,7 +16,7 @@ int main(void)
 
     char alphabets[25];
     alphabets[0] = 'a';
-    printf("%c %i" , alphabets[0] , alphabets[0]);
+    printf("%c %i" , alphabets[0] , alphabets[0] );
 
 
 
