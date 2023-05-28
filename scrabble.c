@@ -62,7 +62,7 @@ int compute_score(string word)
         while(character != alphabets[m]);*/
 
 
-        if (character != alphabets[m])
+        if (character == alphabets[m])
         {
             m += 0;
         }
