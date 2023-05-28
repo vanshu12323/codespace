@@ -13,9 +13,9 @@ int main(void)
     string aa = get_string("Player 1: ");
     string bb = get_string("Player 2: ");
 
-    char a = 'a';
-    a = 1;
-    printf("%i", a);
+    char alphabets[25];
+    alphabets[0] = 'a' == 1;
+    printf("%c %i" , alphabets[0] , alphabets[0]);
 
 
 
