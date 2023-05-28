@@ -11,4 +11,5 @@ int main(void)
     char qq = s[2];
     printf("%c" , qq);
     printf("%i" , dd[]);
+    
 }
