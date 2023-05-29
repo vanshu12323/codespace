@@ -18,6 +18,11 @@ int main(void)
 
 }
 
+
+
+
+
+
 int count_letters(string text)
 {
     int l = 0;
@@ -26,15 +31,26 @@ int count_letters(string text)
     {
         if (isupper(text[i]))
         {
-            return l += i;
+            l++;
         }
         else if (islower(text[i]))
         {
-            return l += i;
+            l++;
         }
         else
         {
-            return l += 0;
+            l += 0;
         }
     }
+    return l;
 }
+
+
+
+
+
+int count_words(string text)
+{
+    
+}
+
