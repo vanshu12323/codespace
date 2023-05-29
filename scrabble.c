@@ -72,6 +72,10 @@ int compute_score(string word)
         {
             m+=0;
         }
+        else
+        {
+            m+=0;
+        }
 
 
         /*while (character <= 'a' || character >= 'z')
