@@ -23,7 +23,7 @@ int main(void)
     double m = (l / w)*100.0;
     double n = (s / w)*100.0;
 
-    printf("%f and %f", m, n);
+    printf("%.5f and %.5f", m, n);
 
     float index = (0.0588 * m) - (0.296 * n) - 15.8;
 
@@ -37,7 +37,7 @@ int main(void)
     }
     else
     {
-        printf("Grade %f", index);
+        printf("Grade %.5f", index);
     }
 
 
