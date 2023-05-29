@@ -25,19 +25,21 @@ int main(void)
 
     //printf("%f and %f", m, n);
 
-    int index = (0.0588 * m) - (0.296 * n) - 15.8;
+    float index = (0.0588 * m) - (0.296 * n) - 15.8;
+    int k = round(index);
 
-    if (index >= 16)
+
+    if (k >= 16)
     {
         printf("Grade 16+\n");
     }
-    else if (index < 1)
+    else if (k < 1)
     {
         printf("Before Grade 1\n");
     }
     else
     {
-        printf("Grade %i\n", index);
+        printf("Grade %i\n", k);
     }
 }
 

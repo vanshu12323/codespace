@@ -7,5 +7,6 @@
 int main(void)
 {
    float m = 8.90;
-   ptintf
+   int n = round(m);
+   printf("%i" , n);
 }
