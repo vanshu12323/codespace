@@ -61,7 +61,7 @@ int compute_score(string word)
             }
         }*/
 
-        if (character >= alphabets[0] || character <= alphabets[25] )
+        for (character ; character >= alphabets[0] || character <= alphabets[25] ; m++ )
         {
             do
             {
