@@ -42,8 +42,8 @@ int main(void)
 
 int compute_score(string word)
 {
-    int points[] = {1 , 3 , 3 , 2 , 1 , 4 , 2 , 4 , 1 , 8 , 5 , 1 , 3 , 1 , 1 , 3 , 10 , 1 , 1 , 1 , 1 , 4 , 4 , 8 , 4 , 10};
-    char alphabets[] = {'a' , 'b' , 'c' , 'd' , 'e' , 'f' , 'g' , 'h' , 'i' , 'j' , 'k' , 'l' , 'm' , 'n' , 'o' , 'p' , 'q' , 'r' , 's' , 't' , 'u' , 'v' , 'w' , 'x' , 'y' , 'z'};
+    int points[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
+    char alphabets[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
 
     int score = 0;
 
@@ -53,7 +53,7 @@ int compute_score(string word)
 
         int m = 0;
 
-        if (character >= 97 )
+        if (character >= 97)
         {
             if (character <= 122)
             {
@@ -63,7 +63,7 @@ int compute_score(string word)
                 }
             }
 
-             score += points[m];
+            score += points[m];
         }
     }
     return score;
