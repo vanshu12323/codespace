@@ -8,5 +8,6 @@ int main(void)
 {
     string on ="🟡";
     string off = "⚫";
-    
+    string message = get_string("Message: ");
+
 }
