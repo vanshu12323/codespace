@@ -20,5 +20,21 @@ int main(void)
 
 int count_letters(string text)
 {
-    if ()
+    int l = 0;
+
+    for(int i = 0 ; i < strlen(text) ; i++)
+    {
+        if (isupper(text[i]))
+        {
+            return l += i;
+        }
+        else if (islower(text[i]))
+        {
+            return l += i;
+        }
+        else
+        {
+            return l += 0;
+        }
+    }
 }
