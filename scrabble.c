@@ -49,7 +49,7 @@ int compute_score(string word)
 
     for (int i = 0 ; i < strlen(word) ; i++)
     {
-        char character = tolower(word[i]);
+        char character = int tolower(word[i]);
 
         int m = 0;
 
