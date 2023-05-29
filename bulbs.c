@@ -18,5 +18,8 @@ int main(void)
 
 int print_bulb(string message)
 {
-    
+    for (int i = 0 ; i < strlen(message) ; i++)
+    {
+        
+    }
 }
