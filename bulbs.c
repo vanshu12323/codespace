@@ -11,7 +11,7 @@ int main(void)
     string on ="🟡";
     string off = "⚫";
     string message = get_string("Message: ");
-    printf("%i", print_bulb(message));
+    printf("%i %i", print_bulb(message) , print_bulb(message));
 
 }
 
