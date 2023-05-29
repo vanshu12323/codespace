@@ -6,7 +6,6 @@
 
 int main(void)
 {
-   float m = 8.90;
-   int n = round(m);
-   printf("%i" , n);
+   string m = "hi";
+   printf("%i %i" , m[0] ,m[1]);
 }
