@@ -61,7 +61,7 @@ int compute_score(string word)
             }
         }*/
 
-        if (character >= 97 || character <= 122)
+        if (character >= 97 && character <= 122)
         {
             /*while ( character != alphabets[m] )
             {
