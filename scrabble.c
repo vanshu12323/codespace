@@ -63,11 +63,10 @@ int compute_score(string word)
 
         for (character ; character >= alphabets[0] || character <= alphabets[25] ; m++ )
         {
-            do
+            if (character != alphabets[m])
             {
                 m++;
             }
-            while (character != alphabets[m]) ;
         }
 
 
