@@ -22,7 +22,18 @@ int main(void)
 
     int index = (0.0588 *((l * w)/100)) - (0.296 *((s * w)/100)) - 15.8;
 
-    if ()
+    if (index >= 16)
+    {
+        printf("Grade 16+");
+    }
+    else if (index < 1)
+    {
+        printf("Before Grade 1");
+    }
+    else
+    {
+        printf("Grade %i", index);
+    }
 
 
 }
