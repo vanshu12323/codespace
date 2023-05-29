@@ -53,20 +53,8 @@ int compute_score(string word)
 
         int m = 0;
 
-       /* for (m = 0 ; character != alphabets[m] ; m++)
-        {
-            if (character >= 97 || character <= 122)
-            {
-                score+=0;
-            }
-        }*/
-
         if (character >= 97 )
         {
-            /*while ( character != alphabets[m] )
-            {
-                m++;
-            }*/
             if (character <= 122)
             {
                 for (m = 0 ; character != alphabets[m] ; m++)
@@ -77,32 +65,6 @@ int compute_score(string word)
 
              score += points[m];
         }
-
-        /*else if (character <= alphabets[0] || character >= alphabets[25])
-        {
-            m+=0;
-        }*/
-        /*else
-        {
-            m+=0;
-        }*/
-
-
-        /*while (character <= 'a' || character >= 'z')
-        {
-            for (m = 0 ; character != alphabets[m] ; m++)
-            {
-                score += points[m];
-            }
-        }*/
-
-        /*do
-        {
-            m++;
-        }
-        while (character != alphabets[m] || character <= 'a' || character >= 'z');*/
-
-       // score += points[m];
     }
     return score;
 }
