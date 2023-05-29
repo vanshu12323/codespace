@@ -20,8 +20,8 @@ int main(void)
     printf("%i words\n", w);
     printf("%i sentences\n", s);
 
-    float m = (l / w)*100;
-    float n = (s / w)*100;
+    double m = (l / w)*100.0;
+    double n = (s / w)*100.0;
 
     printf("%f and %f", m, n);
 
