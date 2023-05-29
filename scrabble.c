@@ -55,7 +55,7 @@ int compute_score(string word)
 
         for (m = 0 ; character != alphabets[m] ; m++)
         {
-            if (character <= alphabets[25])
+            if (character >= 97 || character <= 122)
             {
                 score+=0;
             }
