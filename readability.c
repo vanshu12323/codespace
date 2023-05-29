@@ -20,7 +20,9 @@ int main(void)
     //printf("%i words\n", w);
     //printf("%i sentences\n", s);
 
-    int index = (0.0588 *()
+    int index = (0.0588 *((l * w)/100)) - (0.296 *((s * w)/100)) - 15.8;
+
+    if ()
 
 
 }
