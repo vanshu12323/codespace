@@ -5,15 +5,18 @@
 #include <ctype.h>
 
 int count_letters(string text);
+int count_words(string text);
 
 int main(void)
 {
     string text = get_string("Text: ");
 
     int l = count_letters(text);
-    //int w = count_words(text);
+    int w = count_words(text);
     //int s = count_sentences(text);
-    printf("%i", l);
+    printf("%i letters\n", l);
+    printf("%i words\n", w);
+    //printf("%i letters\n", l);
 
 
 }
@@ -55,7 +58,10 @@ int count_words(string text)
 
     for (int i = 0 ; i < strlen(text) ; i++)
     {
-        
+        if (word[i] = " ")
+        {
+            w++;
+        }
     }
 }
 
