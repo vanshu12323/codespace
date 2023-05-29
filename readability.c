@@ -23,7 +23,7 @@ int main(void)
     int m = (l / w)*100;
     int n = (s / w)*100;
 
-    int index = 0.0588 * m - 0.296 * n - 15.8;
+    int index = (0.0588 * m) - (0.296 * n) - 15.8;
 
     if (index >= 16)
     {
