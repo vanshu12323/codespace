@@ -8,5 +8,5 @@ int main(void)
 {
     string on ="🟡";
     string off = "⚫";
-    printf("%s%s%s" , on, off , on);
+    
 }
