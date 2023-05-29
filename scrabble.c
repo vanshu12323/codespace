@@ -32,7 +32,7 @@ int main(void)
         printf("Tie!\n");
     }
 
-    printf("%i and %i" , score1 , score2 );
+    printf("%i and %i", score1, score2);
 
 }
 
