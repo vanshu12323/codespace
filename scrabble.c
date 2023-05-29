@@ -53,13 +53,13 @@ int compute_score(string word)
 
         int m = 0;
 
-        for (m = 0 ; character != alphabets[m] ; m++)
+        /*for (m = 0 ; character != alphabets[m] ; m++)
         {
             if (character <= 'a' || character >= 'z')
             {
                 score+=0;
             }
-        }
+        }*/
 
         /*while (character <= 'a' || character >= 'z')
         {
