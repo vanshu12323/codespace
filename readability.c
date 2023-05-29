@@ -12,7 +12,7 @@ int main(void)
 
     int l = count_letters(text);
     //int w = count_words(text);
-    int s = count_sentences(text);
+    //int s = count_sentences(text);
 
 
 }
