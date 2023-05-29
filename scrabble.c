@@ -61,11 +61,11 @@ int compute_score(string word)
             }
         }*/
 
-        while (character >= alphabets[0] || character <= alphabets[25])
+        if (character >= alphabets[0] || character <= alphabets[25])
         {
-            while (m = 0 ; character != alphabets[m] ; m++)
+            while ( character != alphabets[m] )
             {
-
+                m++;
             }
         }
 
