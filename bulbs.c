@@ -6,5 +6,7 @@
 
 int main(void)
 {
-    (🟡) (⚫)
+    string on ='🟡';
+    string off = '⚫';#
+    print("%s %s %s" , on, off , on);
 }
