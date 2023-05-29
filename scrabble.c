@@ -51,7 +51,7 @@ int compute_score(string word)
     {
         int character = tolower(word[i]);
 
-        int m = 0;
+        int m;
 
        /* for (m = 0 ; character != alphabets[m] ; m++)
         {
