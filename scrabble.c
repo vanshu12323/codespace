@@ -68,10 +68,10 @@ int compute_score(string word)
                 m++;
             }
         }
-        else if (character <= alphabets[0] || character >= alphabets[25])
+        /*else if (character <= alphabets[0] || character >= alphabets[25])
         {
             m+=0;
-        }
+        }*/
         else
         {
             m+=0;
