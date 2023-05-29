@@ -4,10 +4,19 @@
 #include <string.h>
 #include <ctype.h>
 
+int print_bulb(string message);
+
 int main(void)
 {
     string on ="🟡";
     string off = "⚫";
     string message = get_string("Message: ");
 
+}
+
+
+
+int print_bulb(string message)
+{
+    
 }
