@@ -15,12 +15,19 @@ int main(void)
     int l = count_letters(text);
     int w = count_words(text);
     int s = count_sentences(text);
-    printf("%i letters\n", l);
-    printf("%i words\n", w);
-    printf("%i sentences\n", s);
+
+    //printf("%i letters\n", l);
+    //printf("%i words\n", w);
+    //printf("%i sentences\n", s);
+
+    int index = 0.0588 * 
 
 
 }
+
+
+
+
 
 
 
@@ -53,6 +60,14 @@ int count_letters(string text)
 
 
 
+
+
+
+
+
+
+
+
 int count_words(string text)
 {
     int w = 1;
@@ -66,6 +81,14 @@ int count_words(string text)
     }
     return w;
 }
+
+
+
+
+
+
+
+
 
 
 
