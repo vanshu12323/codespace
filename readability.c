@@ -20,12 +20,12 @@ int main(void)
     printf("%i words\n", w);
     printf("%i sentences\n", s);
 
-    double m = (l / w)*100.0;
-    double n = (s / w)*100.0;
+    double m = ((float)l / w)*100.0;
+    double n = ((float)s / w)*100.0;
 
-    printf("%.5f and %.5f", m, n);
+    printf("%f and %f", m, n);
 
-    float index = (0.0588 * m) - (0.296 * n) - 15.8;
+    int index = (0.0588 * m) - (0.296 * n) - 15.8;
 
     if (index >= 16)
     {
@@ -37,10 +37,8 @@ int main(void)
     }
     else
     {
-        printf("Grade %.5f", index);
+        printf("Grade %i", index);
     }
-
-
 }
 
 
