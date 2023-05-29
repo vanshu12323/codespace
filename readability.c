@@ -16,9 +16,9 @@ int main(void)
     int w = count_words(text);
     int s = count_sentences(text);
 
-    //printf("%i letters\n", l);
-    //printf("%i words\n", w);
-    //printf("%i sentences\n", s);
+    printf("%i letters\n", l);
+    printf("%i words\n", w);
+    printf("%i sentences\n", s);
 
     int index = (0.0588 *((l * w)/100)) - (0.296 *((s * w)/100)) - 15.8;
 
