@@ -6,7 +6,7 @@
 
 int main(void)
 {
-    string on ='🟡';
-    string off = '⚫';#
-    print("%s %s %s" , on, off , on);
+    string on ="🟡";
+    string off = "⚫";
+    printf("%s%s%s" , on, off , on);
 }
