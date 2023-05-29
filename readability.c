@@ -16,14 +16,14 @@ int main(void)
     int w = count_words(text);
     int s = count_sentences(text);
 
-    printf("%i letters\n", l);
-    printf("%i words\n", w);
-    printf("%i sentences\n", s);
+    //printf("%i letters\n", l);
+    //printf("%i words\n", w);
+    //printf("%i sentences\n", s);
 
     double m = ((float)l / w)*100.0;
     double n = ((float)s / w)*100.0;
 
-    printf("%f and %f", m, n);
+    //printf("%f and %f", m, n);
 
     int index = (0.0588 * m) - (0.296 * n) - 15.8;
 
