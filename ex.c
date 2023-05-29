@@ -6,14 +6,6 @@
 
 int main(void)
 {
-   int i[] = {1,2,3,4,5,6,7};
-   int j = 0;
-
-   do
-   {
-    j++;
-   }
-   while (j <= i[6]);
-
-   printf("%i" , j);
+   float m = 8.90;
+   ptintf
 }
