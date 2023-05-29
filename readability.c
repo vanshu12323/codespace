@@ -20,5 +20,5 @@ int main(void)
 
 int count_letters(string text)
 {
-    return strlen(text);
+    for(int i = 0 ; i < strlen(text) ; i++)
 }
