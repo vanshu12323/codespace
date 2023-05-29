@@ -49,25 +49,30 @@ int compute_score(string word)
 
     for (int i = 0 ; i < strlen(word) ; i++)
     {
-        char character = int tolower(word[i]);
+        int character = tolower(word[i]);
 
         int m = 0;
 
-        for (m = 0 ; character != alphabets[m] ; m++)
+       /* for (m = 0 ; character != alphabets[m] ; m++)
         {
             if (character >= 97 || character <= 122)
             {
                 score+=0;
             }
-        }
+        }*/
 
-        /*if (character <= alphabets[25])
+        if (character >= 97 || character <= 122)
         {
-            while ( character != alphabets[m] )
+            /*while ( character != alphabets[m] )
             {
                 m++;
+            }*/
+
+            for (m = 0 ; character != alphabets[m] ; m++)
+            {
+
             }
-        }*/
+        }
 
         /*else if (character <= alphabets[0] || character >= alphabets[25])
         {
