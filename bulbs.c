@@ -12,7 +12,7 @@ int main(void)
 
     for (int i = 0 ; i < strlen(s) ; i++)
     {
-         ascii[i] = s[i];
+      ascii[i] = s[i];
 
          for (int j = 8*i  ; j <= 8*i + 7 ; j++, ascii[i] /= 2)
          {
