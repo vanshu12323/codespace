@@ -25,7 +25,7 @@ int main(void)
 
    int new[8 * strlen(s)];
 
-   for (int i = 8 ; i >= 0 ; i--)
+   for (int i = 7 ; i >= 0 ; i--)
    {
       for (int j = 0 ; j < 8 ; j++)
       {
