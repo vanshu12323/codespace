@@ -7,10 +7,13 @@
 int main(void)
 {
    string s = get_string("Message: ");
+   int ascii[strlen(s)];
 
    for (int i = 0 ; i < strlen(s) ; i++)
    {
-      int ascii = s[i];
-      
+      ascii[i] = s[i];
    }
+
+   
+
 }
