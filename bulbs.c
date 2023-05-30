@@ -28,9 +28,9 @@ int print_bulb(string message)
         for (int j = 0 ; j < 9 ; j++)
         {
             remainder[j] = ascii % 2;
-            ascii = ascii / 2;
+            ascii = (int)ascii / (int)2;
         }
     }
 
-    
+
 }
