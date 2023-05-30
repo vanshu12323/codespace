@@ -31,8 +31,8 @@ int main(void)
 
     for (int i = 0 ; i < strlen(s) ; i++)
     {
-        for (int j = 8 * i + 7 ; j >= 8 * i ; j--)
-        {
+         for (int j = 8 * i + 7 ; j >= 8 * i ; j--)
+         {
             if (remainder[j] == 1)
             {
                 printf("🟡");
@@ -41,8 +41,8 @@ int main(void)
             {
                 printf("⚫");
             }
-        }
-        printf("\n");
+         }
+         printf("\n");
    }
 
 
