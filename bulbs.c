@@ -7,13 +7,13 @@
 int main(void)
 {
 
-    // GET INPUT
+    // GETTING INPUT
 
     string s = get_string("Message: ");
     int ascii[strlen(s)];
     int remainder[8 * strlen(s)];
 
-    // CONVERT INPUT TO NUMBER AND THEN TO BINARY(REVERSED)
+    // CONVERTING INPUT TO NUMBER AND THEN TO BINARY(REVERSED)
 
     for (int i = 0 ; i < strlen(s) ; i++)
     {
