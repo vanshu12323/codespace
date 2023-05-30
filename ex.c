@@ -23,9 +23,12 @@ int main(void)
       printf("\n");
    }
 
-   for (int i = 8*strlen(s) ; i >= 0 ; i--)
+   for (int i = 0 ; i < strnlen(s) ; i++)
    {
-      printf("%i" , remainder[i]);
+      for (int j = 7 ; j >= 0 ; j--)
+      {
+         printf("%i" , remainder[]);
+      }
    }
 
    string name = "SHREYA";
