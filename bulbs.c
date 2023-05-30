@@ -36,6 +36,11 @@ int print_bulb(string message)
         }
     }
 
-    
+    for (int i = 8 * strlen(message) ; i >= 0 ; i--)
+    {
+        printf("%i" , remainder[i]);
+    }
+
+    return remainder[i];
 
 }
