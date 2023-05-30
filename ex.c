@@ -14,7 +14,7 @@ int main(void)
    {
       ascii[i] = s[i];
 
-      for (int j = 8*i  ; j < 8*strlen(s) - 8*i - 1 ; j++ , ascii[i] /= 2)
+      for (int j = 8*i  ; j < 8*strlen(s)  - 1 ; j++ , ascii[i] /= 2)
       {
          remainder[j] = ascii[i] % 2;
         // ascii /= 2;
