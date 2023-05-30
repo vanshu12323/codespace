@@ -17,15 +17,15 @@ int main(void)
       for (int j = 8*i  ; j <= 8*i + 7 ; j++ , ascii[i] /= 2)
       {
          remainder[j] = ascii[i] % 2;
-        // ascii /= 2;
          printf("%i", remainder[j]);
       }
       printf("\n");
    }
 
+  
    for (int i = 0 ; i < strlen(s) ; i++)
    {
-      for (int j = 8 * strlen(s) - 8 * i - 1; j >= 8 * (strlen(s) - i - 1) ; j--)
+      for (int j = 8*i + 7; j >= 8 *i ; j--)
       {
          printf("%i" , remainder[j]);
       }
