@@ -6,10 +6,11 @@
 
 int main(void)
 {
-   string i = "123456";
+   string s = get_string("Message: ");
 
-   for(int j = strlen(i) ; j >= 0 ; j--)
+   for (int i = 0 ; i < strlen(s) ; i++)
    {
-      printf("%c" , i[j]);
+      int ascii = s[i];
+      
    }
 }
