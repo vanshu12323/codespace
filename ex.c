@@ -29,6 +29,7 @@ int main(void)
       {
          printf("%i" , remainder[j]);
       }
+      printf("\n");
    }
 
    string name = "SHREYA";
