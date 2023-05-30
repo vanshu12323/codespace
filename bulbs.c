@@ -33,6 +33,6 @@ int print_bulb(string message)
 
     for (int i = 8 *strlen(message) ; i >= 0 ; i--)
     {
-        
+        return remainder[i];
     }
 }
