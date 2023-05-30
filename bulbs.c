@@ -11,13 +11,18 @@ int main(void)
     string on ="🟡";
     string off = "⚫";
     string message = get_string("Message: ");
-    printf("%i", print_bulb(message));
+
+    int m = print_bulb(message);
+
+    printf("%i" , m);
+
+    //printf("%i", print_bulb(message));
 
 }
 
 
 
-int print_bulb(string message)
+voi print_bulb(string message)
 {
     int ascii;
     int remainder[8 * strlen(message)];
