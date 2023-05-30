@@ -24,7 +24,7 @@ int main(void)
 
 int print_bulb(string message)
 {
-    int ascii;
+    /*int ascii;
     int remainder[8 * strlen(message)];
     for (int i = 0 ; i < strlen(message) ; i++ , ascii = (int)ascii / (int)2)
     {
@@ -42,6 +42,20 @@ int print_bulb(string message)
         printf("%i" , remainder[i]);
     }
 
-    return remainder[1];
+    return remainder[1];*/
+
+
+
+    for (int i = 0 ; i < strlen(message) ; i ++)
+    {
+        int ascii = message[i];
+
+        
+    }
+
+
+
+
+
 
 }
