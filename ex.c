@@ -25,7 +25,7 @@ int main(void)
 
    for (int i = 0 ; i < strnlen(s) ; i++)
    {
-      for (int j = 7 ; j >= 0 ; j--)
+      for (int j = i +  ; j >= 0 ; j--)
       {
          printf("%i" , remainder[]);
       }
