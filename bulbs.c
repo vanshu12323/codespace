@@ -36,8 +36,12 @@ int print_bulb(string message)
         }
     }
 
-    for (int i = 8 *strlen(message) ; i >= 0 ; i--)
+    int remainder = 0;
+    while (n != 0)
     {
-        return remainder[i];
+    remainder = n % 10;
+    reverse = reverse * 10 + remainder;
+    n /= 10;
     }
+
 }
