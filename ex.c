@@ -25,18 +25,19 @@ int main(void)
 
    for (int i = 0 ; i < strlen(s) ; i++)
    {
-      for (int j = 7 ; j >= 0 ; j--)
+      for (int j = 8*strlen(s) ; j > 0 ; j--)
       {
-         printf("%i" , remainder[j]);
+         printf("%i" , remainder[j-1]);
       }
       printf("\n");
    }
 
-   string name = "SHREYA";
+   /*string name = "SHREYA";
    for(int i = strlen(name) ; i >= 0 ; i--)
    {
       printf("%c" , name[i]);
-   }
-
+   }*/
+   //printf("%i" , remainder[15]);
+  // printf("%lu" , strlen(s));
 
 }
