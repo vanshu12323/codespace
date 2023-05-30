@@ -25,7 +25,7 @@ int main(void)
 
    int reversed[8 * strlen(s)];
 
-   for (int i = 0 , j = 8*strlen(s) ; i < strlen(s) , j >= 0 ; i++)
+   for (int i = 0 , j = 8*strlen(s) ;j >= 0 ; i++ , j++)
    {
       for (int m = 0 ; m < 8 ; m++)
       {
