@@ -30,9 +30,10 @@ int print_bulb(string message)
     {
         ascii = message[i];
 
-        for (int j = 0 ; j < 9 ; j++)
+        for (int j = 0 ; j < 9 ; j++ || ascii == ascii / 2)
         {
             remainder[j] = ascii % 2;
+            ascii = ascii / 2;
         }
     }
 
