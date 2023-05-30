@@ -22,7 +22,7 @@ int main(void)
 
 
 
-voi print_bulb(string message)
+int print_bulb(string message)
 {
     int ascii;
     int remainder[8 * strlen(message)];
