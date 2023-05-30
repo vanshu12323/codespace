@@ -21,7 +21,12 @@ int print_bulb(string message)
 {
     for (int i = 0 ; i < strlen(message) ; i++)
     {
-        ascii = message[i];
+        int ascii = message[i];
+
+        for ()
+        {
+            
+        }
     }
 
 }
