@@ -8,16 +8,19 @@ int main(void)
 {
    string s = get_string("Message: ");
    int ascii[strlen(s)];
-   int remainder[];
+   int remainder[8 * strlen(s)];
 
    for (int i = 0 ; i < strlen(s) ; i++)
    {
       ascii[i] = s[i];
 
-      for (int i = 0 ; i < strlen(s) ; i++)
+      for (int j = 0 ; j < 8 ; j++ , ascii[i] /= 2)
       {
-         remainder[i] = ascii[i] / 2
+         remainder[j] = ascii[i] % 2;
+        // ascii /= 2;
+         printf("%i", remainder[j]);
       }
+      printf("\n");
    }
 
 
