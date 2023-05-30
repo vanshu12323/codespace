@@ -23,16 +23,15 @@ int main(void)
       printf("\n");
    }
 
-   int reversed[8 * strlen(s)];
-
-   for (int i = 0 , j = 8 ;j >= 0 ; i++ , j--)
+   for (int i = 8*strlen(s) ; i >= 0 ; i--)
    {
-      for (int m = 0 ; m < 8 ; m++)
-      {
-         reversed[i] = remainder[j];
-         printf("%i", reversed[i]);
-      }
-      printf("\n");
+      printf("%i" , remainder[i]);
+   }
+
+   string name = "SHREYA";
+   for(int i = strlen(name) ; i >= 0 ; i--)
+   {
+      printf("%c" , name[i]);
    }
 
 
