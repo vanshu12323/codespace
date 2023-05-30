@@ -25,7 +25,7 @@ int main(void)
 
    for (int i = 1 ; i <= strlen(s) ; i++)
    {
-      for (int j = 8*strlen(s) ; j > 8 * (strlen(s) - i) || j >= 0; j--)
+      for (int j = 8*strlen(s) ; j > 8 * (strlen(s) - i) && j >= 0; j--)
       {
          printf("%i" , remainder[j-1]);
       }
