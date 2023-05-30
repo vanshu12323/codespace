@@ -23,6 +23,18 @@ int main(void)
       printf("\n");
    }
 
+   int new[8 * strlen(s)];
+
+   for (int i = 8 ; i >= 0 ; i--)
+   {
+      for (int j = 0 ; j < 8 ; j++)
+      {
+         new[j] = ascii[i];
+         printf("%i" , new[j]);
+      }
+      printf("\n");
+   }
+
 
 
 }
