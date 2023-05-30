@@ -19,11 +19,9 @@ int main(void)
 
 int print_bulb(string message)
 {
-    int ascii;
-
     for (int i = 0 ; i < strlen(message) ; i++)
     {
         ascii = message[i];
     }
-    return ascii;
+
 }
