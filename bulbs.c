@@ -19,16 +19,17 @@ int main(void)
 
 int print_bulb(string message)
 {
+    int ascii;
     for (int i = 0 ; i < strlen(message) ; i++)
     {
-        int ascii = message[i];
+        ascii = message[i];
 
-        for (int j = 0 ; j < 9 ; j++)
+       /* for (int j = 0 ; j < 9 ; j++)
         {
             int remainder = ascii % 2;
-            ascii = int() ascii / 2;
-        }
+            ascii = (int) ascii / 2;
+        }*/
     }
-    return remainder;
+    return ascii;
 
 }
