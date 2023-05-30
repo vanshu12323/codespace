@@ -27,14 +27,6 @@ int main(void)
 
     // CORRECTING THE ORDER OF NUMBER IN BINARY
 
-    /*for (int i = 0 ; i < strlen(s) ; i++)
-    {
-        for (int j = 8 * i + 7; j >= 8 * i ; j--)
-        {
-        }
-    }*/
-
-
     for (int i = 0 ; i < strlen(s) ; i++)
     {
         for (int j = 8 * i + 7 ; j >= 8 * i ; j--)
