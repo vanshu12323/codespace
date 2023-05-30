@@ -6,6 +6,10 @@
 
 int main(void)
 {
-   string m = "hi";
-   printf("%i %i" , m[0] ,m[1]);
+   string i = "123456";
+
+   for(int j = strlen(i) ; j >= 0 ; j--)
+   {
+      printf("%c" , i[j]);
+   }
 }
