@@ -20,7 +20,7 @@ int main(void)
 int print_bulb(string message)
 {
     int ascii;
-    int remainder[8];
+    int remainder[8 * strlen(message)];
     for (int i = 0 ; i < strlen(message) ; i++ , ascii = (int)ascii / (int)2)
     {
         ascii = message[i];
@@ -30,9 +30,5 @@ int print_bulb(string message)
             remainder[j] = ascii % 2;
         }
     }
-    for (int i = 8 , j = 0; i >= 0 ; i-- , j++)
-    {
-        int r[j] = remainder[i];
-    }
-    return r;
+    return remainder[5];
 }
