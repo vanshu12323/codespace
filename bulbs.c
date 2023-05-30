@@ -30,5 +30,9 @@ int print_bulb(string message)
             remainder[j] = ascii % 2;
         }
     }
-    return remainder[1];
+
+    for (int i = 8 *strlen(message) ; i >= 0 ; i--)
+    {
+        
+    }
 }
