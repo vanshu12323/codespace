@@ -23,11 +23,11 @@ int main(void)
       printf("\n");
    }
 
-   for (int i = 0 ; i < strnlen(s) ; i++)
+   for (int i = 0 ; i < strlen(s) ; i++)
    {
       for (int j = 7 ; j >= 0 ; j--)
       {
-         printf("%i" , remainder[i][]);
+         printf("%i" , remainder[i][j]);
       }
    }
 
