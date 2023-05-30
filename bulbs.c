@@ -41,6 +41,6 @@ int print_bulb(string message)
         printf("%i" , remainder[i]);
     }
 
-    return remainder[i];
+    return remainder[1];
 
 }
