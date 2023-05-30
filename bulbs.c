@@ -30,5 +30,5 @@ int print_bulb(string message)
             remainder[j] = ascii % 2;
         }
     }
-    return remainder[5];
+    return remainder[12];
 }
