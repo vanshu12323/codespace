@@ -30,8 +30,9 @@ int print_bulb(string message)
             remainder[j] = ascii % 2;
         }
     }
-    for (int i = 8 ; i >= 0 ; i --)
+    for (int i = 8 , j = 0; i >= 0 ; i-- , j++)
     {
-        remainder = remainder[i];
+        int r[j] = remainder[i];
     }
+    return r;
 }
