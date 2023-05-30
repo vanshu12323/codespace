@@ -22,7 +22,7 @@ int main(void)
       printf("\n");
    }
 
-  
+
    for (int i = 0 ; i < strlen(s) ; i++)
    {
       for (int j = 8*i + 7; j >= 8 *i ; j--)
@@ -31,6 +31,8 @@ int main(void)
       }
       printf("\n");
    }
+
+   if ()
 
    /*string name = "SHREYA";
    for(int i = strlen(name) ; i >= 0 ; i--)
