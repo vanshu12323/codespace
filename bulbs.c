@@ -6,9 +6,14 @@
 
 int main(void)
 {
+
+    // GET INPUT
+
     string s = get_string("Message: ");
     int ascii[strlen(s)];
     int remainder[8 * strlen(s)];
+
+    // CONVERT INPUT TO NUMBER AND THEN TO BINARY(REVERSED)
 
     for (int i = 0 ; i < strlen(s) ; i++)
     {
@@ -20,19 +25,20 @@ int main(void)
         }
     }
 
+    // CORRECTING THE ORDER OF NUMBER IN BINARY
 
     for (int i = 0 ; i < strlen(s) ; i++)
     {
-         for (int j = 8 * i + 7; j >= 8 * i ; j--)
-         {
-         }
+        for (int j = 8 * i + 7; j >= 8 * i ; j--)
+        {
+        }
     }
 
 
     for (int i = 0 ; i < strlen(s) ; i++)
     {
-         for (int j = 8 * i + 7 ; j >= 8 * i ; j--)
-         {
+        for (int j = 8 * i + 7 ; j >= 8 * i ; j--)
+        {
             if (remainder[j] == 1)
             {
                 printf("🟡");
@@ -41,18 +47,7 @@ int main(void)
             {
                 printf("⚫");
             }
-         }
-         printf("\n");
-   }
-
-
-
-   /*string name = "SHREYA";
-   for(int i = strlen(name) ; i >= 0 ; i--)
-   {
-      printf("%c" , name[i]);
-   }*/
-   //printf("%i" , remainder[15]);
-  // printf("%lu" , strlen(s));
-
+        }
+        printf("\n");
+    }
 }
