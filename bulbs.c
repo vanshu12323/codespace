@@ -17,9 +17,7 @@ int main(void)
       for (int j = 8*i  ; j <= 8*i + 7 ; j++ , ascii[i] /= 2)
       {
          remainder[j] = ascii[i] % 2;
-         //printf("%i", remainder[j]);
       }
-      //printf("\n");
    }
 
 
@@ -27,15 +25,13 @@ int main(void)
    {
       for (int j = 8*i + 7; j >= 8 *i ; j--)
       {
-         //printf("%i" , remainder[j]);
       }
-     // printf("\n");
    }
 
 
    for (int i = 0 ; i < strlen(s) ; i++)
    {
-      for (int j = 8*i + 7; j >= 8 *i ; j--)
+      for (int j = 8 * i + 7 ; j >= 8 * i ; j--)
       {
          if (remainder[j] == 1)
          {
@@ -45,7 +41,6 @@ int main(void)
          {
             printf("⚫");
          }
-
       }
       printf("\n");
    }
