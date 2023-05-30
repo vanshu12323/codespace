@@ -12,37 +12,37 @@ int main(void)
 
     for (int i = 0 ; i < strlen(s) ; i++)
     {
-       ascii[i] = s[i];
+         ascii[i] = s[i];
 
-       for (int j = 8*i  ; j <= 8*i + 7 ; j++ , ascii[i] /= 2)
-       {
-          remainder[j] = ascii[i] % 2;
-       }
+         for (int j = 8*i  ; j <= 8*i + 7 ; j++, ascii[i] /= 2)
+         {
+            remainder[j] = ascii[i] % 2;
+         }
     }
 
 
     for (int i = 0 ; i < strlen(s) ; i++)
     {
-       for (int j = 8*i + 7; j >= 8 *i ; j--)
-       {
-       }
+         for (int j = 8*i + 7; j >= 8 *i ; j--)
+         {
+         }
     }
 
 
     for (int i = 0 ; i < strlen(s) ; i++)
     {
-       for (int j = 8 * i + 7 ; j >= 8 * i ; j--)
-       {
-          if (remainder[j] == 1)
-          {
-             printf("🟡");
-          }
-          else if (remainder[j] == 0)
-          {
-             printf("⚫");
-          }
-       }
-       printf("\n");
+         for (int j = 8 * i + 7 ; j >= 8 * i ; j--)
+         {
+             if (remainder[j] == 1)
+            {
+               printf("🟡");
+            }
+            else if (remainder[j] == 0)
+            {
+               printf("⚫");
+            }
+         }
+         printf("\n");
    }
 
 
