@@ -15,9 +15,12 @@ int main(void)
 
     for (int i = 0 ; i < strlen(text) ; i++)
     {
+        if (text[i] == ' ')
+        {
+            printf(" ");
+        }
         s[i] = text[i];
         s[i] += key;
-       // printf("%i " , s[i]);
         printf("%c" , s[i] );
     }
 
