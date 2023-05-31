@@ -13,6 +13,8 @@ int main(void)
     int s[strlen(text)];
     string ct[strlen(text)];
 
+    printf("ciphertext: ");
+
     for (int i = 0 ; i < strlen(text) ; i++)
     {
         if (text[i] == ' ')
@@ -21,10 +23,10 @@ int main(void)
         }
         s[i] = text[i];
         s[i] += key;
-        printf("%c" , s[i] );
+        printf("%c", s[i]);
     }
 
-    //printf("ciphertext: %c");
+
 
 
 }
