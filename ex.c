@@ -11,10 +11,14 @@ int main(void)
     int s[strlen(text)];
     string ct[strlen(text)];
 
+    int key = get_int("Key: ");
+
     for (int i = 0 ; i < strlen(text) ; i++)
     {
         s[i] = text[i];
-        s[i]++;
-        printf("%i " , s[i] );
+        s[i] += key;
+        printf("%c " , s[i] );
     }
+
+
 }
