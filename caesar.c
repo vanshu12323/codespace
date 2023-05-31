@@ -4,10 +4,11 @@
 #include <string.h>
 #include <ctype.h>
 
-int main(int argc , string argv[])
+int key;
+
+int main(int argc , string argv[key])
 {
-    /*int key;
-    do
+    /*do
     {
         key = get_int("");
     }
