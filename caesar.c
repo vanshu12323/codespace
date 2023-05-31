@@ -11,5 +11,7 @@ int main(int argc , string argv[])
         int key = get_int("");
     }
     while (key < 0);
+
+    if (argc)
     string text = get_string("plaintext: ");
 }
