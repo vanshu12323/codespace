@@ -6,6 +6,10 @@
 
 int main(void)
 {
-    int key = get_int("");
+    do
+    {
+        int key = get_int("");
+    }
+    while (key < 0);
     string text = get_string("plaintext: ");
 }
