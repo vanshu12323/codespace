@@ -4,7 +4,18 @@
 #include <string.h>
 #include <ctype.h>
 
-int main(main)
+int main(void)
 {
-    
+    string text = get_string("Text: ");
+
+    int s[strlen(text)];
+    string ct[strlen(text)];
+
+    for (int i = 0 ; i < strlen(text) ; i++)
+    {
+        s[i] = text[i];
+        s[i]++;
+        ct[i] = s[i];
+        printf("%c" , ct[i] );
+    }
 }
