@@ -15,12 +15,12 @@ int main(int argc , string argv[])
 
     if (argc != 2)
     {
-        printf("ERROR : Enter a valid key!")
+        printf("ERROR : Enter a valid key!");
         return 1;
     }
     else
     {
-        return 0;
+        string text = get_string("plaintext: ");
     }
-    string text = get_string("plaintext: ");
+    //string text = get_string("plaintext: ");
 }
