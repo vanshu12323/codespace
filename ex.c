@@ -6,12 +6,12 @@
 
 int main(void)
 {
-    string text = get_string("Text: ");
+    int key = get_int("Key: ");
+
+    string text = get_string("plaintext:  ");
 
     int s[strlen(text)];
     string ct[strlen(text)];
-
-    int key = get_int("Key: ");
 
     for (int i = 0 ; i < strlen(text) ; i++)
     {
@@ -23,6 +23,8 @@ int main(void)
         s[i] += key;
         printf("%c" , s[i] );
     }
+
+    //printf("ciphertext: %c");
 
 
 }
