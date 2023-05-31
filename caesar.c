@@ -6,12 +6,12 @@
 
 int main(int argc , string argv[])
 {
-    int key;
+    /*int key;
     do
     {
         key = get_int("");
     }
-    while (key < 0);
+    while (key < 0);*/
 
     if (argc != 2)
     {
