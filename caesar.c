@@ -4,9 +4,9 @@
 #include <string.h>
 #include <ctype.h>
 
-int key;
+bool only_digits(string key);
 
-int main(int argc , string argv[key])
+int main(int argc , string argv[])
 {
     /*do
     {
@@ -28,5 +28,9 @@ int main(int argc , string argv[key])
     {
         string text = get_string("plaintext: ");
     }
-    //string text = get_string("plaintext: ");
+}
+
+bool only_digits(string key)
+{
+    return 0;
 }
