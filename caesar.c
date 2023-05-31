@@ -6,12 +6,21 @@
 
 int main(int argc , string argv[])
 {
+    int key;
     do
     {
-        int key = get_int("");
+        key = get_int("");
     }
     while (key < 0);
 
-    if (argc)
+    if (argc != 2)
+    {
+        printf("ERROR : Enter a valid key!")
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
     string text = get_string("plaintext: ");
 }
