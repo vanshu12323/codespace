@@ -17,8 +17,8 @@ int main(void)
     {
         s[i] = text[i];
         s[i] += key;
-        printf("%i " , s[i]);
-        printf("%c " , s[i] );
+       // printf("%i " , s[i]);
+        printf("%c" , s[i] );
     }
 
 
