@@ -15,7 +15,6 @@ int main(void)
     {
         s[i] = text[i];
         s[i]++;
-        ct[i] = s[i];
-        printf("%c" , ct[i] );
+        printf("%i " , s[i] );
     }
 }
