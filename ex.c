@@ -4,11 +4,18 @@
 #include <string.h>
 #include <ctype.h>
 
-int key;
-
-int main(int argc, string argv[])
+int main(int argc, char* argv[])
 {
-    argv[1] = get_int("");
+    if (isdigit(argv[1]) = True)
+    {
+        return 0;
+    }
+    else
+    {
+        printf("Usage: ./caesar key");
+        return 1;
+    }
+
     if (argc != 2)
     {
         printf("Usage: ./caesar key");
