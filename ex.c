@@ -7,15 +7,7 @@
 
 int main(int argc, char* argv[])
 {
-    if (isdigit(argv[1]) = True)
-    {
-        return 0;
-    }
-    else
-    {
-        printf("Usage: ./caesar key");
-        return 1;
-    }
+    
 
     if (argc != 2)
     {
