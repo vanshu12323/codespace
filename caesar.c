@@ -39,7 +39,7 @@ int main(int argc, string argv[])
         printf("ERROR! ENTER A VALID KEY!");
         return 1;
     }
-    else if
+    else 
     {
         text = get_string("plaintext:  ");
     }
