@@ -46,6 +46,8 @@ int main(int argc, string argv[])
 
     // GET INPUT FROM USER
 
+     printf("\033[1;31mWELCOME TO OPENGENUS\033[0m\n");
+
     for (int i = 0 ; i < 6 ; i++)
     {
 
@@ -60,4 +62,5 @@ int main(int argc, string argv[])
         printf("Guess %i: %s\n", i + 1, text);
 
     }
+
 }
