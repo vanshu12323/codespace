@@ -4,9 +4,9 @@
 #include <string.h>
 #include <ctype.h>
 
-int main(void)
+int main(int argc , string argv[])
 {
-    int key = get_int("Key: ");
+    //int argv[1] = get_int("Key: ");
 
     string text = get_string("plaintext:  ");
 
@@ -22,7 +22,7 @@ int main(void)
             printf(" ");
         }
         s[i] = text[i];
-        s[i] += key;
+        s[i] += argv[1];
         printf("%c", s[i]);
     }
 
