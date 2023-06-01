@@ -34,7 +34,9 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    printf("This is WORDLE50\nYou have 6 tries to guess the %i-letter word I'm thinking of\n", atoi(argv[1]));
+    printf("This is WORDLE50"RESET"\n");
+
+    printf("You have 6 tries to guess the %i-letter word I'm thinking of\n", atoi(argv[1]));
 
     // GET INPUT FROM USER
 
