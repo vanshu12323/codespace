@@ -2,35 +2,70 @@
 #include <stdio.h>
 #include <math.h>
 #include <string.h>
+#include <stdlib.h>
 #include <ctype.h>
 
-bool only_digits(string key);
-
-int main(int argc , string argv[])
+int main(int argc, string argv[])
 {
-    /*do
-    {
-        key = get_int("");
-    }
-    while (key < 0);*/
+    string text;
 
     if (argc != 2)
     {
-        printf("ERROR : Enter a valid key!");
+        printf("Usage: ./caesar key");
         return 1;
     }
-    else if (argv[1] < 0)
+    else if (atoi(argv[1]) == isdigit(atoi(argv[1])))
     {
-        printf("ERROR : Enter a valid key!");
+        printf("ERROR! ENTER A VALID KEY!");
+        return 1;
+    }
+    else if (atoi(argv[1]) < 0)
+    {
+        printf("ERROR! ENTER A VALID KEY!");
         return 1;
     }
     else
     {
-        string text = get_string("plaintext: ");
+        text = get_string("plaintext:  ");
     }
-}
 
-bool only_digits(string key)
-{
+    int m[strlen(text)];
+
+    for (int i = 0 ; i < strlen(text) ; i++)
+    {
+        if (isupper(text[i]))
+        {
+            m[i] = text[i] - 65;
+        }
+        else if(islower(text[i]))
+        {
+            m[i] = text[i] - 97;
+        }
+    }
+
+    printf("ciphertext: ");
+
+    for (int i = 0 ; i < strlen(text) ; i++)
+    {
+        if (text[i] == ' ')
+        {
+            printf(" ");
+        }
+        else if (isupper(text[i]))
+        {
+            m[i] = ((m[i] + atoi(argv[1])) % 26) + 65;
+            printf("%c" , m[i]);
+        }
+        else if(islower(text[i]))
+        {
+            m[i] = ((m[i] + atoi(argv[1])) % 26) + 97;
+            printf("%c" , m[i]);
+        }
+        else
+        {
+            printf("%c" , text[i]);
+        }
+    }
+
     return 0;
 }
