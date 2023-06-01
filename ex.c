@@ -7,6 +7,8 @@
 
 int main(int argc, string argv[])
 {
+    string text;
+
     for (int i = 0 ; i < strlen(argv[1]) ; i++)
     {
         if (isalpha(argv[1][i]) == false)
@@ -20,5 +22,11 @@ int main(int argc, string argv[])
             printf("Key must contain 26 characters.");
             return 1;
         }
+        else
+        {
+            text = get_string("plaintext:  ");
+        }
     }
+
+    
 }
