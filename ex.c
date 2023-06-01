@@ -7,6 +7,8 @@
 
 int main(int argc, string argv[])
 {
+    string text;
+
     if (argc != 2)
     {
         printf("Usage: ./wordle wordsize");
@@ -22,8 +24,19 @@ int main(int argc, string argv[])
         }
     }
 
-    printf("This is WORDLE50 \n You have 6 tries to guess the 5-letter word I'm thinking of");
+    if (atoi(argv[1]) > 8 || atoi(argv[1]) < 5)
+    {
+        printf("Error: wordsize must be either 5, 6, 7, or 8");
+        return 1;
+    }
 
-    string text = get_string("Inout a 5-letter word: ");
+    printf("This is WORDLE50\nYou have 6 tries to guess the %i-letter word I'm thinking of\n", atoi(argv[1]));
 
+    do
+    {
+        text = get_string("Input a %i-letter word: ", atoi(argv[1]));
+    }
+    while (strlen(text) != atoi(argv[1]));
+
+    printf("Guess 1: %s", text);
 }
