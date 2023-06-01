@@ -5,9 +5,9 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-int main(int argc, char* argv[])
+int main(int argc, string argv[])
 {
-    
+    int aoi
 
     if (argc != 2)
     {
