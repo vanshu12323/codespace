@@ -27,4 +27,20 @@ int main(int argc, string argv[])
     text = get_string("plaintext:  ");
 
 
+    int m[strlen(text)];
+
+    for (int i = 0 ; i < strlen(text) ; i++)
+    {
+        if (isupper(text[i]))
+        {
+            m[i] = text[i] - 65;
+        }
+        else if (islower(text[i]))
+        {
+            m[i] = text[i] - 97;
+        }
+    }
+
+
+
 }
