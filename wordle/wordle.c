@@ -5,6 +5,8 @@
 #include <time.h>
 #include <ctype.h>
 
+int wordsize = 0;
+
 // each of our text files contains 1000 words
 #define LISTSIZE 1000
 
@@ -26,6 +28,8 @@ void print_word(string guess, int wordsize, int status[]);
 
 int main(int argc, string argv[])
 {
+    wordsize = atoi(argv[1]);
+
     // ensure proper usage
     // TODO #1
 
@@ -130,9 +134,9 @@ string get_guess(int wordsize)
     // TODO #3
     do
         {
-            guess = get_string("Input a %i-letter word: ", atoi(argv[1]));
+            guess = get_string("Input a %i-letter word: ", wordsize);
         }
-        while (strlen(guess) != atoi(argv[1]));
+        while (strlen(guess) != wordsize);
 
     return guess;
 }
