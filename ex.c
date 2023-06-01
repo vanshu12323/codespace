@@ -4,11 +4,11 @@
 #include <string.h>
 #include <ctype.h>
 
-int main(void)
+int main(int key , string argv[])
 {
-    int key = get_int("Key: ");
+    //int key = get_int("Key: ");
     string text = get_string("plaintext:  ");
-    int m[26];
+    int m[strlen(text)];
 
     for (int i = 0 ; i < strlen(text) ; i++)
     {
@@ -22,8 +22,6 @@ int main(void)
         }
     }
 
-    //printf("%i %i %i" , m[0] , m[1] , m[2]);
-
     printf("ciphertext: ");
     int n[26];
 
@@ -35,12 +33,12 @@ int main(void)
         }
         else if (isupper(text[i]))
         {
-            n[i] = ((m[i] + key) % 26) + 65;
+            n[i] = (m[i] + key % 26) + 65;
             printf("%c" , n[i]);
         }
         else if(islower(text[i]))
         {
-            n[i] = ((m[i] + key) % 26) + 97;
+            n[i] = (m[i] + key % 26) + 97;
             printf("%c" , n[i]);
         }
         else
