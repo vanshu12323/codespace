@@ -4,7 +4,7 @@
 #include <string.h>
 #include <ctype.h>
 
-int main(void)
+int main(int argc, string argv[])
 {
     int key = get_int("Key: ");
     string text = get_string("plaintext:  ");
