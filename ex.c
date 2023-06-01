@@ -15,7 +15,11 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key");
         return 1;
     }
-    else if (isatoi(argv[1]))
+    else if (atoi(argv[1]) != isdigit(atoi(argv[1])))
+    {
+        printf("ERROR! ENTER A VALID KEY!");
+        return 1;
+    }
     else if (atoi(argv[1]) < 0)
     {
         printf("ERROR! ENTER A VALID KEY!");
