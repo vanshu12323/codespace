@@ -29,15 +29,18 @@ int main(void)
     for (int i = 0 ; i < strlen(text) ; i++)
     {
         if (text[i] == ' ')
-        
+        {
+            printf(" ");
+        }
         else if (isupper(text[i]))
         {
             m[i] = ((m[i] + key) % 26) + 65;
-            printf("%c" . m[i]);
+            printf("%c" , m[i]);
         }
         else if(islower(text[i]))
         {
             m[i] = ((m[i] + key) % 26) + 97;
+            printf("%c" , m[i]);
         }
     }
 }
