@@ -9,6 +9,12 @@ int main(int argc, string argv[])
 {
     string text;
 
+    if (argc != 2)
+    {
+        printf("Usage: ./caesar key");
+        return 1;
+    }
+
     for (int i = 0 ; i < strlen(argv[1]) ; i++)
     {
         if (isalpha(argv[1][i]) == false)
@@ -62,7 +68,7 @@ int main(int argc, string argv[])
             printf("%c", text[i]);
         }
     }
-    
+
     printf("\n");
 
     return 0;
