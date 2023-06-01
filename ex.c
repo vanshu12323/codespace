@@ -47,5 +47,8 @@ int main(int argc, string argv[])
             text = get_string("Input a %i-letter word: ", atoi(argv[1]));
         }
         while (strlen(text) != atoi(argv[1]));
+
+        printf("Guess %i: %s", i + 1, text);
+
     }
 }
