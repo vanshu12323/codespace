@@ -32,9 +32,9 @@ int main(int argc, string argv[])
 
     for (int i = 0 ; i < strlen(argv[1]) ; i++)
     {
-        for (int j = i + 1 ; j < strlen(argv[1]) ; j++)
+        for (int j = 0 ; j < strlen(argv[1]) ; j++)
         {
-            if (argv[1][i] == argv[1][j])
+            if (argv[1][i] == argv[1][j] && i != j)
             {
                 printf("ERROR! NO DUPLICATES ALLOWED!");
                 return 1;
