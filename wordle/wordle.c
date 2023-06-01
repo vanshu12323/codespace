@@ -28,10 +28,33 @@ int main(int argc, string argv[])
     // ensure proper usage
     // TODO #1
 
+    if (argc != 2)
+    {
+        printf("Usage: ./wordle wordsize");
+        return 1;
+    }
+
+    // CHECKING IF THE INPUT IN CLA IS ONLY A NUMBER BETWEEN 5 TO 8
+
+    for (int i = 0 ; i < strlen(argv[1]) ; i++)
+    {
+        if (isdigit(argv[1][i]) == false)
+        {
+            printf("Usage: ./wordle wordsize");
+            return 1;
+        }
+    }
+
     int wordsize = 0;
 
     // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
     // TODO #2
+
+    if (atoi(argv[1]) > 8 || atoi(argv[1]) < 5)
+    {
+        printf("Error: wordsize must be either 5, 6, 7, or 8");
+        return 1;
+    }
 
     // open correct file, each file has exactly LISTSIZE words
     char wl_filename[6];
@@ -79,7 +102,7 @@ int main(int argc, string argv[])
         int score = check_word(guess, wordsize, status, choice);
 
         printf("Guess %i: ", i + 1);
-        
+
         // Print the guess
         print_word(guess, wordsize, status);
 
