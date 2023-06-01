@@ -30,14 +30,9 @@ int main(void)
         {
             printf(" ");
         }
-        else if (isupper(text[i]))
+        else
         {
             m[i] = (m[i] + key) % 26;
-            printf("%c" , m[i]);
-        }
-        else if(islower(text[i]))
-        {
-            m[i] = (m[i] + key) % 26;;
             printf("%c" , m[i]);
         }
     }
