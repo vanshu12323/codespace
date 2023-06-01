@@ -8,6 +8,7 @@
 int main(int argc, string argv[])
 {
     string text;
+    int wordsize = atoi(argv[1]);
 
     // CHECKING THE LENGTH OF CLA
 
