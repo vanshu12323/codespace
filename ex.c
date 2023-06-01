@@ -22,7 +22,7 @@ int main(void)
         }
     }
 
-    print
+    printf("%i %i %i" , m[0] , m[1] , m[2]);
 
     printf("ciphertext: ");
 
