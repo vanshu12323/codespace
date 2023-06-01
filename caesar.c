@@ -15,7 +15,7 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    for (int i = 0 ; i < strlen(srgv[1]) ; i++)
+    for (int i = 0 ; i < strlen(argv[1]) ; i++)
     {
         if (atoi(argv[1][i]) == isdigit(atoi(argv[1][i])))
         {
