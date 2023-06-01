@@ -9,11 +9,15 @@ int main(int argc, string argv[])
 {
     string text;
 
+    // CHECKING THE LENGTH OF CLA
+
     if (argc != 2)
     {
         printf("Usage: ./wordle wordsize");
         return 1;
     }
+
+    // CHECKING IF THE INPUT IN CLA IS ONLY A NUMBER BETWEEN 5 TO 8
 
     for (int i = 0 ; i < strlen(argv[1]) ; i++)
     {
