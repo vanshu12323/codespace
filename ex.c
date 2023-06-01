@@ -22,18 +22,13 @@ int main(void)
         }
     }
 
+    print
+
     printf("ciphertext: ");
 
     for (int i = 0 ; i < strlen(text) ; i++)
     {
-       // if (text[i] == ' ')
-       // {
-        //    printf(" ");
-        //}
-       // else
-       // {
-            m[i] = (m[i] + key) % 26;
-            printf("%c" , m[i]);
-       // }
+        m[i] = (m[i] + key) % 26;
+        printf("%c" , m[i]);
     }
 }
