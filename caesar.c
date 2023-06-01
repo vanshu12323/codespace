@@ -14,11 +14,22 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key");
         return 1;
     }
-    else if (atoi(argv[1]) == isdigit(atoi(argv[1])))
+
+    for (int i = 0 ; i < strlen(srgv[1]) ; i++)
+    {
+        if (atoi(argv[1][i]) == isdigit(atoi(argv[1][i])))
+        {
+            printf("Usage: ./caesar key");
+            return 1;
+        }
+    }
+
+    /*else if (atoi(argv[1]) == isdigit(atoi(argv[1])))
     {
         printf("Usage: ./caesar key");
         return 1;
-    }
+    }*/
+
     else if (atoi(argv[1]) < 0)
     {
         printf("ERROR! ENTER A VALID KEY!");
