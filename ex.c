@@ -41,6 +41,29 @@ int main(int argc, string argv[])
         }
     }
 
+    printf("ciphertext: ");
 
+    for (int i = 0 ; i < strlen(text) ; i++)
+    {
+        if (text[i] == ' ')
+        {
+            printf(" ");
+        }
+        else if (isupper(text[i]))
+        {
+            printf("%c", toupper(argv[1][m[i]]));
+        }
+        else if (islower(text[i]))
+        {
+            printf("%c", tolower(argv[1][m[i]]));
+        }
+        else
+        {
+            printf("%c", text[i]);
+        }
+    }
+    
+    printf("\n");
 
+    return 0;
 }
