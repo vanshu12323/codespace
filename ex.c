@@ -21,7 +21,6 @@ int main(int argc, string argv[])
     else
     {
         text = get_string("plaintext:  ");
-        return 0;
     }
 
     int key = get_int("Key: ");
