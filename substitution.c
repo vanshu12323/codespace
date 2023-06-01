@@ -15,6 +15,8 @@ int main(int argc, string argv[])
         return 1;
     }
 
+    // CHECKING IF THE INPUT IN CLA IS 26 LETTERS
+
     for (int i = 0 ; i < strlen(argv[1]) ; i++)
     {
         if (isalpha(argv[1][i]) == false)
@@ -30,6 +32,8 @@ int main(int argc, string argv[])
         }
     }
 
+    // CHECKING IF ANY LETTER IS REPEATED
+
     for (int i = 0 ; i < strlen(argv[1]) ; i++)
     {
         for (int j = 0 ; j < strlen(argv[1]) ; j++)
@@ -44,6 +48,7 @@ int main(int argc, string argv[])
 
     text = get_string("plaintext:  ");
 
+    // CONVERTING PLAINTEXT TO NUMBER
 
     int m[strlen(text)];
 
@@ -58,6 +63,8 @@ int main(int argc, string argv[])
             m[i] = text[i] - 97;
         }
     }
+
+    // CONVERTING PLAINTEXT TO CIPHERTEXT
 
     printf("ciphertext: ");
 
