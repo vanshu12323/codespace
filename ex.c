@@ -7,6 +7,8 @@
 
 int main(int argc, string argv[])
 {
+    // TODO 1
+
     string text;
     int wordsize = atoi(argv[1]);
 
@@ -28,6 +30,8 @@ int main(int argc, string argv[])
             return 1;
         }
     }
+
+    // TODO 2
 
     if (atoi(argv[1]) > 8 || atoi(argv[1]) < 5)
     {
