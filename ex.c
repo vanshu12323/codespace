@@ -46,7 +46,7 @@ int main(int argc, string argv[])
 
     // GET INPUT FROM USER
 
-     printf("\033[1;31mWELCOME TO OPENGENUS\033[0m\n");
+    //printf("\033[1;31mWELCOME TO OPENGENUS\033[0m\n");
 
     for (int i = 0 ; i < 6 ; i++)
     {
