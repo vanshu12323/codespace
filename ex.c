@@ -38,5 +38,5 @@ int main(int argc, string argv[])
     }
     while (strlen(text) != atoi(argv[1]));
 
-    printf("Guess 1: %s", text);
+    for int
 }
