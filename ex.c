@@ -6,6 +6,21 @@
 
 int main(int argc, string argv[])
 {
+    if (argc != 2)
+    {
+        printf("Usage: ./caesar key");
+        return 1;
+    }
+    else if (argv[1] < 0)
+    {
+        printf("ERROR : Enter a valid key!");
+        return 1;
+    }
+    else
+    {
+        string text = get_string("plaintext: ");
+    }
+
     int key = get_int("Key: ");
     string text = get_string("plaintext:  ");
     int m[strlen(text)];
