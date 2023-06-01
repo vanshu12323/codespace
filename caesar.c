@@ -17,7 +17,7 @@ int main(int argc, string argv[])
 
     for (int i = 0 ; i < strlen(argv[1]) ; i++)
     {
-        if (argv[1][i] == isdigit(atoi(&argv[1][i])))
+        if (argv[1][i] != isdigit(atoi(&argv[1][i])))
         {
             printf("Usage: ./caesar key");
             return 1;
@@ -39,7 +39,7 @@ int main(int argc, string argv[])
         printf("ERROR! ENTER A VALID KEY!");
         return 1;
     }
-    else 
+    else
     {
         text = get_string("plaintext:  ");
     }
