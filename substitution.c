@@ -63,11 +63,7 @@ int main(int argc, string argv[])
 
     for (int i = 0 ; i < strlen(text) ; i++)
     {
-        if (text[i] == ' ')
-        {
-            printf(" ");
-        }
-        else if (isupper(text[i]))
+        if (isupper(text[i]))
         {
             printf("%c", toupper(argv[1][m[i]]));
         }
