@@ -44,7 +44,7 @@ int main(int argc, string argv[])
         {
             m[i] = text[i] - 65;
         }
-        else if(islower(text[i]))
+        else if (islower(text[i]))
         {
             m[i] = text[i] - 97;
         }
@@ -63,12 +63,12 @@ int main(int argc, string argv[])
         else if (isupper(text[i]))
         {
             m[i] = ((m[i] + atoi(argv[1])) % 26) + 65;
-            printf("%c" , m[i]);
+            printf("%c", m[i]);
         }
-        else if(islower(text[i]))
+        else if (islower(text[i]))
         {
             m[i] = ((m[i] + atoi(argv[1])) % 26) + 97;
-            printf("%c" , m[i]);
+            printf("%c", m[i]);
         }
         else
         {
