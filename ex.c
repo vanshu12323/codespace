@@ -4,8 +4,11 @@
 #include <string.h>
 #include <ctype.h>
 
-int main(int argc, string argv[2])
+int key;
+
+int main(int argc, string argv[])
 {
+    argv[1] = get_int("");
     if (argc != 2)
     {
         printf("Usage: ./caesar key");
