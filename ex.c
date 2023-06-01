@@ -8,6 +8,8 @@
 int main(int argc, string argv[])
 {
     string text;
+    int key;
+
     if (argc != 2)
     {
         printf("Usage: ./caesar key");
@@ -20,10 +22,10 @@ int main(int argc, string argv[])
     }
     else
     {
+        key = get_int("Key: ");
         text = get_string("plaintext:  ");
     }
 
-    int key = get_int("Key: ");
     int m[strlen(text)];
 
     for (int i = 0 ; i < strlen(text) ; i++)
