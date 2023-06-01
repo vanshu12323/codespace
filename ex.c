@@ -42,5 +42,9 @@ int main(void)
             text[i] = ((m[i] + key) % 26) + 97;
             printf("%c" , text[i]);
         }
+        else
+        {
+            printf("%c" , text[i]);
+        }
     }
 }
