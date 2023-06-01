@@ -32,12 +32,12 @@ int main(void)
         }
         else if (isupper(text[i]))
         {
-            m[i] = (m[i] + key % 26) + 65;
+            m[i] = ((m[i] + key) % 26) + 65;
             printf("%c" , m[i]);
         }
         else if(islower(text[i]))
         {
-            m[i] = (m[i] + key % 26) + 97;
+            m[i] = ((m[i] + key) % 26) + 97;
             printf("%c" , m[i]);
         }
         else
