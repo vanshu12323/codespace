@@ -15,6 +15,7 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key");
         return 1;
     }
+    else if (isatoi(argv[1]))
     else if (atoi(argv[1]) < 0)
     {
         printf("ERROR! ENTER A VALID KEY!");
@@ -22,7 +23,7 @@ int main(int argc, string argv[])
     }
     else
     {
-        key = get_int("Key: ");
+       // key = get_int("Key: ");
         text = get_string("plaintext:  ");
     }
 
@@ -50,12 +51,12 @@ int main(int argc, string argv[])
         }
         else if (isupper(text[i]))
         {
-            m[i] = ((m[i] + key) % 26) + 65;
+            m[i] = ((m[i] + atoi(argv[1])) % 26) + 65;
             printf("%c" , m[i]);
         }
         else if(islower(text[i]))
         {
-            m[i] = ((m[i] + key) % 26) + 97;
+            m[i] = ((m[i] + atoi(argv[1])) % 26) + 97;
             printf("%c" , m[i]);
         }
         else
