@@ -25,6 +25,7 @@ int main(void)
     //printf("%i %i %i" , m[0] , m[1] , m[2]);
 
     printf("ciphertext: ");
+    int n[26];
 
     for (int i = 0 ; i < strlen(text) ; i++)
     {
@@ -34,13 +35,13 @@ int main(void)
         }
         else if (isupper(text[i]))
         {
-            m[i] = ((m[i] + key) % 26) + 65;
-            printf("%c" , m[i]);
+            n[i] = ((m[i] + key) % 26) + 65;
+            printf("%c" , n[i]);
         }
         else if(islower(text[i]))
         {
-            m[i] = ((m[i] + key) % 26) + 97;
-            printf("%c" , m[i]);
+            n[i] = ((m[i] + key) % 26) + 97;
+            printf("%c" , n[i]);
         }
         else
         {
