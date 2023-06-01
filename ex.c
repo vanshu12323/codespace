@@ -11,6 +11,7 @@ int main(int argc, string argv[])
 
     string text;
     int wordsize = atoi(argv[1]);
+    int score = 0;
 
     // CHECKING THE LENGTH OF CLA
 
@@ -47,6 +48,9 @@ int main(int argc, string argv[])
 
     for (int i = 0 ; i < 6 ; i++)
     {
+
+    // TODO 3
+
         do
         {
             text = get_string("Input a %i-letter word: ", atoi(argv[1]));
