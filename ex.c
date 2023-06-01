@@ -22,13 +22,22 @@ int main(void)
         }
     }
 
-    printf("%i %i %i" , m[0] , m[1] , m[2]);
+    //printf("%i %i %i" , m[0] , m[1] , m[2]);
 
     printf("ciphertext: ");
 
     for (int i = 0 ; i < strlen(text) ; i++)
     {
-        m[i] = (m[i] + key) % 26;
-        printf("%c" , m[i]);
+        if (text[i] == ' ')
+        
+        else if (isupper(text[i]))
+        {
+            m[i] = ((m[i] + key) % 26) + 65;
+            printf("%c" . m[i]);
+        }
+        else if(islower(text[i]))
+        {
+            m[i] = ((m[i] + key) % 26) + 97;
+        }
     }
 }
