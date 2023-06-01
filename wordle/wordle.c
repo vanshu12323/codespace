@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
+#include <ctype.h>
 
 // each of our text files contains 1000 words
 #define LISTSIZE 1000
