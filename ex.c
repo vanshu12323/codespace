@@ -10,6 +10,8 @@ int main(int argc , string argv[])
 
     string text = get_string("plaintext:  ");
 
+    argv[1] = int key;
+
     int s[strlen(text)];
     string ct[strlen(text)];
 
@@ -22,7 +24,7 @@ int main(int argc , string argv[])
             printf(" ");
         }
         s[i] = text[i];
-        s[i] += argv[1];
+        s[i] += key;
         printf("%c", s[i]);
     }
 
