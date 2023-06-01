@@ -36,11 +36,14 @@ int main(int argc, string argv[])
 
     printf("This is WORDLE50\nYou have 6 tries to guess the %i-letter word I'm thinking of\n", atoi(argv[1]));
 
-    do
-    {
-        text = get_string("Input a %i-letter word: ", atoi(argv[1]));
-    }
-    while (strlen(text) != atoi(argv[1]));
+    // GET INPUT FROM USER
 
-    
+    for (int i = 0 ; i < 6 ; i++)
+    {
+        do
+        {
+            text = get_string("Input a %i-letter word: ", atoi(argv[1]));
+        }
+        while (strlen(text) != atoi(argv[1]));
+    }
 }
