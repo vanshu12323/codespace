@@ -8,7 +8,7 @@ int main(void)
 {
     int key = get_int("Key: ");
     string text = get_string("plaintext:  ");
-    int m[strlen(text)];
+    int m[26];
 
     for (int i = 0 ; i < strlen(text) ; i++)
     {
@@ -26,14 +26,14 @@ int main(void)
 
     for (int i = 0 ; i < strlen(text) ; i++)
     {
-        if (text[i] == ' ')
-        {
-            printf(" ");
-        }
-        else
-        {
+       // if (text[i] == ' ')
+       // {
+        //    printf(" ");
+        //}
+       // else
+       // {
             m[i] = (m[i] + key) % 26;
             printf("%c" , m[i]);
-        }
+       // }
     }
 }
