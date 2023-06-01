@@ -10,7 +10,7 @@ int main(void)
     string text = get_string("plaintext:  ");
     int m[26];
 
-    for (int i = 0 ; i <= strlen(text) ; i++)
+    for (int i = 0 ; i < strlen(text) ; i++)
     {
         if (isupper(text[i]))
         {
