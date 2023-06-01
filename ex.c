@@ -21,4 +21,9 @@ int main(int argc, string argv[])
             return 1;
         }
     }
+
+    printf("This is WORDLE50 \n You have 6 tries to guess the 5-letter word I'm thinking of");
+
+    string text = get_string("Inout a 5-letter word: ");
+
 }
