@@ -4,9 +4,9 @@
 #include <string.h>
 #include <ctype.h>
 
-int main(int key , string argv[])
+int main(void)
 {
-    //int key = get_int("Key: ");
+    int key = get_int("Key: ");
     string text = get_string("plaintext:  ");
     int m[strlen(text)];
 
@@ -23,7 +23,6 @@ int main(int key , string argv[])
     }
 
     printf("ciphertext: ");
-    int n[26];
 
     for (int i = 0 ; i < strlen(text) ; i++)
     {
@@ -33,13 +32,13 @@ int main(int key , string argv[])
         }
         else if (isupper(text[i]))
         {
-            n[i] = (m[i] + key % 26) + 65;
-            printf("%c" , n[i]);
+            m[i] = (m[i] + key % 26) + 65;
+            printf("%c" , m[i]);
         }
         else if(islower(text[i]))
         {
-            n[i] = (m[i] + key % 26) + 97;
-            printf("%c" , n[i]);
+            m[i] = (m[i] + key % 26) + 97;
+            printf("%c" , m[i]);
         }
         else
         {
