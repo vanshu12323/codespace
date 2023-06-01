@@ -18,11 +18,11 @@ int main(int argc, string argv[2])
     }
     else
     {
-        string text = get_string("plaintext: ");
+        string text = get_string("plaintext:  ");
     }
 
     int key = get_int("Key: ");
-    string text = get_string("plaintext:  ");
+   // string text = get_string("plaintext:  ");
     int m[strlen(text)];
 
     for (int i = 0 ; i < strlen(text) ; i++)
@@ -60,4 +60,6 @@ int main(int argc, string argv[2])
             printf("%c" , text[i]);
         }
     }
+
+    return 0;
 }
