@@ -9,6 +9,8 @@ int main(int argc, string argv[])
 {
     string text;
 
+    //COMMAND LINE ARGUMENT , PROMPTING THE USER TO ENTER ONLY POSITIVE INTEGER
+
     if (argc != 2)
     {
         printf("Usage: ./caesar key");
@@ -47,6 +49,8 @@ int main(int argc, string argv[])
             m[i] = text[i] - 97;
         }
     }
+
+    // CONVERTING PLAINTEXT TO CIPHERTEXT
 
     printf("ciphertext: ");
 
