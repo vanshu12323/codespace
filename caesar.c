@@ -22,17 +22,7 @@ int main(int argc, string argv[])
             printf("Usage: ./caesar key");
             return 1;
         }
-        else
-        {
-
-        }
     }
-
-    /*else if (atoi(argv[1]) == isdigit(atoi(argv[1])))
-    {
-        printf("Usage: ./caesar key");
-        return 1;
-    }*/
 
     if (atoi(argv[1]) < 0)
     {
