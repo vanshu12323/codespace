@@ -12,4 +12,13 @@ int main(int argc, string argv[])
         printf("Usage: ./wordle wordsize");
         return 1;
     }
+
+    for (int i = 0 ; i < strlen(argv[1]) ; i++)
+    {
+        if (isdigit(argv[1][i]) == false)
+        {
+            printf("Usage: ./wordle wordsize");
+            return 1;
+        }
+    }
 }
