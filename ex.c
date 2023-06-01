@@ -48,7 +48,7 @@ int main(int argc, string argv[])
         }
         while (strlen(text) != atoi(argv[1]));
 
-        printf("Guess %i: %s", i + 1, text);
+        printf("Guess %i: %s\n", i + 1, text);
 
     }
 }
