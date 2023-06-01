@@ -19,7 +19,7 @@ int main(int argc, string argv[])
 
     for (int i = 0 ; i < strlen(argv[1]) ; i++)
     {
-        if (argv[1][i] != isdigit(atoi(&argv[1][i])))
+        if (isdigit(argv[1][i]) == false)
         {
             printf("Usage: ./caesar key");
             return 1;
@@ -72,7 +72,7 @@ int main(int argc, string argv[])
         }
         else
         {
-            printf("%c" , text[i]);
+            printf("%c", text[i]);
         }
     }
 
