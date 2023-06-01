@@ -34,13 +34,13 @@ int main(void)
         }
         else if (isupper(text[i]))
         {
-            m[i] = ((m[i] + key) % 26) + 65;
-            printf("%c" , m[i]);
+            text[i] = ((m[i] + key) % 26) + 65;
+            printf("%c" , text[i]);
         }
         else if(islower(text[i]))
         {
-            m[i] = ((m[i] + key) % 26) + 97;
-            printf("%c" , m[i]);
+            text[i] = ((m[i] + key) % 26) + 97;
+            printf("%c" , text[i]);
         }
     }
 }
