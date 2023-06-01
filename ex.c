@@ -8,14 +8,13 @@
 int main(int argc, string argv[])
 {
     string text;
-    int key;
 
     if (argc != 2)
     {
         printf("Usage: ./caesar key");
         return 1;
     }
-    else if (atoi(argv[1]) != isdigit(atoi(argv[1])))
+    else if (atoi(argv[1]) == isdigit(atoi(argv[1])))
     {
         printf("ERROR! ENTER A VALID KEY!");
         return 1;
@@ -27,7 +26,6 @@ int main(int argc, string argv[])
     }
     else
     {
-       // key = get_int("Key: ");
         text = get_string("plaintext:  ");
     }
 
