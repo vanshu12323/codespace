@@ -50,7 +50,7 @@ int main(int argc, string argv[])
         }
     }
 
-    int wordsize = 0;
+    //int wordsize = 0;
 
     // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
     // TODO #2
