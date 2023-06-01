@@ -7,8 +7,6 @@
 
 int main(int argc, string argv[])
 {
-    int aoi
-
     if (argc != 2)
     {
         printf("Usage: ./caesar key");
