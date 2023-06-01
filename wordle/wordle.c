@@ -5,7 +5,7 @@
 #include <time.h>
 #include <ctype.h>
 
-int wordsize = 0;
+int wordsize;
 
 // each of our text files contains 1000 words
 #define LISTSIZE 1000
