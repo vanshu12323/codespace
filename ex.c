@@ -13,7 +13,7 @@ int main(int argc, string argv[2])
     }
     else if (argv[1] < 0)
     {
-        printf("ERROR : Enter a valid key!");
+        printf("Usage: ./caesar key");
         return 1;
     }
     else
