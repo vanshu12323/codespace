@@ -128,6 +128,11 @@ string get_guess(int wordsize)
 
     // ensure users actually provide a guess that is the correct length
     // TODO #3
+    do
+        {
+            guess = get_string("Input a %i-letter word: ", atoi(argv[1]));
+        }
+        while (strlen(guess) != atoi(argv[1]));
 
     return guess;
 }
