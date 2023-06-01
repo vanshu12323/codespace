@@ -42,8 +42,5 @@ int main(int argc, string argv[])
     }
     while (strlen(text) != atoi(argv[1]));
 
-    for (int i = 0 ; i < strlen(text) ; i++)
-    {
-        printf("Guess %i: %s", i, tolower(text));
-    }
+    
 }
