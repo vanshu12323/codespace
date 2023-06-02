@@ -10,17 +10,17 @@ int main(void)
     string text = get_string("Text: ");
     int length = strlen(text);
 
-    for (int i = 0 ; i < length ; i++)
+    for (int i = 1 ; i < length ; i++)
     {
         if (islower(text[i]))
         {
-            if ((int)text[i] < (int)text[i + 1])
+            if ((int)text[i] > (int)text[i + 1])
             {
-                printf("Yes");
+                printf("Yes ");
             }
             else
             {
-                printf("No");
+                printf("No ");
             }
         }
     }
