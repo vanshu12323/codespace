@@ -9,9 +9,9 @@ void draw(int n);
 
 int main(void)
 {
-    int height = get_int("Height: ");
+    //int height = get_int("Height: ");
 
-    draw(height);
+    draw(1);
 }
 
 
@@ -29,6 +29,6 @@ void draw(int n)
 
         printf("\n");
     }
-    
+
     draw(n+1);
 }
