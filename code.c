@@ -7,7 +7,8 @@
 
 int main(void)
 {
-    int array[5];
+    int n = get_int("Length: ");
+    int array[n];
     array[0] = 1;
     printf("%i\n", array[0]);
 
