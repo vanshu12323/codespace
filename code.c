@@ -11,8 +11,9 @@ int main(void)
     array[0] = 1;
     printf("%i\n", array[0]);
 
-    for (int i = 1 ; i <= 4 ; i++)
+    for (int i = 1 ; i < 5 ; i++)
     {
-        printf("%i\n", array[i-1]*2);
+        array[i] = array[i-1]*2;
+        printf("%i\n", array[i]);
     }
 }
