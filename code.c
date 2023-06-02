@@ -19,6 +19,7 @@ int main(void)
 
 void draw(int n)
 {
+
     if (n <= 0)
     {
         return;
@@ -30,4 +31,6 @@ void draw(int n)
         printf("#");
     }
     printf("\n");
+
+
 }
