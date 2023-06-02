@@ -7,21 +7,21 @@
 
 int main(void)
 {
-    int n;
+    string text = get_string("Text: ");
+    int length = strlen(text);
 
-    do
+    for (int i = 0 ; i < length ; i++)
     {
-        n = get_int("Length: ");
-    }
-    while (n <= 0);
-
-    int array[n];
-    array[0] = 1;
-    printf("%i\n", array[0]);
-
-    for (int i = 1 ; i < n ; i++)
-    {
-        array[i] = array[i-1]*2;
-        printf("%i\n", array[i]);
+        if (islower(text[i]))
+        {
+            if ((int)text[i] < (int)text[i + 1])
+            {
+                printf("Yes");
+            }
+            else
+            {
+                printf("No");
+            }
+        }
     }
 }
