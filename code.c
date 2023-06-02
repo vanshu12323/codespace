@@ -15,8 +15,6 @@ int main(void)
 
 
 
-
-
 void draw(int n)
 {
 
