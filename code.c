@@ -7,5 +7,6 @@
 
 int main(void)
 {
-    
+    JHJL
+    JK
 }
