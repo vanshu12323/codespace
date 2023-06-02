@@ -14,7 +14,7 @@ int main(void)
     {
         if (islower(text[i]))
         {
-            if ((int)text[i] > (int)text[i + 1])
+            if ((int)text[i] > (int)text[i - 1])
             {
                 printf("Yes ");
             }
