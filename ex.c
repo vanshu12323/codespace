@@ -67,13 +67,13 @@ int main(int argc, string argv[])
             {
                 candidates[j].vote += 1;
             }
-            else if (votes[i] == candidates[n].name)
+            else if (i = n - 1 && strcmp(votes[i], candidates[j].name) == 0)
             {
                 printf("Invalid vote.\n");
             }
         }
     }
-
-
 }
+
+//printf("Invalid vote.\n");
 
