@@ -76,5 +76,15 @@ int main(int argc, string argv[])
                 printf("Invalid vote.\n");
             }
         }*/
+        for (int l = 0 ; l < n ; l++)
+        {
+            for (int k = 0 ; k < argc - 1 ; k++)
+            {
+                if(strcmp(candidates[k].name, votes[l]) != 0)
+                {
+                    printf("Invalid vote.\n");
+                }
+            }
+        }
     }
 }
