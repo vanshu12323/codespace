@@ -4,6 +4,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <search.h>
 
 typedef struct
 {
@@ -68,7 +69,7 @@ int main(int argc, string argv[])
             }
             else if ()
             {
-                
+
             }
         }
     }
