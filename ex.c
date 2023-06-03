@@ -8,7 +8,7 @@
 
 int s;
 
-void find(string name, string here[]);
+bool find(string votes, string name[]);
 
 typedef struct
 {
@@ -72,20 +72,23 @@ int main(int argc, string argv[])
                 candidates[j].vote += 1;
             }
         }
+
+        if (find(votes[i] , candidates[argc - 1]) == )
     }
 }
 
-void find(string votes, string name[s])
+bool find(string votes, string name[s])
 {
     for (int i = 0 ; i < s ; i++)
     {
         if(strcmp(votes, name[i]) == 0)
         {
-            
+            return 1;
         }
         else
         {
             printf("Invalid vote.");
+            return 0;
         }
     }
 }
