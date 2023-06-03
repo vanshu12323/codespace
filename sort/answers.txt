@@ -1,7 +1,7 @@
 sort1 uses: TODO
 
 Real time (random5000) : 0.106s (Bubble)
-Real time (random10000) : 0.
+Real time (random10000) : 0.321s (Bubble)
 Real time (random50000) :
 Real time (reversed5000) :
 Real time (reversed10000) :
@@ -15,7 +15,7 @@ How do you know?: TODO
 sort2 uses: TODO
 
 Real time (random5000) : 0.043s (Merge)
-Real time (random10000) :
+Real time (random10000) : 0.085s (Merge)
 Real time (random50000) :
 Real time (reversed5000) :
 Real time (reversed10000) :
@@ -29,13 +29,13 @@ How do you know?: TODO
 sort3 uses: TODO
 
 Real time (random5000) : 0.046s (Selection)
-Real time (random10000) :
+Real time (random10000) : 0.206s (Selection)
 Real time (random50000) :
 Real time (reversed5000) :
 Real time (reversed10000) :
 Real time (reversed50000) :
 Real time (sorted5000) :
 Real time (sorted10000) :
-Real time (sorted50000) :
+Real time (sorted50000) : 
 
 How do you know?: TODO
