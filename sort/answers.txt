@@ -2,7 +2,7 @@ sort1 uses: TODO
 
 Real time (random5000) : 0.106s (Bubble)
 Real time (random10000) : 0.321s (Bubble)
-Real time (random50000) :
+Real time (random50000) : 9.686s
 Real time (reversed5000) :
 Real time (reversed10000) :
 Real time (reversed50000) :
@@ -36,6 +36,6 @@ Real time (reversed10000) :
 Real time (reversed50000) :
 Real time (sorted5000) :
 Real time (sorted10000) :
-Real time (sorted50000) : 
+Real time (sorted50000) :
 
 How do you know?: TODO
