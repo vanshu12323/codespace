@@ -68,7 +68,7 @@ int main(int argc, string argv[])
                 candidates[j].vote += 1;
             }
 
-            for (int k = 0 ; strcmp(votes[i], candidates[j].name) != 0 ; k++)
+            for (int k = 0 ; strcmp(votes[i], candidates[k].name) != 0 ; k++)
             {
                 if ((j == argc - 2) && (strcmp(votes[i], candidates[argc - 2].name) != 0))
                 {
