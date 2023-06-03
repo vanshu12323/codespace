@@ -75,9 +75,21 @@ int main(int argc, string argv[])
         }
     }
 
+    // DECIDING THE WINNER
+
     for (int i = 0 ; i < argc - 1 ; i++)
     {
-        
+        for (int j = 0 ; j < argc - 1 ; j++)
+        {
+            if (candidates[i].vote > candidates[j].vote)
+            {
+                printf("%s\n", candidates[i].name);
+            }
+            else if (candidates[i].vote == candidates[j].vote)
+            {
+                printf("%s\n", candidates[i].name);
+            }
+        }
     }
 }
 
