@@ -2,11 +2,11 @@ sort1 uses: TODO
 
 Real time (random5000) : 0.106s (Bubble)
 Real time (random10000) : 0.321s (Bubble)
-Real time (random50000) : 10.912s
-Real time (reversed5000) :
-Real time (reversed10000) :
-Real time (reversed50000) :
-Real time (sorted5000) :
+Real time (random50000) : 10.912s (Bubble)
+Real time (reversed5000) : 0.075s (Bubble)
+Real time (reversed10000) : 0.278s (Bubble)
+Real time (reversed50000) : 9.398s (Bubble)
+Real time (sorted5000) : 0.03
 Real time (sorted10000) :
 Real time (sorted50000) :
 
@@ -16,10 +16,10 @@ sort2 uses: TODO
 
 Real time (random5000) : 0.043s (Merge)
 Real time (random10000) : 0.085s (Merge)
-Real time (random50000) : 2.919s
-Real time (reversed5000) :
-Real time (reversed10000) :
-Real time (reversed50000) :
+Real time (random50000) : 2.919s (Merge)
+Real time (reversed5000) : 0.033s (Merge)
+Real time (reversed10000) : 0.083s (Merge)
+Real time (reversed50000) : 1.803s (Merge)
 Real time (sorted5000) :
 Real time (sorted10000) :
 Real time (sorted50000) :
@@ -30,10 +30,10 @@ sort3 uses: TODO
 
 Real time (random5000) : 0.046s (Selection)
 Real time (random10000) : 0.206s (Selection)
-Real time (random50000) : 5.922s
-Real time (reversed5000) :
-Real time (reversed10000) :
-Real time (reversed50000) :
+Real time (random50000) : 5.922s (Selection)
+Real time (reversed5000) : 0.070s (Selection)
+Real time (reversed10000) : 0.195s (Selection)
+Real time (reversed50000) : 5.700s (Selection)
 Real time (sorted5000) :
 Real time (sorted10000) :
 Real time (sorted50000) :
