@@ -67,7 +67,7 @@ int main(int argc, string argv[])
             {
                 candidates[j].vote += 1;
             }
-            else if (lsearch(votes[i]))
+            else if (lsearch(votes[i] , candidates , argc - 1))
             {
 
             }
