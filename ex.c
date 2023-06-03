@@ -6,10 +6,6 @@
 #include <ctype.h>
 #include <search.h>
 
-int s;
-
-bool find(string votes, string name[]);
-
 typedef struct
 {
     string name;
@@ -71,22 +67,7 @@ int main(int argc, string argv[])
             {
                 candidates[j].vote += 1;
             }
-        
+        }
     }
 }
 
-bool find(string votes, string name[s])
-{
-    for (int i = 0 ; i < s ; i++)
-    {
-        if(strcmp(votes, name[i]) == 0)
-        {
-            return 1;
-        }
-        else
-        {
-            printf("Invalid vote.");
-            return 0;
-        }
-    }
-}
