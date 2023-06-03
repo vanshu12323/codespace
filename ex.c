@@ -8,7 +8,7 @@
 typedef struct
 {
     string name;
-    int votes;
+    int vote;
 }
 candidate;
 
@@ -51,7 +51,7 @@ int main(int argc, string argv[])
 
     for (int i = 0 ; i < n ; i++)
     {
-        candidates[i].votes = 0;
+        candidates[i].vote = 0;
     }
 
     string votes[n];
@@ -64,7 +64,7 @@ int main(int argc, string argv[])
         {
             if (strcmp(votes[i], candidates[j].name) == 0)
             {
-                candidates[j].votes += 1;
+                candidates[j].vote += 1;
             }
         }
     }
