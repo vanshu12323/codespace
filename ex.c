@@ -6,10 +6,6 @@
 #include <ctype.h>
 #include <search.h>
 
-int cmpfunc (const void * a, const void * b) {
-   return ( *(int*)a - *(int*)b );
-}
-
 typedef struct
 {
     string name;
@@ -72,11 +68,13 @@ int main(int argc, string argv[])
                 candidates[j].vote += 1;
             }
         }
+
+        if (votes[i] != candidates[n].name)
+        {
+            printf("Invalid vote.\n");
+        }
     }
 
-    qsort(candidates, argc - 1, sizeof(int), cmpfunc);
-
-    printf("%i", candidates[3].vote);
 
 }
 
