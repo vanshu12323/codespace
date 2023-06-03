@@ -61,21 +61,6 @@ int main(int argc, string argv[])
     {
         votes[i] = get_string("Vote: ");
 
-        for (int l = 0 ; l < n ; l++)
-        {
-            for (int k = 0 ; k < argc - 1 ; k++)
-            {
-                if(strcmp(candidates[k].name, votes[l]) != 0)
-                {
-                    printf("Invalid vote.\n");
-                }
-                else
-                {
-
-                }
-            }
-        }
-
         for (int j = 0 ; j < argc - 1 ; j++)
         {
             if (strcmp(votes[i], candidates[j].name) == 0)
@@ -84,4 +69,9 @@ int main(int argc, string argv[])
             }
         }
     }
+}
+
+bool find(string name)
+{
+    
 }
