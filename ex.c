@@ -70,9 +70,9 @@ int main(int argc, string argv[])
         }
     }
 
-    for (int i = 0 ; i < argc -1 ; i++)
-    {
-        if (candidates[i].votes > candidates[i-1].votes)
-    }
+    qsort(candidates, argc - 1, sizeof(int), cmpfunc);
+
+    printf("%i", candidates[3].votes);
+
 }
 
