@@ -60,37 +60,16 @@ int main(int argc, string argv[])
             {
                 candidates[j].votes += 1;
             }
+            else if (strcmp(votes[i], candidates[j].name) == 1)
+            {
+                printf("Invalid Vote.");
+            }
+
         }
     }
 
-        int m = 0;
-        int k = 0;
-
-        if (strcmp(votes[m], candidates[k].name) == 0)
-        {
-            k++;
-            if (strcmp(votes[m], candidates[k].name) != 0)
-            {
-                printf("Inavlid vote.\n");
-                m++;
-            }
-        }
-
-        for (int m = 0 ; m <  ; m++)
-        {
-            for (int k = 0 ; k <  ; k++)
-            {
-                
-            }
-        }
 
 
 
 
-
-
-    /*for (int i = 0 ; i < argc ; i++)
-    {
-        if ()
-    }*/
 }
