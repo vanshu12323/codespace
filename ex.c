@@ -68,22 +68,19 @@ int main(int argc, string argv[])
                 candidates[j].vote += 1;
             }
         }
+    }
 
-        /*for (int k = 0 ; k < argc - 1 ; k++)
+    for (int l = 0 ; l < n ; l++)
+    {
+        for (int k = 0 ; k < argc - 1 ; k++)
         {
-            if (strcmp(votes[i], candidates[k].name) != 0)
+            if(strcmp(candidates[k].name, votes[l]) == 1)
             {
                 printf("Invalid vote.\n");
             }
-        }*/
-        for (int l = 0 ; l < n ; l++)
-        {
-            for (int k = 0 ; k < argc - 1 ; k++)
+            else
             {
-                if(strcmp(candidates[k].name, votes[l]) == 1)
-                {
-                    printf("Invalid vote.\n");
-                }
+
             }
         }
     }
