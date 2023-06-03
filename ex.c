@@ -70,6 +70,9 @@ int main(int argc, string argv[])
         }
     }
 
-    
+    for (int i = 0 ; i < argc -1 ; i++)
+    {
+        if (candidates[i].votes > candidates[i-1].votes )
+    }
 }
 
