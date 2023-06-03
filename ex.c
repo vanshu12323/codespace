@@ -6,6 +6,8 @@
 #include <ctype.h>
 #include <search.h>
 
+bool find(string name);
+
 typedef struct
 {
     string name;
@@ -73,5 +75,8 @@ int main(int argc, string argv[])
 
 bool find(string name)
 {
-    
+    for (int i = 0 ; i < argc - 1 ; i++)
+    {
+
+    }
 }
