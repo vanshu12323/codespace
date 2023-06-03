@@ -67,10 +67,6 @@ int main(int argc, string argv[])
             {
                 candidates[j].vote += 1;
             }
-            else if (lsearch(votes[i] , candidates , argc - 1) == 1)
-            {
-                printf("Invalid vote.\n");
-            }
         }
     }
 }
