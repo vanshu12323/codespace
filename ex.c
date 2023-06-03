@@ -50,7 +50,7 @@ int main(int argc, string argv[])
 
     // NO. OF VOTES
 
-    for (int i = 0 ; i < n ; i++)
+    for (int i = 0 ; i < argc - 1 ; i++)
     {
         candidates[i].vote = 0;
     }
