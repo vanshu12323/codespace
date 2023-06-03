@@ -67,6 +67,14 @@ int main(int argc, string argv[])
             {
                 candidates[j].vote += 1;
             }
+
+            for (int k = 0 ; k < argc - 1 ; k++)
+            {
+                if (strcmp(votes[i], candidates[k].name) == 1)
+                {
+                    printf("Invalid code.\n");
+                }
+            }
         }
     }
 }
