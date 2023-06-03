@@ -6,6 +6,8 @@
 #include <ctype.h>
 #include <search.h>
 
+int s;
+
 bool find(string name, string here[]);
 
 typedef struct
@@ -73,11 +75,10 @@ int main(int argc, string argv[])
     }
 }
 
-bool find(string name, string here[n])
+bool find(string name, string here[s])
 {
-    for (int i = 0 ; i < 4 ; i++)
+    for (int i = 0 ; i < s ; i++)
     {
-
+        
     }
-    return 1;
 }
