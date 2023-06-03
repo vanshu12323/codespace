@@ -84,10 +84,12 @@ int main(int argc, string argv[])
             if (candidates[i].vote > candidates[j].vote)
             {
                 printf("%s\n", candidates[i].name);
+                break;
             }
             else if (candidates[i].vote == candidates[j].vote)
             {
                 printf("%s\n", candidates[i].name);
+                break;
             }
         }
     }
