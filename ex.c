@@ -67,7 +67,7 @@ int main(int argc, string argv[])
             {
                 candidates[j].vote += 1;
             }
-            else if ((j == argc - 2) || (strcmp(votes[i], candidates[j].name) != 0))
+            else if ((j == argc - 2) && (strcmp(votes[i], candidates[argc - 2].name) != 0))
             {
                 printf("Invalid vote.\n");
             }
