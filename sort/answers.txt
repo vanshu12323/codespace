@@ -12,7 +12,7 @@ Real time (sorted50000) : 2.816s ()
 
 How do you know?: TODO
 
-sort2 uses: TODO
+sort2 uses: Merge sort
 
 Real time (random5000) : 0.043s (Merge)
 Real time (random10000) : 0.085s (Merge)
@@ -24,7 +24,7 @@ Real time (sorted5000) : 0.023s (Merge)
 Real time (sorted10000) : 0.091s (Merge)
 Real time (sorted50000) : 4.140s ()
 
-How do you know?: TODO
+How do you know?: 
 
 sort3 uses: TODO
 
