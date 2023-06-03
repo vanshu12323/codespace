@@ -5,62 +5,92 @@
 #include <stdlib.h>
 #include <ctype.h>
 
+typedef struct
+{
+    string name;
+    int votes;
+}
+candidate;
+
 int main(int argc, string argv[])
 {
-    // TODO 1
-
-    string text;
-    int wordsize = atoi(argv[1]);
-    int score = 0;
-
-    // CHECKING THE LENGTH OF CLA
-
-    if (argc != 2)
+    if (argc > 9 || argc < 3)
     {
-        printf("Usage: ./wordle wordsize");
+        printf("ERROR! Enter valid number of candidates!\n");
         return 1;
     }
 
-    // CHECKING IF THE INPUT IN CLA IS ONLY A NUMBER BETWEEN 5 TO 8
-
-    for (int i = 0 ; i < strlen(argv[1]) ; i++)
+    for (int i = 1 ; i < argc ; i++)
     {
-        if (isdigit(argv[1][i]) == false)
+        for (int j = 0 ; j < strlen(argv[i]) ; j++)
         {
-            printf("Usage: ./wordle wordsize");
-            return 1;
+            if (isalpha(argv[i][j]) == false)
+            {
+                printf("ERROR! Enter a valid candidate name!\n");
+                return 1;
+            }
+        }
+
+    }
+
+    candidate candidates[argc - 1];
+
+    for (int i = 0 ; i < argc - 1 ; i++)
+    {
+        candidates[i].name = argv[i+1];
+    }
+
+    int n = get_int("Number of voters: ");
+
+    for (int i = 0 ; i < n ; i++)
+    {
+        candidates[i].votes = 0;
+    }
+
+    string votes[n];
+
+    for (int i = 0 ; i < n ; i++)
+    {
+
+        votes[i] = get_string("Vote: ");
+
+        for (int j = 0 ; j < argc - 1 ; j++)
+        {
+            if (strcmp(votes[i], candidates[j].name) == 0)
+            {
+                candidates[j].votes += 1;
+            }
         }
     }
 
-    // TODO 2
+        int m = 0;
+        int k = 0;
 
-    if (atoi(argv[1]) > 8 || atoi(argv[1]) < 5)
-    {
-        printf("Error: wordsize must be either 5, 6, 7, or 8");
-        return 1;
-    }
-
-    printf("This is WORDLE50\n");
-
-    printf("You have 6 tries to guess the %i-letter word I'm thinking of\n", atoi(argv[1]));
-
-    // GET INPUT FROM USER
-
-    //printf("\033[1;31mWELCOME TO OPENGENUS\033[0m\n");
-
-    for (int i = 0 ; i < 6 ; i++)
-    {
-
-    // TODO 3
-
-        do
+        if (strcmp(votes[m], candidates[k].name) == 0)
         {
-            text = get_string("Input a %i-letter word: ", atoi(argv[1]));
+            k++;
+            if (strcmp(votes[m], candidates[k].name) != 0)
+            {
+                printf("Inavlid vote.\n");
+                m++;
+            }
         }
-        while (strlen(text) != atoi(argv[1]));
 
-        printf("Guess %i: %s\n", i + 1, text);
+        for (int m = 0 ; m <  ; m++)
+        {
+            for (int k = 0 ; k <  ; k++)
+            {
+                
+            }
+        }
 
-    }
 
+
+
+
+
+    /*for (int i = 0 ; i < argc ; i++)
+    {
+        if ()
+    }*/
 }
