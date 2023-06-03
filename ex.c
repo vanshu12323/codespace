@@ -56,7 +56,7 @@ int main(int argc, string argv[])
 
     string votes[n];
 
-    for (int i = 0 , int m = n - 1 ; i < n && m >= 0; i++ , m--)
+    for (int i = 0 ; i < n ; i++)
     {
         votes[i] = get_string("Vote: ");
 
