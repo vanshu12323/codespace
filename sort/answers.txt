@@ -1,4 +1,4 @@
-sort1 uses: TODO
+sort1 uses: Bubble sort
 
 Real time (random5000) : 0.106s (Bubble)
 Real time (random10000) : 0.321s (Bubble)
@@ -10,7 +10,7 @@ Real time (sorted5000) : 0.038s (Bubble)
 Real time (sorted10000) : 0.121s (Selection)
 Real time (sorted50000) : 2.816s ()
 
-How do you know?: TODO
+How do you know?: Bubble sort sorts the data in more time than the other two
 
 sort2 uses: Merge sort
 
@@ -24,9 +24,9 @@ Real time (sorted5000) : 0.023s (Merge)
 Real time (sorted10000) : 0.091s (Merge)
 Real time (sorted50000) : 4.140s ()
 
-How do you know?: 
+How do you know?: Merge sort sorts the data in less time
 
-sort3 uses: TODO
+sort3 uses: Selection sort
 
 Real time (random5000) : 0.046s (Selection)
 Real time (random10000) : 0.206s (Selection)
@@ -38,4 +38,4 @@ Real time (sorted5000) : 0.067s (Selection)
 Real time (sorted10000) : 0.153s (Bubble)
 Real time (sorted50000) : 7.774s ()
 
-How do you know?: TODO
+How do you know?: Selection sort sorts the data in less time than bubble sort but more time than merge sort
