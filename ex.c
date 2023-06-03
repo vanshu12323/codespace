@@ -48,7 +48,7 @@ int main(int argc, string argv[])
 
     int n = get_int("Number of voters: ");
 
-    // NO. OF VOTES
+    // NO. OF VOTES AND MAKING SURE IF ANY VOTES ARE INVALID
 
     for (int i = 0 ; i < argc - 1 ; i++)
     {
