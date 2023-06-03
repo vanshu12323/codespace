@@ -14,6 +14,8 @@ candidate;
 
 int main(int argc, string argv[])
 {
+    // COMMAND LINE ARGUMNET
+
     if (argc > 9 || argc < 3)
     {
         printf("ERROR! Enter valid number of candidates!\n");
@@ -30,8 +32,9 @@ int main(int argc, string argv[])
                 return 1;
             }
         }
-
     }
+
+    // NAME OF CANDIDATES
 
     candidate candidates[argc - 1];
 
@@ -40,7 +43,11 @@ int main(int argc, string argv[])
         candidates[i].name = argv[i+1];
     }
 
+    // NO. OF VOTERS
+
     int n = get_int("Number of voters: ");
+
+    // NO. OF VOTES
 
     for (int i = 0 ; i < n ; i++)
     {
@@ -51,7 +58,6 @@ int main(int argc, string argv[])
 
     for (int i = 0 ; i < n ; i++)
     {
-
         votes[i] = get_string("Vote: ");
 
         for (int j = 0 ; j < argc - 1 ; j++)
@@ -60,11 +66,6 @@ int main(int argc, string argv[])
             {
                 candidates[j].votes += 1;
             }
-            else if (strcmp(votes[i], candidates[j].name) == 1)
-            {
-                printf("Invalid Vote.");
-            }
-
         }
     }
 
