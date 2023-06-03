@@ -67,11 +67,10 @@ int main(int argc, string argv[])
             {
                 candidates[j].vote += 1;
             }
-        }
-
-        if (votes[i] != candidates[n].name)
-        {
-            printf("Invalid vote.\n");
+            else if (votes[i] == candidates[n].name)
+            {
+                printf("Invalid vote.\n");
+            }
         }
     }
 
