@@ -36,6 +36,6 @@ Real time (reversed10000) : 0.195s (Selection)
 Real time (reversed50000) : 5.700s (Selection)
 Real time (sorted5000) : 0.067s (Selection)
 Real time (sorted10000) : 0.153s (Bubble)
-Real time (sorted50000) :
+Real time (sorted50000) : 7.774s ()
 
 How do you know?: TODO
