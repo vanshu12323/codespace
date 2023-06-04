@@ -78,7 +78,7 @@ int main(int argc, string argv[])
     // DECIDING THE WINNER
 
     int sorted[argc - 1];
-    int names[argc - 1];
+    string names[argc - 1];
 
     for (int i = 0 ; i < argc - 1 ; i++)
     {
