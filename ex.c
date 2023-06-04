@@ -79,7 +79,31 @@ int main(int argc, string argv[])
 
     int sorted[argc - 1];
 
-    
+    for (int i = 0 ; i < argc - 1 ; i++)
+    {
+        sorted[i] = candidates[i].vote;
+    }
+
+    for (int i = 0 ; i < argc - 1 ; i++)
+    {
+        for (int j = 0 ; j < 7 ; j++)
+        {
+            if (sorted[i] <= sorted[j])
+            {
+                sorted[i] = candidates[j].vote;
+                sorted[j] = candidates[i].vote;
+                candidates[i].vote = sorted[i];
+                candidates[j].vote = sorted[j];
+            }
+        }
+    }
+
+    for (int i = 0 ; i < argc - 1 ; i++)
+    {
+        printf("%s got %i votes.\n", candidates[i].name, candidates[i].vote);
+    }
+
+
 }
 
 //printf("Invalid vote.\n");
