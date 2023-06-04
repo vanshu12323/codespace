@@ -79,7 +79,11 @@ int main(int argc, string argv[])
 
     int sorted[argc - 1];
 
-    
+    printf("%s got %i votes.\n", candidates[0].name, candidates[0].vote);
+    printf("%s got %i votes.\n", candidates[1].name, candidates[1].vote);
+    printf("%s got %i votes.\n", candidates[2].name, candidates[2].vote);
+
+
 }
 
 //printf("Invalid vote.\n");
