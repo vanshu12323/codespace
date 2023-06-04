@@ -19,14 +19,17 @@ int main(void)
     sorted[5] = n[4];
     sorted[4] = n[5];
 
-    for (int i = 0 ; i < 7 ; i++)
+    for(int k = 0 ; k < 7 ; k++)
     {
-        for (int j = 0 ; j < 7 ; j++)
+         for (int i = 0 ; i < 7 ; i++)
         {
-            if (n[i] >= n[j])
+            for (int j = 0 ; j < 7 ; j++)
             {
-                sorted[0] = n[j];
-                break;
+                if (n[k] >= n[j])
+                {
+                    sorted[i] = n[j];
+                    break;
+                }
             }
         }
     }
