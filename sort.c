@@ -9,7 +9,12 @@
 int main(void)
 {
     int s[7];
-    int n[7] = {4, 5, 9, 2, 3, 0, 1};
+    int n[7];
+
+    for (int i = 0 ; i < 7 ; i++)
+    {
+        n[i] = get_int("Enter a number: ");
+    }
 
     for (int i = 0 ; i < 7 ; i++)
     {
@@ -32,6 +37,8 @@ int main(void)
             }
         }
     }
+
+    printf("Sorted: ");
 
     for (int i = 0 ; i < 7 ; i++)
     {
