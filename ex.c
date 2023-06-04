@@ -92,7 +92,10 @@ int main(int argc, string argv[])
         }
     }
 
-    printf("%s", candidates[argc - 1].name);
+    for (int i = 0 ; i < argc - 1 ; i++)
+    {
+        printf("%i ", candidates[i].vote);
+    }
 }
 
 //printf("Invalid vote.\n");
