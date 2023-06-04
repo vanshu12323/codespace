@@ -78,10 +78,12 @@ int main(int argc, string argv[])
     // DECIDING THE WINNER
 
     int sorted[argc - 1];
+    int names[argc - 1];
 
     for (int i = 0 ; i < argc - 1 ; i++)
     {
         sorted[i] = candidates[i].vote;
+        names[i] = candidates[i].name;
     }
 
     for (int i = 0 ; i < argc - 1 ; i++)
@@ -94,6 +96,11 @@ int main(int argc, string argv[])
                 sorted[j] = candidates[i].vote;
                 candidates[i].vote = sorted[i];
                 candidates[j].vote = sorted[j];
+
+                names[i] = candidates[j].name;
+                names[j] = candidates[i].name;
+                candidates[i].name = names[i];
+                candidates[j].name = names[j];
             }
         }
     }
@@ -107,7 +114,7 @@ int main(int argc, string argv[])
 
     printf("\n");
 
-    printf("%s ", candidates[].name);
+    printf("%s is the winner with %i votes.", candidates[argc - 2].name, candidates[argc - 2].vote);
 
 
 
