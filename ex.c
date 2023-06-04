@@ -79,10 +79,10 @@ int main(int argc, string argv[])
 
     for (int i = 0 ; i < argc - 1 ; i++)
     {
-        for (int j = i + 1 ; j < argc - 1 ; j++)
-        {
-            if (candidates.votes[i] > )
-        }
+            if (candidates[i].vote > n/2)
+            {
+                printf("%s", candidates[i].name);
+            }
     }
 }
 
