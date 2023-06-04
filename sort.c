@@ -8,21 +8,33 @@
 
 int main(void)
 {
-    int sorted[7];
+    int s[7];
     int n[7] = {4, 5, 9, 2, 3, 0, 1};
 
     for (int i = 0 ; i < 7 ; i++)
     {
-        sorted[i] = n[i];
+        s[i] = n[i];
     }
 
     //sorted[5] = n[4];
     //sorted[4] = n[5];
 
-    
+    for (int i = 0 ; i < 7 ; i++)
+    {
+        for (int j = 0 ; j < 7 ; j++)
+        {
+            if (s[i] <= s[j])
+            {
+                s[i] = n[j];
+                s[j] = n[i];
+                n[i] = s[i];
+                n[j] = s[j];
+            }
+        }
+    }
 
     for (int i = 0 ; i < 7 ; i++)
     {
-        printf("%i ", sorted[i]);
+        printf("%i ", s[i]);
     }
 }
