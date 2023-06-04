@@ -77,13 +77,15 @@ int main(int argc, string argv[])
 
     // DECIDING THE WINNER
 
+    int sorted[argc - 1];
+
     for (int i = 0 ; i < argc - 2 ; i++)
     {
         for (int j = i + 1 ; j < argc - 1 ; j++)
         {
             if (candidates[i].vote > candidates[j].vote)
             {
-
+                
             }
             else if (candidates[i].vote == candidates[j].vote)
             {
