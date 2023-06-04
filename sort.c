@@ -16,8 +16,8 @@ int main(void)
         sorted[i] = n[i];
     }
 
-    sorted[5] = n[4];
-    sorted[4] = n[5];
+    //sorted[5] = n[4];
+    //sorted[4] = n[5];
 
     for(int k = 0 ; k < 7 ; k++)
     {
@@ -25,9 +25,9 @@ int main(void)
         {
             for (int j = 0 ; j < 7 ; j++)
             {
-                if (n[k] >= n[j])
+                if (n[i] >= n[j])
                 {
-                    sorted[i] = n[j];
+                    sorted[k] = n[j];
                     break;
                 }
             }
