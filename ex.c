@@ -105,15 +105,6 @@ int main(int argc, string argv[])
         }
     }
 
-    // printf("Sorted: ");
-
-    // for (int i = 0 ; i < argc - 1 ; i++)
-    // {
-    //     printf("%i, ", sorted[i]);
-    // }
-
-    // printf("\n");
-
     // PRINTING THE WINNER
 
     for (int i = 0 ; i < argc - 1 ; i++)
