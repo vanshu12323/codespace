@@ -1,78 +1,47 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <math.h>
 #include <string.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <search.h>
 
-// Max number of candidates
-#define MAX 9
-
-// Candidates have name and vote count
-typedef struct
+int main(void)
 {
-    string name;
-    int votes;
-}
-candidate;
+    int s[7];
+    int n[7];
 
-// Array of candidates
-candidate candidates[MAX];
-
-// Number of candidates
-int candidate_count;
-
-// Function prototypes
-bool vote(string name);
-void print_winner(void);
-
-int main(int argc, string argv[])
-{
-    // Check for invalid usage
-    if (argc < 2)
+    for (int i = 0 ; i < 7 ; i++)
     {
-        printf("Usage: plurality [candidate ...]\n");
-        return 1;
+        n[i] = get_int("Enter a number: ");
     }
 
-    // Populate array of candidates
-    candidate_count = argc - 1;
-    if (candidate_count > MAX)
+    for (int i = 0 ; i < 7 ; i++)
     {
-        printf("Maximum number of candidates is %i\n", MAX);
-        return 2;
-    }
-    for (int i = 0; i < candidate_count; i++)
-    {
-        candidates[i].name = argv[i + 1];
-        candidates[i].votes = 0;
+        s[i] = n[i];
     }
 
-    int voter_count = get_int("Number of voters: ");
+    //sorted[5] = n[4];
+    //sorted[4] = n[5];
 
-    // Loop over all voters
-    for (int i = 0; i < voter_count; i++)
+    for (int i = 0 ; i < 7 ; i++)
     {
-        string name = get_string("Vote: ");
-
-        // Check for invalid vote
-        if (!vote(name))
+        for (int j = 0 ; j < 7 ; j++)
         {
-            printf("Invalid vote.\n");
+            if (s[i] <= s[j])
+            {
+                s[i] = n[j];
+                s[j] = n[i];
+                n[i] = s[i];
+                n[j] = s[j];
+            }
         }
     }
 
-    // Display winner of election
-    print_winner();
-}
+    printf("Sorted: ");
 
-// Update vote totals given a new vote
-bool vote(string name)
-{
-    // TODO
-    return false;
-}
-
-// Print the winner (or winners) of the election
-void print_winner(void)
-{
-    // TODO
-    return;
+    for (int i = 0 ; i < 7 ; i++)
+    {
+        printf("%i ", s[i]);
+    }
 }
