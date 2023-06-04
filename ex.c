@@ -114,14 +114,13 @@ int main(int argc, string argv[])
 
     printf("\n");
 
-    printf("%s is the winner with %i votes.", candidates[argc - 2].name, candidates[argc - 2].vote);
-
-
-
-    // for (int i = 0 ; i < argc - 1 ; i++)
-    // {
-    //     printf("%s got %i votes.\n", candidates[i].name, candidates[i].vote);
-    // }
+    for (int i = 0 ; i < argc - 1 ; i++)
+    {
+        for (int j = 1 ; j < argc - 1 ; j++)
+        {
+            if (candidates[i].vote == candidates[j].vote)
+        }
+    }
 
 
 }
