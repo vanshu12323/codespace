@@ -8,9 +8,9 @@
 
 int main(void)
 {
-    int n[6] = {4, 5, 9, 2, 3, 0, 1};
+    int n[7] = {4, 5, 9, 2, 3, 0, 1};
 
-    for (int i = 0 ; i < 6 ; i++)
+    for (int i = 0 ; i < 7 ; i++)
     {
         
     }
