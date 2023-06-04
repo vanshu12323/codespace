@@ -91,6 +91,8 @@ int main(int argc, string argv[])
             }
         }
     }
+
+    printtf("%s", candidates[argc - 1].name);
 }
 
 //printf("Invalid vote.\n");
