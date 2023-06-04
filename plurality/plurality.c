@@ -41,7 +41,7 @@ int main(int argc, string argv[])
 
     for (int i = 0 ; i < argc - 1 ; i++)
     {
-        candidates[i].name = argv[i+1];
+        candidates[i].name = argv[i + 1];
     }
 
     // NO. OF VOTERS
