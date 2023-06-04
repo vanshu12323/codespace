@@ -79,20 +79,7 @@ int main(int argc, string argv[])
 
     for (int i = 0 ; i < argc - 1 ; i++)
     {
-        if (n % 2 == 0)
-        {
-            if (candidates[i].vote >= n/2)
-            {
-                printf("%s", candidates[i].name);
-            }
-        }
-        else if (n % 2 != 0)
-        {
-            if (candidates[i].vote >= (n +1)/2)
-            {
-                printf("%s", candidates[i].name);
-            }
-        }
+
     }
 }
 
