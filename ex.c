@@ -81,7 +81,7 @@ int main(int argc, string argv[])
     {
         for (int j = i + 1 ; j < argc - 1 ; j++)
         {
-            
+            if (candidates.votes[i] > )
         }
     }
 }
