@@ -23,4 +23,9 @@ int main(void)
     {
         printf("%i ", sorted[i]);
     }
+
+    for (int i = 0 ; i < 7 ; i++)
+    {
+        printf("%i ", n[i]);
+    }
 }
