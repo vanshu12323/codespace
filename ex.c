@@ -102,8 +102,14 @@ int main(int argc, string argv[])
 
     for (int i = 0 ; i < argc - 1 ; i++)
     {
-        printf("%i ", sorted[i]);
+        printf("%i, ", sorted[i]);
     }
+
+    printf("\n");
+
+    printf("%s ", candidates[].name);
+
+
 
     // for (int i = 0 ; i < argc - 1 ; i++)
     // {
