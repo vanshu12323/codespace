@@ -59,6 +59,26 @@ int main(int argc, string argv[])
         }
     }
 
+    string name[argc - 1];
+
+    for (int i = 0 ; i < voter_count ; i++)
+    {
+        name[i] = get_string("Vote: ");
+
+        for (int j = 0 ; j < argc - 1 ; j++)
+        {
+            if (strcmp(votes[i], candidates[j].name) == 0)
+            {
+                candidates[j].vote += 1;
+                break;
+            }
+            else if (j == argc - 2 && strcmp(votes[i], candidates[j].name) != 0)
+            {
+                printf("Invalid vote.\n");
+            }
+        }
+    }
+
     // Display winner of election
     print_winner();
 }
