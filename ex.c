@@ -118,7 +118,7 @@ int main(int argc, string argv[])
     {
         for (int j = 1 ; j < argc - 1 ; j++)
         {
-            if (candidates[i].vote == candidates[j].vote)
+            if (candidates[i].vote > candidates[j].vote)
         }
     }
 
