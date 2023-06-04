@@ -105,28 +105,24 @@ int main(int argc, string argv[])
         }
     }
 
-    printf("Sorted: ");
+    // printf("Sorted: ");
+
+    // for (int i = 0 ; i < argc - 1 ; i++)
+    // {
+    //     printf("%i, ", sorted[i]);
+    // }
+
+    // printf("\n");
+
+    // PRINTING THE WINNER
 
     for (int i = 0 ; i < argc - 1 ; i++)
     {
-        printf("%i, ", sorted[i]);
-    }
-
-    printf("\n");
-
-    for (int i = 0 ; i < argc - 1 ; i++)
-    {
-        for (int j = 0 ; j < argc - 1 ; j++)
+        if (candidates[i].vote == candidates[argc - 2].vote)
         {
-            if (candidates[i].vote > candidates[j].vote)
-            {
-                printf("%s\n", candidates[i].name);
-            }
+            printf("%s\n", candidates[i].name);
         }
     }
-
-
 }
 
-//printf("Invalid vote.\n");
 
