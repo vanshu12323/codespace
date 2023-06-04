@@ -86,7 +86,7 @@ int main(int argc, string argv[])
 
     for (int i = 0 ; i < argc - 1 ; i++)
     {
-        for (int j = 0 ; j < 7 ; j++)
+        for (int j = 0 ; j < argc - 1 ; j++)
         {
             if (sorted[i] <= sorted[j])
             {
@@ -98,10 +98,17 @@ int main(int argc, string argv[])
         }
     }
 
+    printf("Sorted: ");
+
     for (int i = 0 ; i < argc - 1 ; i++)
     {
-        printf("%s got %i votes.\n", candidates[i].name, candidates[i].vote);
+        printf("%i ", sorted[i]);
     }
+
+    // for (int i = 0 ; i < argc - 1 ; i++)
+    // {
+    //     printf("%s got %i votes.\n", candidates[i].name, candidates[i].vote);
+    // }
 
 
 }
