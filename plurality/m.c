@@ -58,7 +58,7 @@ int main(int argc, string argv[])
             printf("Invalid vote.\n");
         }
     }
-    
+
     // Display winner of election
     print_winner();
 }
@@ -66,7 +66,21 @@ int main(int argc, string argv[])
 // Update vote totals given a new vote
 bool vote(string name)
 {
-    // TODO
+    for (int j = 0 ; j < argc - 1 ; j++)
+        {
+            if (sorted[i] <= sorted[j])
+            {
+                sorted[i] = candidates[j].vote;
+                sorted[j] = candidates[i].vote;
+                candidates[i].vote = sorted[i];
+                candidates[j].vote = sorted[j];
+
+                names[i] = candidates[j].name;
+                names[j] = candidates[i].name;
+                candidates[i].name = names[i];
+                candidates[j].name = names[j];
+            }
+        }   
     return false;
 }
 
