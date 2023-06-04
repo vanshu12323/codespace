@@ -25,7 +25,7 @@ int main(void)
         {
             if (n[i] >= n[j])
             {
-                sorted[i] = n[j];
+                sorted[0] = n[j];
                 break;
             }
         }
