@@ -85,11 +85,9 @@ int main(int argc, string argv[])
         {
             if (candidates[i].vote > candidates[j].vote)
             {
-                
-            }
-            else if (candidates[i].vote == candidates[j].vote)
-            {
-
+                candidates[i].vote = candidates[j].vote;
+                candidates[j].vote = candidates[i].vote;
+                break;
             }
         }
     }
