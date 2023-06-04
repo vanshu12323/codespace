@@ -77,13 +77,13 @@ int main(int argc, string argv[])
 
     // DECIDING THE WINNER
 
-    for (int i = 0 ; i < argc - 1 ; i++)
+    /*for (int i = 0 ; i < argc - 1 ; i++)
     {
         for (int j = 0 ; j < argc - 1 ; j++)
         {
             if (candidates[i].vote > candidates[j].vote)
             {
-                
+
             }
             else if (candidates[i].vote == candidates[j].vote)
             {
@@ -91,7 +91,7 @@ int main(int argc, string argv[])
                 break;
             }
         }
-    }
+    }*/
 }
 
 //printf("Invalid vote.\n");
