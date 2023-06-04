@@ -21,11 +21,18 @@ int main(void)
 
     for (int i = 0 ; i < 7 ; i++)
     {
-        printf("%i ", sorted[i]);
+        for (int j = 0 ; j < 7 ; j++)
+        {
+            if (n[i] >= n[j])
+            {
+                sorted[i] = n[j];
+                break;
+            }
+        }
     }
 
     for (int i = 0 ; i < 7 ; i++)
     {
-        printf("%i ", n[i]);
+        printf("%i ", sorted[i]);
     }
 }
