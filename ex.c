@@ -116,9 +116,12 @@ int main(int argc, string argv[])
 
     for (int i = 0 ; i < argc - 1 ; i++)
     {
-        for (int j = 1 ; j < argc - 1 ; j++)
+        for (int j = 0 ; j < argc - 1 ; j++)
         {
             if (candidates[i].vote > candidates[j].vote)
+            {
+                printf("%s\n", candidates[i].name);
+            }
         }
     }
 
