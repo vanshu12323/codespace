@@ -6,42 +6,114 @@
 #include <ctype.h>
 #include <search.h>
 
-int main(void)
+typedef struct
 {
-    int s[7];
-    int n[7];
+    string name;
+    int vote;
+}
+candidate;
 
-    for (int i = 0 ; i < 7 ; i++)
+int main(int argc, string argv[])
+{
+    // COMMAND LINE ARGUMNET
+
+    if (argc > 9 || argc < 3)
     {
-        n[i] = get_int("Enter a number: ");
+        printf("ERROR! Enter valid number of candidates!\n");
+        return 1;
     }
 
-    for (int i = 0 ; i < 7 ; i++)
+    for (int i = 1 ; i < argc ; i++)
     {
-        s[i] = n[i];
-    }
-
-    //sorted[5] = n[4];
-    //sorted[4] = n[5];
-
-    for (int i = 0 ; i < 7 ; i++)
-    {
-        for (int j = 0 ; j < 7 ; j++)
+        for (int j = 0 ; j < strlen(argv[i]) ; j++)
         {
-            if (s[i] <= s[j])
+            if (isalpha(argv[i][j]) == false)
             {
-                s[i] = n[j];
-                s[j] = n[i];
-                n[i] = s[i];
-                n[j] = s[j];
+                printf("ERROR! Enter a valid candidate name!\n");
+                return 1;
             }
         }
     }
 
-    printf("Sorted: ");
+    // NAME OF CANDIDATES
 
-    for (int i = 0 ; i < 7 ; i++)
+    candidate candidates[argc - 1];
+
+    for (int i = 0 ; i < argc - 1 ; i++)
     {
-        printf("%i ", s[i]);
+        candidates[i].name = argv[i+1];
+    }
+
+    // NO. OF VOTERS
+
+    int n = get_int("Number of voters: ");
+
+    // NO. OF VOTES AND MAKING SURE IF ANY VOTES ARE INVALID
+
+    for (int i = 0 ; i < argc - 1 ; i++)
+    {
+        candidates[i].vote = 0;
+    }
+
+    string votes[n];
+
+    for (int i = 0 ; i < n ; i++)
+    {
+        votes[i] = get_string("Vote: ");
+
+        for (int j = 0 ; j < argc - 1 ; j++)
+        {
+            if (strcmp(votes[i], candidates[j].name) == 0)
+            {
+                candidates[j].vote += 1;
+                break;
+            }
+            else if (j == argc - 2 && strcmp(votes[i], candidates[j].name) != 0)
+            {
+                printf("Invalid vote.\n");
+            }
+        }
+    }
+
+    // DECIDING THE WINNER
+
+    int sorted[argc - 1];
+    string names[argc - 1];
+
+    for (int i = 0 ; i < argc - 1 ; i++)
+    {
+        sorted[i] = candidates[i].vote;
+        names[i] = candidates[i].name;
+    }
+
+    for (int i = 0 ; i < argc - 1 ; i++)
+    {
+        for (int j = 0 ; j < argc - 1 ; j++)
+        {
+            if (sorted[i] <= sorted[j])
+            {
+                sorted[i] = candidates[j].vote;
+                sorted[j] = candidates[i].vote;
+                candidates[i].vote = sorted[i];
+                candidates[j].vote = sorted[j];
+
+                names[i] = candidates[j].name;
+                names[j] = candidates[i].name;
+                candidates[i].name = names[i];
+                candidates[j].name = names[j];
+            }
+        }
+    }
+
+    // PRINTING THE WINNER
+
+    for (int i = 0 ; i < argc - 1 ; i++)
+    {
+        if (candidates[i].vote == candidates[argc - 2].vote)
+        {
+            printf("%s\n", candidates[i].name);
+        }
     }
 }
+
+
