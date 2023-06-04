@@ -20,12 +20,17 @@ int main(void)
 
             for (int j = 0 ; j < 7 ; j++)
             {
-                if (n[i] > n[i+1])
+                if (n[j] > n[i+1])
                 {
-                    n[i+1] = n[i];
-                    n[i] = n[i+1];
+                    n[i+1] = n[j];
+                    n[j] = n[i+1];
                 }
             }
         }
+    }
+
+    for(int i = 0 ; i < 7 ; i++)
+    {
+        printf("%i ", n[i]);
     }
 }
