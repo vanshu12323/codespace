@@ -25,7 +25,7 @@ int main(void)
         {
             for (int j = 0 ; j < 7 ; j++)
             {
-                if (n[i] >= n[j])
+                if (n[k] >= n[j])
                 {
                     sorted[k] = n[j];
                     break;
