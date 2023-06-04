@@ -77,7 +77,7 @@ int main(int argc, string argv[])
 
     // DECIDING THE WINNER
 
-    for (int i = 0 ; i < n ; i++)
+    for (int i = 0 ; i < argc - 1 ; i++)
     {
         
     }
