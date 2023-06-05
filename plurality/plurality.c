@@ -69,7 +69,7 @@ bool vote(string name)
     int n = candidate_count;
     string vote[n];
 
-    for (int i = 0 ; i < n ; i++)
+    for (int i = 0 ; i <  ; i++)
     {
         vote[i] = candidates[i].name;
     }
