@@ -47,6 +47,8 @@ int main(int argc, string argv[])
 
     int voter_count = get_int("Number of voters: ");
 
+    hello();
+
     printf("%i", hello());
 
     // Loop over all voters
@@ -103,7 +105,7 @@ void print_winner(void)
     return;
 }
 
-void hello(void)
+int hello(void)
 {
     printf("%i", candidate_count);
 }
