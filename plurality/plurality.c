@@ -68,7 +68,7 @@ bool vote(string name)
 {
     bool present_or_not;
     int n = candidate_count;
-    int m = candidates[n].votes;
+    int m = 4;
     string vote[n];
 
     for (int i = 0 ; i < m ; i++)
