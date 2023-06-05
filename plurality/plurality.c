@@ -63,7 +63,7 @@ int main(int argc, string argv[])
             // }
 
             // Check for invalid vote
-            else if (!vote(name[i]))
+            if (!vote(name[i]))
             {
                 printf("Invalid vote.\n");
                 break;
@@ -81,7 +81,6 @@ bool vote(string name)
     bool present_or_not;
     int n = candidate_count;
     int m = voter_count;
-    string total_votes[m];
 
     for (int i = 0; i < m; i++)
     {
@@ -89,6 +88,7 @@ bool vote(string name)
         {
             if (strcmp(name, candidates[j].name) == 0)
             {
+                candidates[j].votes += 1;
                 present_or_not = true;
                 break;
             }
@@ -153,8 +153,8 @@ void print_winner(void)
         }
     }
 
-    // for (int i = 0; i < n; i++)
-    // {
-    //     printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
-    // }
+    for (int i = 0; i < n; i++)
+    {
+        printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
+    }
 }
