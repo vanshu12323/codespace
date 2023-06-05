@@ -109,6 +109,10 @@ void print_winner(void)
     for (int i = 0; i < n; i++)
     {
         sorted[i] = candidates[i].votes;
+    }
+
+    for (int i = 0; i < n; i++)
+    {
         names[i] = candidates[i].name;
     }
 
