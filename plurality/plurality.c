@@ -48,21 +48,21 @@ int main(int argc, string argv[])
 
     voter_count = get_int("Number of voters: ");
 
-    string name;
+    string name[i];
 
     // Loop over all voters
     for (int i = 0; i < voter_count; i++)
     {
-        name = get_string("Vote: ");
+        name[i] = get_string("Vote: ");
 
         for (int j = 0; j < argc - 1; j++)
         {
-            if (vote(name) == true)
+            if (vote(name[i]) == true)
             {
                 candidates[j].votes += 1;
             }
             // Check for invalid vote
-            else if (!vote(name))
+            else if (!vote(name[i]))
             {
                 printf("Invalid vote.\n");
                 break;
