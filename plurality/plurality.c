@@ -111,10 +111,10 @@ void print_winner(void)
 
     // PREPARING TO SORT
 
-    for (int i = 0; i < n; i++)
-    {
-        candidates[i].votes = candidates[i].votes / 4;
-    }
+    // for (int i = 0; i < n; i++)
+    // {
+    //     candidates[i].votes = candidates[i].votes / 4;
+    // }
 
     for (int i = 0; i < n; i++)
     {
@@ -158,8 +158,8 @@ void print_winner(void)
         }
     }
 
-    // for (int i = 0; i < n; i++)
-    // {
-    //     printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
-    // }
+    for (int i = 0; i < n; i++)
+    {
+        printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
+    }
 }
