@@ -99,3 +99,8 @@ void print_winner(void)
 {
     return;
 }
+
+void hello(void)
+{
+    printf("%i", candidate_count);
+}
