@@ -69,7 +69,7 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     bool present_or_not;
-    int n = candidate_count;
+    int n = 3;
     int m = 4; // total number of voters
     string total[m];
 
