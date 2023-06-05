@@ -66,14 +66,25 @@ int main(int argc, string argv[])
 // Update vote totals given a new vote
 bool vote(string name)
 {
-    for (int j = 0 ; j < candidate_count ; j++)
+    int m = candidate_count;
+    int sorted[m];
+    string names[m];
+
+    for (int i = 0 ; i < m ; i++)
+    {
+        sorted[i] = candidates[i].votes;
+        names[i] = candidates[i].name;
+    }
+
+    for (int j = 0 ; j < m ; j++)
         {
+            
             if (sorted[i] <= sorted[j])
             {
-                sorted[i] = candidates[j].vote;
-                sorted[j] = candidates[i].vote;
-                candidates[i].vote = sorted[i];
-                candidates[j].vote = sorted[j];
+                sorted[i] = candidates[j].votes;
+                sorted[j] = candidates[i].votes;
+                candidates[i].votes = sorted[i];
+                candidates[j].votes = sorted[j];
 
                 names[i] = candidates[j].name;
                 names[j] = candidates[i].name;
