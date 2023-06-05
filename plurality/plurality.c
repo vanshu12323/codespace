@@ -57,15 +57,11 @@ int main(int argc, string argv[])
         for (int j = 0; j < argc - 1; j++)
         {
             // UPDATE THE NUMBER OF VOTES
-            if (strcmp(name[i], candidates[j].name) == 0)
+            if (vote(name[i]) == true && strcmp(name[i], candidates[j].name) == 0)
             {
                 candidates[j].votes += 1;
             }
 
-            else if (vote(name[i]) == 0)
-            {
-                
-            }
             // Check for invalid vote
             else if (!vote(name[i]))
             {
