@@ -89,7 +89,7 @@ bool vote(string name)
                 candidates[j].votes += 1;
                 break;
             }
-            else if (j == n - 1 && strcmp(name, candidates[j].name) != 0)
+            else if (j == n - 1 && strcmp(, candidates[j].name) != 0)
             {
                 present_or_not = false;
             }
