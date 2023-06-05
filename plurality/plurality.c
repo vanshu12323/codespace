@@ -10,7 +10,7 @@ typedef struct
 {
     string name;
     int votes;
-}candidate;
+} candidate;
 
 // Array of candidates
 candidate candidates[MAX];
@@ -82,29 +82,19 @@ bool vote(string name)
     int n = candidate_count;
     int m = voter_count;
 
-        for (int j = 0; j < n; j++)
+    for (int j = 0; j < n; j++)
+    {
+        if (strcmp(name, candidates[j].name) == 0)
         {
-            if (strcmp(name, candidates[j].name) == 0)
-            {
-                candidates[j].votes += 1;
-                present_or_not = true;
-                break;
-            }
-            else if (j == n - 1 && strcmp(name, candidates[j].name) != 0)
-            {
-                present_or_not = false;
-            }
+            candidates[j].votes += 1;
+            present_or_not = true;
+            break;
         }
-
-        // for (int j = 0; j < n; j++)
-        // {
-        //     if (strcmp(name, candidates[j].name) == 0)
-        //     {
-        //         candidates[j].votes += 1;
-        //         break;
-        //     }
-        // }
-
+        else if (j == n - 1 && strcmp(name, candidates[j].name) != 0)
+        {
+            present_or_not = false;
+        }
+    }
     return present_or_not;
 }
 
