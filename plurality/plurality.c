@@ -68,6 +68,8 @@ bool vote(string name)
 {
     int n = candidate_count;
     string vote[n];
+
+    for (int i = 0 ; i < )
     return false;
 }
 
