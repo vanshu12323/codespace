@@ -82,7 +82,7 @@ bool vote(string name)
     {
         for (int j = 0 ; j < n ; j++)
         {
-            if (strcmp(total_votes[i], candidates[j].name) == 0)
+            if (strcmp(name, candidates[j].name) == 0)
             {
                 present_or_not = true;
                 break;
