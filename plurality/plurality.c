@@ -86,7 +86,7 @@ bool vote(string name)
         {
             if (strcmp(name, candidates[j].name) == 0)
             {
-                candidates[j].votes += 1;
+                //candidates[j].votes += 1;
                 present_or_not = true;
                 break;
             }
@@ -95,6 +95,16 @@ bool vote(string name)
                 present_or_not = false;
             }
         }
+
+        for (int j = 0; j < n; j++)
+        {
+            if (strcmp(name, candidates[j].name) == 0)
+            {
+                candidates[j].votes += 1;
+                break;
+            }
+        }
+
     return present_or_not;
 }
 
@@ -108,10 +118,10 @@ void print_winner(void)
 
     // PREPARING TO SORT
 
-    for (int i = 0; i < n; i++)
-    {
-        candidates[i].votes = candidates[i].votes / n; // IDK THE OUTPUT WAS n TIMES THE ACTUAL VOTES
-    }
+    // for (int i = 0; i < n; i++)
+    // {
+    //     candidates[i].votes = candidates[i].votes / n; // IDK THE OUTPUT WAS n TIMES THE ACTUAL VOTES
+    // }
 
     for (int i = 0; i < n; i++)
     {
@@ -153,5 +163,10 @@ void print_winner(void)
         {
             printf("%s\n", candidates[i].name);
         }
+    }
+
+    for (int i = 0 ; i < n ; i++)
+    {
+        printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
     }
 }
