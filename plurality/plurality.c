@@ -111,10 +111,10 @@ void print_winner(void)
 
     // PREPARING TO SORT
 
-    for (int i = 0; i < n; i++)
-    {
-        candidates[i].votes = candidates[i].votes / n;
-    }
+    // for (int i = 0; i < n; i++)
+    // {
+    //     candidates[i].votes = candidates[i].votes / n;
+    // }
 
     for (int i = 0; i < n; i++)
     {
