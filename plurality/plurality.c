@@ -57,7 +57,7 @@ int main(int argc, string argv[])
         for (int j = 0; j < argc - 1; j++)
         {
             // UPDATE THE NUMBER OF VOTES
-            if (vote(name[i]))
+            if (strcmp(name[i], candidates[j].name) == 0)
             {
                 candidates[j].votes += 1;
             }
