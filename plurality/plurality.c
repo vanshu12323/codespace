@@ -75,12 +75,17 @@ bool vote(string name)
         vote[i] = candidates[i].name;
     }
 
-    for (int i = 0 ; i < m ; i++)
+    for (int i = 0 ; i < n ; i++)
     {
-        for (int j = 0 ; j < n)
+        for (int j = 0 ; j < n ; j++)
+        {
+            if (strcmp(vote[i], candidates[j].name))
+            {
+                return false;
+            }
+        }
     }
-
-    return false;
+    return 1;
 }
 
 // Print the winner (or winners) of the election
