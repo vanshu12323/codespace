@@ -84,6 +84,10 @@ bool vote(string name)
             {
                 present_or_not = false;
             }
+            else
+            {
+                present_or_not = true;
+            }
         }
     }
     return present_or_not;
