@@ -59,8 +59,7 @@ int main(int argc, string argv[])
         {
             if (vote(name) == true)
             {
-                candidates[i].votes += 1;
-                break;
+                candidates[j].votes += 1;
             }
             // Check for invalid vote
             else if (!vote(name))
