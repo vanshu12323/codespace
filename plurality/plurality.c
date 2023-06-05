@@ -113,7 +113,7 @@ void print_winner(void)
 
     for (int i = 0; i < n; i++)
     {
-        candidates[i].votes = candidates[i].votes / n;
+        candidates[i].votes = candidates[i].votes / n; // IDK THE 
     }
 
     for (int i = 0; i < n; i++)
@@ -157,9 +157,4 @@ void print_winner(void)
             printf("%s\n", candidates[i].name);
         }
     }
-
-    // for (int i = 0; i < n; i++)
-    // {
-    //     printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
-    // }
 }
