@@ -19,6 +19,7 @@ candidate candidates[MAX];
 // Number of candidates
 int candidate_count;
 int voter_count;
+string nameq;
 
 // Function prototypes
 bool vote(string name);
@@ -51,10 +52,10 @@ int main(int argc, string argv[])
     // Loop over all voters
     for (int i = 0; i < voter_count; i++)
     {
-        string name = get_string("Vote: ");
+        nameq = get_string("Vote: ");
 
         // Check for invalid vote
-        if (!vote(name))
+        if (!vote(nameq))
         {
             printf("Invalid vote.\n");
         }
@@ -105,6 +106,28 @@ void print_winner(void)
     int n = candidate_count;
     int sorted[n];
     string names[n];
+    int m = voter_count;
+
+    // COUNTING NUMBER OF VOTES
+
+    for (int i = 0 ; i < n ; i++)
+    {
+        candidates[i].votes = 0;
+    }
+
+    for (int i = 0 ; i < m ; i++)
+    {
+        for (int j = 0 ; j < n ; j++)
+        {
+            if (strcmp(nameq, candidates[j].name) == 0)
+            {
+                candidates[j].votes += 1;
+                break;
+            }
+        }
+    }
+
+    // PREPARING TO SORT
 
     for (int i = 0; i < n; i++)
     {
