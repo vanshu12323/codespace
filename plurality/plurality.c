@@ -110,22 +110,22 @@ void print_winner(void)
 
     // COUNTING NUMBER OF VOTES
 
-    // for (int i = 0 ; i < n ; i++)
-    // {
-    //     candidates[i].votes = 0;
-    // }
+    for (int i = 0 ; i < n ; i++)
+    {
+        candidates[i].votes = 0;
+    }
 
-    // for (int i = 0 ; i < m ; i++)
-    // {
-    //     for (int j = 0 ; j < n ; j++)
-    //     {
-    //         if (strcmp(nameq, candidates[j].name) == 0)
-    //         {
-    //             candidates[j].votes += 1;
-    //             break;
-    //         }
-    //     }
-    // }
+    for (int i = 0 ; i < m ; i++)
+    {
+        for (int j = 0 ; j < n ; j++)
+        {
+            if (strcmp(nameq, candidates[j].name) == 0)
+            {
+                candidates[j].votes += 1;
+                break;
+            }
+        }
+    }
 
     // PREPARING TO SORT
 
