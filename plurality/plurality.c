@@ -71,6 +71,8 @@ bool vote(string name)
     int m = voter_count; // total number of voters
     string total[m];
 
+    for (int i = 0 ; i < )
+
     for (int i = 0 ; i < m ; i++)
     {
         for (int j = 0 ; j < n ; j++)
