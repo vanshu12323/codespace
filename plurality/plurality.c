@@ -1,116 +1,78 @@
 #include <cs50.h>
-#include <ctype.h>
-#include <math.h>
-#include <search.h>
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 
+// Max number of candidates
+#define MAX 9
+
+// Candidates have name and vote count
 typedef struct
 {
     string name;
-    int vote;
-} candidate;
+    int votes;
+}
+candidate;
+
+// Array of candidates
+candidate candidates[MAX];
+
+// Number of candidates
+int candidate_count;
+
+// Function prototypes
+bool vote(string name);
+void print_winner(void);
 
 int main(int argc, string argv[])
 {
-    // COMMAND LINE ARGUMNET
-
-    if (argc > 9 || argc < 3)
+    // Check for invalid usage
+    if (argc < 2)
     {
-        printf("ERROR! Enter valid number of candidates!\n");
+        printf("Usage: plurality [candidate ...]\n");
         return 1;
     }
 
-    for (int i = 1; i < argc; i++)
+    // Populate array of candidates
+    candidate_count = argc - 1;
+    if (candidate_count > MAX)
     {
-        for (int j = 0; j < strlen(argv[i]); j++)
-        {
-            if (isalpha(argv[i][j]) == false)
-            {
-                printf("ERROR! Enter a valid candidate name!\n");
-                return 1;
-            }
-        }
+        printf("Maximum number of candidates is %i\n", MAX);
+        return 2;
     }
-
-    // NAME OF CANDIDATES
-
-    candidate candidates[argc - 1];
-
-    for (int i = 0; i < argc - 1; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         candidates[i].name = argv[i + 1];
+        candidates[i].votes = 0;
     }
 
-    // NO. OF VOTERS
+    int voter_count = get_int("Number of voters: ");
 
-    int n = get_int("Number of voters: ");
-
-    // NO. OF VOTES AND MAKING SURE IF ANY VOTES ARE INVALID
-
-    for (int i = 0; i < argc - 1; i++)
+    // Loop over all voters
+    for (int i = 0; i < voter_count; i++)
     {
-        candidates[i].vote = 0;
-    }
+        string name = get_string("Vote: ");
 
-    string votes[n];
-
-    for (int i = 0; i < n; i++)
-    {
-        votes[i] = get_string("Vote: ");
-
-        for (int j = 0; j < argc - 1; j++)
+        // Check for invalid vote
+        if (!vote(name))
         {
-            if (strcmp(votes[i], candidates[j].name) == 0)
-            {
-                candidates[j].vote += 1;
-                break;
-            }
-            else if (j == argc - 2 && strcmp(votes[i], candidates[j].name) != 0)
-            {
-                printf("Invalid vote.\n");
-            }
+            printf("Invalid vote.\n");
         }
     }
 
-    // DECIDING THE WINNER BY SORTING THE NUMBER OF VOTES
+    // Display winner of election
+    print_winner();
+}
 
-    int sorted[argc - 1];
-    string names[argc - 1];
+// Update vote totals given a new vote
+bool vote(string name)
+{
+    // TODO
+    return false;
+}
 
-    for (int i = 0; i < argc - 1; i++)
-    {
-        sorted[i] = candidates[i].vote;
-        names[i] = candidates[i].name;
-    }
-
-    for (int i = 0; i < argc - 1; i++)
-    {
-        for (int j = 0; j < argc - 1; j++)
-        {
-            if (sorted[i] <= sorted[j])
-            {
-                sorted[i] = candidates[j].vote;
-                sorted[j] = candidates[i].vote;
-                candidates[i].vote = sorted[i];
-                candidates[j].vote = sorted[j];
-
-                names[i] = candidates[j].name;
-                names[j] = candidates[i].name;
-                candidates[i].name = names[i];
-                candidates[j].name = names[j];
-            }
-        }
-    }
-
-    // PRINTING THE WINNER i.e. THE CANDIDATES HAVING THE SAME NUMBER OF VOTES AS OF THE LAST ELEMENT OF THE SORTED LIST
-
-    for (int i = 0; i < argc - 1; i++)
-    {
-        if (candidates[i].vote == candidates[argc - 2].vote)
-        {
-            printf("%s\n", candidates[i].name);
-        }
-    }
+// Print the winner (or winners) of the election
+void print_winner(void)
+{
+    // TODO
+    return;
 }
