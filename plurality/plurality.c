@@ -48,24 +48,25 @@ int main(int argc, string argv[])
 
     voter_count = get_int("Number of voters: ");
 
-    string name[voter_count];
+    string name;
 
     // Loop over all voters
     for (int i = 0; i < voter_count; i++)
     {
-        name[i] = get_string("Vote: ");
+        name = get_string("Vote: ");
 
         for (int j = 0; j < argc - 1; j++)
         {
-            if (vote(name[i]) == true)
+            if (vote(name) == true)
             {
-                candidates[j].votes += 1;
+                candidates[i].votes += 1;
                 break;
             }
             // Check for invalid vote
-            else if (!vote(name[i]))
+            else if (!vote(name))
             {
                 printf("Invalid vote.\n");
+                break;
             }
         }
     }
@@ -80,13 +81,8 @@ bool vote(string name)
 {
     bool present_or_not;
     int n = candidate_count;
-    int m = voter_count; // total number of voters
+    int m = voter_count;
     string total_votes[m];
-
-    // for (int i = 0 ; i < n ; i++)
-    // {
-    //     candidates[i].votes = 0;
-    // }
 
     for (int i = 0 ; i < m ; i++)
     {
@@ -103,19 +99,6 @@ bool vote(string name)
             }
         }
     }
-
-    // for (int i = 0 ; i < m ; i++)
-    // {
-    //     for (int j = 0 ; j < n ; j++)
-    //     {
-    //         if (strcmp(name, candidates[j].name) == 0)
-    //         {
-    //             candidates[j].votes += 1;
-    //             break;
-    //         }
-    //     }
-    // }
-
     return present_or_not;
 }
 
