@@ -47,6 +47,8 @@ int main(int argc, string argv[])
 
     int voter_count = get_int("Number of voters: ");
 
+    printf("%i", hello());
+
     // Loop over all voters
     for (int i = 0; i < voter_count; i++)
     {
@@ -61,6 +63,7 @@ int main(int argc, string argv[])
 
     // Display winner of election
     print_winner();
+
 }
 
 // Update vote totals given a new vote
