@@ -76,7 +76,6 @@ bool vote(string name)
 
     for (int i = 0 ; i < n ; i++)
     {
-        total_votes[i] = candidates[i].name;
         candidates[i].votes = 0;
     }
 
@@ -87,12 +86,23 @@ bool vote(string name)
             if (strcmp(name, candidates[j].name) == 0)
             {
                 present_or_not = true;
-                candidates[j].votes += 1;
                 break;
             }
             else if (j == n - 1 && strcmp(name, candidates[j].name) != 0)
             {
                 present_or_not = false;
+            }
+        }
+    }
+
+    for (int i = 0 ; i < m ; i++)
+    {
+        for (int j = 0 ; j < n ; j++)
+        {
+            if (strcmp(name, candidates[j].name) == 0)
+            {
+                candidates[j].votes += 1;
+                break;
             }
         }
     }
