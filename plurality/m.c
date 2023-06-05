@@ -76,21 +76,24 @@ bool vote(string name)
         names[i] = candidates[i].name;
     }
 
-    for (int j = 0 ; j < m ; j++)
+    for (int i = 0 ; i <  ; i++)
         {
-            
-            if (sorted[i] <= sorted[j])
+            for (int j = 0 ; j < m ; j++)
             {
-                sorted[i] = candidates[j].votes;
-                sorted[j] = candidates[i].votes;
-                candidates[i].votes = sorted[i];
-                candidates[j].votes = sorted[j];
+                if (sorted[i] <= sorted[j])
+                {
+                    sorted[i] = candidates[j].votes;
+                    sorted[j] = candidates[i].votes;
+                    candidates[i].votes = sorted[i];
+                    candidates[j].votes = sorted[j];
 
-                names[i] = candidates[j].name;
-                names[j] = candidates[i].name;
-                candidates[i].name = names[i];
-                candidates[j].name = names[j];
+                    names[i] = candidates[j].name;
+                    names[j] = candidates[i].name;
+                    candidates[i].name = names[i];
+                    candidates[j].name = names[j];
+                }
             }
+
         }
     return false;
 }
