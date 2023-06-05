@@ -71,23 +71,23 @@ bool vote(string name)
     bool present_or_not;
     int n = candidate_count;
     int m = voter_count; // total number of voters
-    string total[m];
+    string total_votes[m];
 
     for (int i = 0 ; i < n ; i++)
     {
-        total[i] = candidates[i].name;
+        total_votes[i] = candidates[i].name;
     }
 
     for (int i = 0 ; i < m ; i++)
     {
         for (int j = 0 ; j < n ; j++)
         {
-            if (strcmp(total[i], candidates[j].name) == 0)
+            if (strcmp(total_votes[i], candidates[j].name) == 0)
             {
                 present_or_not = true;
                 break;
             }
-            else if (j == n - 1 && strcmp(total[i], candidates[j].name) != 0)
+            else if (j == n - 1 && strcmp(total_votes[i], candidates[j].name) != 0)
             {
                 present_or_not = false;
             }
