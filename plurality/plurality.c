@@ -53,14 +53,18 @@ int main(int argc, string argv[])
     {
         string name = get_string("Vote: ");
 
-        if (vote(name) == true)
+        for (int j = 0; j < argc - 1; j++)
         {
-            candidates[i].votes += 1;
-        }
-        // Check for invalid vote
-        else if (!vote(name))
-        {
-            printf("Invalid vote.\n");
+            if (vote(name) == true)
+            {
+                candidates[i].votes += 1;
+                break;
+            }
+            // Check for invalid vote
+            else if (!vote(name))
+            {
+                printf("Invalid vote.\n");
+            }
         }
     }
 
