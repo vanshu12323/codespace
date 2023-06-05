@@ -67,12 +67,19 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     int n = candidate_count;
+    int m = candidates[n].votes;
     string vote[n];
 
-    for (int i = 0 ; i < candidates[n].votes ; i++)
+    for (int i = 0 ; i < m ; i++)
     {
         vote[i] = candidates[i].name;
     }
+
+    for (int i = 0 ; i < m ; i++)
+    {
+        for (int j = 0 ; j < n)
+    }
+
     return false;
 }
 
