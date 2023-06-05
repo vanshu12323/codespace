@@ -113,6 +113,11 @@ void print_winner(void)
 
     for (int i = 0; i < n; i++)
     {
+        candidates[i].votes = candidates[i].votes / 4;
+    }
+
+    for (int i = 0; i < n; i++)
+    {
         sorted[i] = candidates[i].votes;
     }
 
