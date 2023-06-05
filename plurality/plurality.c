@@ -103,21 +103,8 @@ bool vote(string name)
 void print_winner(void)
 {
     int n = candidate_count;
-    int m = voter_count;
     int sorted[n];
     string names[n];
-
-    for (int i = 0 ; i < m ; i++)
-    {
-        for (int j = 0 ; j < n ; j++)
-        {
-            if (strcmp(name, candidates[j].name) == 0)
-            {
-                candidates[j].votes += 1;
-                break;
-            }
-        }
-    }
 
     for (int i = 0; i < n; i++)
     {
