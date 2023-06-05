@@ -22,7 +22,7 @@ int candidate_count;
 // Function prototypes
 bool vote(string name);
 void print_winner(void);
-int hello(void);
+void hello(void);
 
 int main(int argc, string argv[])
 {
@@ -106,7 +106,7 @@ void print_winner(void)
     return;
 }
 
-int hello(void)
+void hello(void)
 {
     printf("%i", candidate_count);
 }
