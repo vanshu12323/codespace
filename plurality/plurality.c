@@ -165,8 +165,8 @@ void print_winner(void)
         }
     }
 
-    for (int i = 0 ; i < n ; i++)
-    {
-        printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
-    }
+    // for (int i = 0 ; i < n ; i++)
+    // {
+    //     printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
+    // }
 }
