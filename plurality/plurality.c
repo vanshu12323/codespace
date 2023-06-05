@@ -68,7 +68,7 @@ bool vote(string name)
 {
     bool present_or_not;
     int n = candidate_count;
-    int m = voter_count; // total number of voters
+    int m = 4; // total number of voters
     string total[m];
 
     for (int i = 0 ; i < n ; i++)
@@ -90,6 +90,8 @@ bool vote(string name)
             }
         }
     }
+
+    return present_or_not;
 }
 
 // Print the winner (or winners) of the election
