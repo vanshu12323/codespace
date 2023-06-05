@@ -48,7 +48,7 @@ int main(int argc, string argv[])
 
     voter_count = get_int("Number of voters: ");
 
-    string name[i];
+    string name[voter_count];
 
     // Loop over all voters
     for (int i = 0; i < voter_count; i++)
@@ -57,7 +57,8 @@ int main(int argc, string argv[])
 
         for (int j = 0; j < argc - 1; j++)
         {
-            if (vote(name[i]) == true)
+            // 
+            if (strcmp(name[i], candidates[j].name) == 0)
             {
                 candidates[j].votes += 1;
             }
