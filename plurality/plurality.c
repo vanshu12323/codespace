@@ -10,8 +10,7 @@ typedef struct
 {
     string name;
     int votes;
-}
-candidate;
+}candidate;
 
 // Array of candidates
 candidate candidates[MAX];
@@ -57,7 +56,7 @@ int main(int argc, string argv[])
 
         for (int j = 0; j < argc - 1; j++)
         {
-            // 
+            // UPDATE THE NUMBER OF VOTES
             if (strcmp(name[i], candidates[j].name) == 0)
             {
                 candidates[j].votes += 1;
@@ -73,7 +72,6 @@ int main(int argc, string argv[])
 
     // Display winner of election
     print_winner();
-
 }
 
 // Update vote totals given a new vote
@@ -84,9 +82,9 @@ bool vote(string name)
     int m = voter_count;
     string total_votes[m];
 
-    for (int i = 0 ; i < m ; i++)
+    for (int i = 0; i < m; i++)
     {
-        for (int j = 0 ; j < n ; j++)
+        for (int j = 0; j < n; j++)
         {
             if (strcmp(name, candidates[j].name) == 0)
             {
@@ -154,8 +152,8 @@ void print_winner(void)
         }
     }
 
-    for (int i = 0; i < n; i++)
-    {
-        printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
-    }
+    // for (int i = 0; i < n; i++)
+    // {
+    //     printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
+    // }
 }
