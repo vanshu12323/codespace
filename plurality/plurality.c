@@ -108,5 +108,6 @@ void print_winner(void)
 
 void hello(void)
 {
-    printf("%i", candidate_count);
+    //printf("%i", candidate_count);
+    return candidate_count;
 }
