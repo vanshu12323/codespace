@@ -70,7 +70,7 @@ bool vote(string name)
 {
     bool present_or_not;
     int n = candidate_count;
-    int m = ; // total number of voters
+    int m = 4; // total number of voters
     string total[m];
 
     for (int i = 0 ; i < n ; i++)
@@ -100,5 +100,40 @@ bool vote(string name)
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
-    return;
+    int n = candidate_count;
+    int sorted[n];
+    string names[n];
+
+    for (int i = 0; i < n; i++)
+    {
+        sorted[i] = candidates[i].votes;
+        names[i] = candidates[i].name;
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            if (sorted[i] <= sorted[j])
+            {
+                sorted[i] = candidates[j].votes;
+                sorted[j] = candidates[i].votes;
+                candidates[i].votes = sorted[i];
+                candidates[j].votes = sorted[j];
+
+                names[i] = candidates[j].name;
+                names[j] = candidates[i].name;
+                candidates[i].name = names[i];
+                candidates[j].name = names[j];
+            }
+        }
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        if (candidates[i].votes == candidates[n - 1].votes)
+        {
+            printf("%s\n", candidates[i].name);
+        }
+    }
 }
