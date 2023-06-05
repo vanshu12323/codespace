@@ -110,8 +110,6 @@ void print_winner(void)
     string names[n];
     int m = voter_count;
 
-
-
     // PREPARING TO SORT
 
     for (int i = 0; i < n; i++)
