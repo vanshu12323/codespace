@@ -109,47 +109,47 @@ void print_winner(void)
 
     // PREPARING TO SORT
 
-    for (int i = 0; i < n; i++)
-    {
-        sorted[i] = candidates[i].votes;
-    }
+    // for (int i = 0; i < n; i++)
+    // {
+    //     sorted[i] = candidates[i].votes;
+    // }
 
-    for (int i = 0; i < n; i++)
-    {
-        names[i] = candidates[i].name;
-    }
+    // for (int i = 0; i < n; i++)
+    // {
+    //     names[i] = candidates[i].name;
+    // }
 
-    // SORTING THE CANDIDATES BASED ON THEIR NUMBER OF VOTES
+    // // SORTING THE CANDIDATES BASED ON THEIR NUMBER OF VOTES
 
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < n; j++)
-        {
-            if (sorted[i] <= sorted[j])
-            {
-                sorted[i] = candidates[j].votes;
-                sorted[j] = candidates[i].votes;
-                candidates[i].votes = sorted[i];
-                candidates[j].votes = sorted[j];
+    // for (int i = 0; i < n; i++)
+    // {
+    //     for (int j = 0; j < n; j++)
+    //     {
+    //         if (sorted[i] <= sorted[j])
+    //         {
+    //             sorted[i] = candidates[j].votes;
+    //             sorted[j] = candidates[i].votes;
+    //             candidates[i].votes = sorted[i];
+    //             candidates[j].votes = sorted[j];
 
-                names[i] = candidates[j].name;
-                names[j] = candidates[i].name;
-                candidates[i].name = names[i];
-                candidates[j].name = names[j];
-            }
-        }
-    }
+    //             names[i] = candidates[j].name;
+    //             names[j] = candidates[i].name;
+    //             candidates[i].name = names[i];
+    //             candidates[j].name = names[j];
+    //         }
+    //     }
+    // }
 
-    // PRINTING THE WINNER i.e. THE CANDIDATES HAVING THE SAME
-    // NUMBER OF VOTES AS OF THE LAST ELEMENT OF THE SORTED LIST
+    // // PRINTING THE WINNER i.e. THE CANDIDATES HAVING THE SAME
+    // // NUMBER OF VOTES AS OF THE LAST ELEMENT OF THE SORTED LIST
 
-    for (int i = 0; i < n; i++)
-    {
-        if (candidates[i].votes == candidates[n - 1].votes)
-        {
-            printf("%s\n", candidates[i].name);
-        }
-    }
+    // for (int i = 0; i < n; i++)
+    // {
+    //     if (candidates[i].votes == candidates[n - 1].votes)
+    //     {
+    //         printf("%s\n", candidates[i].name);
+    //     }
+    // }
 
     for (int i = 0; i < n; i++)
     {
