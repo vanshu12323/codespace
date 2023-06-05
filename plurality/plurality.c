@@ -116,6 +116,8 @@ void print_winner(void)
         names[i] = candidates[i].name;
     }
 
+    // SORTING THE CANDIDATES BASED ON THEIR NUMBER OF VOTES
+
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < n; j++)
@@ -134,6 +136,9 @@ void print_winner(void)
             }
         }
     }
+
+    // PRINTING THE WINNER i.e. THE CANDIDATES HAVING THE SAME
+    // NUMBER OF VOTES AS OF THE LAST ELEMENT OF THE SORTED LIST
 
     for (int i = 0; i < n; i++)
     {
