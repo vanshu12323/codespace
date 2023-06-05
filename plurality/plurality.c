@@ -75,7 +75,7 @@ int main(int argc, string argv[])
         }
     }
 
-    // DECIDING THE WINNER
+    // DECIDING THE WINNER BY SORTING THE NUMBER OF VOTES
 
     int sorted[argc - 1];
     string names[argc - 1];
@@ -105,7 +105,7 @@ int main(int argc, string argv[])
         }
     }
 
-    // PRINTING THE WINNER
+    // PRINTING THE WINNER i.e. THE CANDIDATES HAVING THE SAME NUMBER OF VOTES AS OF THE LAST ELEMENT OF THE SORTED LIST
 
     for (int i = 0 ; i < argc - 1 ; i++)
     {
