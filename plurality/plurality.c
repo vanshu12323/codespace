@@ -61,6 +61,11 @@ int main(int argc, string argv[])
             {
                 candidates[j].votes += 1;
             }
+
+            else if (vote(name[i]) == 0)
+            {
+                
+            }
             // Check for invalid vote
             else if (!vote(name[i]))
             {
