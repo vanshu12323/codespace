@@ -68,34 +68,11 @@ bool vote(string name)
 {
     bool present_or_not;
     int n = candidate_count;
-    int m = 4;
-    string vote[n];
-
-    for (int i = 0 ; i < m ; i++)
-    {
-        vote[i] = candidates[i].name;
-    }
-
-    for (int i = 0 ; i < m ; i++)
-    {
-        for (int j = 0 ; j < n ; j++)
-        {
-            if (strcmp(vote[i], candidates[j].name) != 0)
-            {
-                present_or_not = false;
-            }
-            else
-            {
-                present_or_not = true;
-            }
-        }
-    }
-    return present_or_not;
+    
 }
 
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
-    #
     return;
 }
