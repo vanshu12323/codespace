@@ -82,8 +82,8 @@ bool vote(string name)
     int n = candidate_count;
     int m = voter_count;
 
-    for (int i = 0; i < m; i++)
-    {
+    // for (int i = 0; i < m; i++)
+    // {
         for (int j = 0; j < n; j++)
         {
             if (strcmp(name, candidates[j].name) == 0)
@@ -97,7 +97,7 @@ bool vote(string name)
                 present_or_not = false;
             }
         }
-    }
+    //}
     return present_or_not;
 }
 
