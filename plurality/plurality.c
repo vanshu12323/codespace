@@ -18,11 +18,11 @@ candidate candidates[MAX];
 
 // Number of candidates
 int candidate_count;
+int voter_count;
 
 // Function prototypes
 bool vote(string name);
 void print_winner(void);
-void hello(void);
 
 int main(int argc, string argv[])
 {
@@ -46,7 +46,7 @@ int main(int argc, string argv[])
         candidates[i].votes = 0;
     }
 
-    int voter_count = get_int("Number of voters: ");
+    voter_count = get_int("Number of voters: ");
 
     // Loop over all voters
     for (int i = 0; i < voter_count; i++)
@@ -70,7 +70,7 @@ bool vote(string name)
 {
     bool present_or_not;
     int n = candidate_count;
-    int m = 4; // total number of voters
+    int m = voter_count; // total number of voters
     string total[m];
 
     for (int i = 0 ; i < n ; i++)
