@@ -48,10 +48,6 @@ int main(int argc, string argv[])
 
     int voter_count = get_int("Number of voters: ");
 
-    hello();
-
-    printf("%i", hello());
-
     // Loop over all voters
     for (int i = 0; i < voter_count; i++)
     {
@@ -104,10 +100,4 @@ bool vote(string name)
 void print_winner(void)
 {
     return;
-}
-
-void hello(void)
-{
-    //printf("%i", candidate_count);
-    return candidate_count;
 }
