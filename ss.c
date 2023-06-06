@@ -15,7 +15,7 @@ candidate;
 
 int voter_count;
 int candidate_count;
-string voted_for[voter_count][candidate_count];
+string voted_for[MAX_VOTERS][MAX_CANDIDATES];
 
 candidate candidates[MAX_CANDIDATES];
 
@@ -76,7 +76,7 @@ int main(int argc, string argv[])
             if (!vote(i, j, voted_for[i][j]))
             {
                 printf("Invalid vote.\n");
-                break;
+                // break;
             }
         }
         printf("\n");
