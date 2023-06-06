@@ -105,13 +105,14 @@ int main(int argc, string argv[])
     }
 
     // Keep holding runoffs until winner exists
-    while (true)
+    bool won = print_winner();
+    while (won == false)
     {
         // Calculate votes given remaining candidates
         tabulate();
 
         // Check if election has been won
-        bool won = print_winner();
+
         if (won == true)
         {
             break;
