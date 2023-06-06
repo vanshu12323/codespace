@@ -110,7 +110,7 @@ int main(int argc, string argv[])
         }
     }
 
-    
+
 
 }
 
@@ -149,6 +149,14 @@ bool vote(int voter, int rank, string name)
 
 
 
+
+
+
+// UPDATING NUMBER OF VOTES BEFORE/AFTER ELIMINATION
+void tabulate(tabulate)
+{
+    
+}
 
 
 
@@ -200,6 +208,17 @@ bool print_winner(void)
 
     return winner;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
