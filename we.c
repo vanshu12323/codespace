@@ -73,12 +73,11 @@ int main(int argc, string argv[])
     }
 
 
-    for (int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < voter_count; i++)
     {
-        for (int j = 0; j < voter_count; j++)
+        for (int j = 0; j < candidate_count; j++)
         {
-            if (vote_name[j][i])
-            if (strcmp(vote_name[j][i], candidates[i].name) == 0)
+            if (strcmp(vote_name[i][j], candidates[j].name) == 0)
         }
     }
 
