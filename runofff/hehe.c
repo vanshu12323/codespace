@@ -186,7 +186,6 @@ bool print_winner(void)
         if (candidates[i].votes >= candidate_count * voter_count / 2)
         {
             winner_present_or_not = true;
-        ;
             break;
         }
         else
@@ -201,8 +200,11 @@ bool print_winner(void)
 // Return the minimum number of votes any remaining candidate has
 int find_min(void)
 {
-    // TODO
-    return 0;
+    int minimum;
+    for (int i = 0; i < candidate_count; i++)
+    {
+        
+    }
 }
 
 // Return true if the election is tied between all candidates, false otherwise
