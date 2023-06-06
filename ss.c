@@ -61,8 +61,19 @@ int main(int argc, string argv[])
 
     for (int i = 0; i < voter_count; i++)
     {
-        for (int j = 0; j < candidate_count; )
+        for (int j = 0; j < candidate_count; j++)
+        {
+            voted_for[i][j] = get_string("Rank %i: ", j + 1);
+            if
+        }
+        printf("\n");
     }
 
+
+}
+
+// INVALID VOTE
+bool vote(int voter, int rank, string name)
+{
 
 }
