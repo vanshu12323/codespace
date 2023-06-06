@@ -71,5 +71,6 @@ int main(int argc, string argv[])
         printf("\n");
     }
 
-    
+    // ASSIGNING SCORES TO EACH RANK
+    for (int i = 0; i < )
 }
