@@ -68,7 +68,6 @@ int main(int argc, string argv[])
     // Keep querying for votes
     for (int i = 0; i < voter_count; i++)
     {
-
         // Query for each rank
         for (int j = 0; j < candidate_count; j++)
         {
@@ -81,7 +80,6 @@ int main(int argc, string argv[])
                 // return 4;
             }
         }
-
         printf("\n");
     }
 
@@ -155,7 +153,7 @@ void tabulate(void)
     {
         for (int j = 0; j < candidate_count; j++)
         {
-            preferences[i][j] = 
+            preferences[i][j] =
         }
     }
 }
