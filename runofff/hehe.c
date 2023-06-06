@@ -109,7 +109,10 @@ int main(int argc, string argv[])
     while (true)
     {
         // Calculate votes given remaining candidates
-        tabulate();
+        for (int i = 0; i < 1; i++)
+        {
+            tabulate();
+        }
 
         // Check if election has been won
 
@@ -200,7 +203,7 @@ void tabulate(void)
         printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
     }
 
-    
+
 }
 
 
