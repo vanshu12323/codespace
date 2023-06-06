@@ -72,17 +72,20 @@ int main(int argc, string argv[])
         for (int j = 0; j < candidate_count; j++)
         {
             name[i][j] = get_string("Rank %i: ", j + 1);
-            if (strcmp(name[i][j], candidates[j].name) == 0)
-            {
-                candidates[j].votes += 1;
-            }
 
-            // Record vote, unless it's invalid
-            else if (!vote(i, j, name[i][j]))
+            for (int k = 0; k < candidate_count; k++)
             {
-                printf("Invalid vote.\n");
-                // return 4;
-
+                if (strcmp(name[i][j], candidates[k].name) == 0)
+                {
+                    candidates[k].votes += candidate_count - j;
+                    break;
+                }
+                // Record vote, unless it's invalid
+                else if (!vote(i, j, name[i][j]))
+                {
+                    printf("Invalid vote.\n");
+                    // return 4;
+                }
             }
         }
         printf("\n");
