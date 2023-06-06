@@ -54,12 +54,12 @@ int main(int argc, string argv[])
         {
             vote_name[i][k] = get_string("Rank %i: ", k + 1);
 
-            // CHECKING FOR ANYN INVALID VOTES
+            // CHECKING FOR ANY INVALID VOTES
             for (int j = 0; j < candidate_count; j++)
             {
                 if (strcmp(vote_name[i][k], candidates[j].name) == 0)
                 {
-                    candidates[j].votes += candidate_count - k;
+                    candidates[j].votes += candidate_count - k - 1;
                     break;
                 }
                 else if (j == candidate_count - 1 && strcmp(vote_name[i][k], candidates[j].name) != 0)
