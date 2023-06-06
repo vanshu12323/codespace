@@ -170,9 +170,18 @@ bool print_winner(void)
 
     for (int i = 0; i < candidate_count; i++)
     {
-        
+        if (candidates[i].votes >= candidate_count * voter_count / 2)
+        {
+            winner_present_or_not = true;
+            break;
+        }
+        else
+        {
+            winner_present_or_not = false;
+        }
     }
 
+    return winner_present_or_not;
 }
 
 // Return the minimum number of votes any remaining candidate has
