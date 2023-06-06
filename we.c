@@ -79,7 +79,7 @@ int main(int argc, string argv[])
         {
             if (strcmp(vote_name[i][j], candidates[k].name) == 0)
             {
-                candidate
+                candidates[j].votes += ;
             }
         }
     }
