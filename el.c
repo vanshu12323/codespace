@@ -18,7 +18,7 @@ int main(void)
             if (n[i] >= n[j])
             {
                 s[i] = n[j];
-                s[j] = n[i];
+                n[i] = s[j];
             }
         }
     }
