@@ -187,5 +187,46 @@ bool print_winner(void)
 
 int find_min(void)
 {
-    
+    int n = candidate_count;
+    int sorted[n];
+    string names[n];
+    int m = voter_count;
+
+    // PREPARING TO SORT
+    for (int i = 0; i < n; i++)
+    {
+        candidates[i].votes = candidates[i].votes / n; // IDK THE OUTPUT WAS n TIMES THE ACTUAL VOTES
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        sorted[i] = candidates[i].votes;
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        names[i] = candidates[i].name;
+    }
+
+    // SORTING THE CANDIDATES BASED ON THEIR NUMBER OF VOTES
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            if (sorted[i] <= sorted[j])
+            {
+                sorted[i] = candidates[j].votes;
+                sorted[j] = candidates[i].votes;
+                candidates[i].votes = sorted[i];
+                candidates[j].votes = sorted[j];
+
+                names[i] = candidates[j].name;
+                names[j] = candidates[i].name;
+                candidates[i].name = names[i];
+                candidates[j].name = names[j];
+            }
+        }
+    }
+
+    return sorted[0];
 }
