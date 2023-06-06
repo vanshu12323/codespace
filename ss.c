@@ -270,11 +270,6 @@ int find_min(void)
 
     for (int i = 0; i < n; i++)
     {
-        candidates[i].votes = candidates[i].votes / n; // IDK THE OUTPUT WAS n TIMES THE ACTUAL VOTES
-    }
-
-    for (int i = 0; i < n; i++)
-    {
         sorted[i] = candidates[i].votes;
     }
 
