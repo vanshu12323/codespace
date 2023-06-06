@@ -51,26 +51,25 @@ int main(int argc, string argv[])
         for (int k = 0; k < candidate_count; k++)
         {
             vote_name[i][k] = get_string("Rank %i: ", k + 1);
-        }
 
-        // CHECKING FOR ANYN INVALID VOTES
-        for (int p = 0; p < candidate_count; p++)
-        {
-            for (int j = 0; j < candidate_count; j++)
+            // CHECKING FOR ANYN INVALID VOTES
+            for (int p = 0; p < candidate_count; p++)
             {
-                if (strcmp(vote_name[i][p], candidates[j].name) == 0)
+                for (int j = 0; j < candidate_count; j++)
                 {
-                    //candidates[j].votes += 1;
-                    break;
-                }
-                else if (j == candidate_count - 1 && strcmp(vote_name[i][p], candidates[candidate_count - 1].name) != 0)
-                {
-                    printf("Invalid vote.\n");
-                    break;
+                    if (strcmp(vote_name[i][p], candidates[j].name) == 0)
+                    {
+                        //candidates[j].votes += 1;
+                        break;
+                    }
+                    else if (j == candidate_count - 1 && strcmp(vote_name[i][p], candidates[candidate_count - 1].name) != 0)
+                    {
+                        printf("Invalid vote.\n");
+                        break;
+                    }
                 }
             }
         }
-
         printf("\n");
     }
 }
