@@ -1,9 +1,9 @@
 #include <cs50.h>
-#include <stdio.h>
-#include <math.h>
-#include <string.h>
-#include <stdlib.h>
 #include <ctype.h>
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 // MAX. NO. OF CANDIDATES
 #define MAX 9
@@ -26,12 +26,14 @@ int main(int argc, string argv[])
 
     if (candidate_count < 2)
     {
-        printf("Usage: ./runoff [candidates...]");
+        printf("Usage: ./runoff [candidates...]\n");
+        return 1;
     }
 
     if (candidate_count > MAX)
     {
-        printf("Maximum number of candidates can be 9 !");
+        printf("Maximum number of candidates can be 9 !\n");
+        return 1;
     }
 
     // STORING THE NAME OF CANDIDATES IN AN ARRAY
