@@ -141,6 +141,10 @@ bool vote(int voter, int rank, string name)
 
 
 
+
+
+
+
 // UPDATING SCORES OF CANDIDATES
 void tabulate(void)
 {
@@ -161,12 +165,18 @@ void tabulate(void)
 }
 
 
+
+
+
+
+
+
+
 // CHECKING IF THERE IS A WINNER OR NOT
 bool print_winner(void)
 {
     bool winner;
     int n = candidate_count;
-
     for (int i = 0; i < candidate_count; i++)
     {
         n = n * (i + 1);
@@ -176,7 +186,7 @@ bool print_winner(void)
 
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].votes >= (int)total_votes / 2)
+        if (candidates[i].votes >= (float)total_votes / 2.0)
         {
             winner = true;
         }
@@ -184,6 +194,13 @@ bool print_winner(void)
 
     return winner;
 }
+
+
+
+
+
+
+
 
 int find_min(void)
 {
