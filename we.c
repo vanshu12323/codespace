@@ -35,9 +35,11 @@ int main(int argc, string argv[])
     }
 
     // STORING THE NAME OF CANDIDATES IN AN ARRAY
+    // INITIALIZING NO. OF VOTES = 0
     for (int i = 0; i < candidate_count; i++)
     {
         candidates[i].name = argv[i];
+        candidates[i].votes = 0;
     }
 
     // Number of voters
@@ -53,23 +55,25 @@ int main(int argc, string argv[])
             vote_name[i][k] = get_string("Rank %i: ", k + 1);
 
             // CHECKING FOR ANYN INVALID VOTES
-            for (int p = 0; p < candidate_count; p++)
+            for (int j = 0; j < candidate_count; j++)
             {
-                for (int j = 0; j < candidate_count; j++)
+                if (strcmp(vote_name[i][k], candidates[j].name) == 0)
                 {
-                    if (strcmp(vote_name[i][p], candidates[j].name) == 0)
-                    {
-                        //candidates[j].votes += 1;
-                        break;
-                    }
-                    else if (j == candidate_count - 1 && strcmp(vote_name[i][p], candidates[j].name) != 0)
-                    {
-                        printf("Invalid vote.\n");
-                        break;
-                    }
+                    candidates[j].votes += 1;
+                    break;
+                }
+                else if (j == candidate_count - 1 && strcmp(vote_name[i][k], candidates[j].name) != 0)
+                {
+                    printf("Invalid vote.\n");
+                    break;
                 }
             }
         }
         printf("\n");
+    }
+
+    for (int i = 0; i < candidate_count; i++)
+    {
+        printf("%s got a total of %i votes.", candidates[i].name, candidates[i].votes);
     }
 }
