@@ -338,3 +338,20 @@ bool is_tie(int min)
 
     return tie;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+void eliminate(int min)
+{
+    
+}
