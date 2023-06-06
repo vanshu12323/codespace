@@ -367,7 +367,8 @@ void eliminate(int min)
     {
         if (candidates[i].votes == min)
         {
-
+            candidates[i].eliminated = true;
+            
             for (int j = 0; j < i; j++)
             {
                 candidates[j].name = candidates[j].name;
