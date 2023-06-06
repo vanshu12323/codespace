@@ -220,9 +220,9 @@ bool print_winner(void)
 {
     bool winner = false;
     int n = candidate_count;
-    for (int i = 0; i < candidate_count; i++)
+    for (int i = 1; i < candidate_count; i++)
     {
-        n = n * (i + 1);
+        n = n * (i);
     }
     int total_votes = voter_count * n;
 
