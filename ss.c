@@ -67,6 +67,7 @@ int main(int argc, string argv[])
             if (!vote(i, j, voted_for[i][j]))
             {
                 printf("Invalid vote.\n");
+                break;
             }
             else
             {
