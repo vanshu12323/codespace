@@ -83,9 +83,11 @@ int main(int argc, string argv[])
     }
 
     for (int i = 0; i < candidate_count; i++)
-        {
-            printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
-        }
+    {
+        printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
+    }
+
+
 
 
 }
@@ -127,4 +129,29 @@ void tabulate(void)
             }
         }
     }
+}
+
+
+// CHECKING IF THERE IS A WINNER OR NOT
+bool print_winner(void)
+{
+    bool winner;
+    int n = candidate_count;
+
+    for (int i = 0; i < candidate_count; i++)
+    {
+        n = n * (i + 1);
+    }
+
+    int total_votes = voter_count * n;
+
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[i].votes >= (int)total_votes / 2)
+        {
+            winner = true;
+        }
+    }
+
+    return winner;
 }
