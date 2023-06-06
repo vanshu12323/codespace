@@ -50,7 +50,7 @@ int main(int argc, string argv[])
     {
         for (int k = 0; k < candidate_count; k++)
         {
-            vote_name[i][k] = get_string("Rank %i: \n", k + 1);
+            vote_name[i][k] = get_string("Rank %i: ", k + 1);
         }
 
         // CHECKING FOR ANYN INVALID VOTES
