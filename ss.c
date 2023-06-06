@@ -68,11 +68,18 @@ int main(int argc, string argv[])
             {
                 printf("Invalid vote.\n");
             }
+            else
+            {
+                candidates[j].votes = candidate_count - j;
+            }
         }
         printf("\n");
     }
 
-    
+    for (int i = 0; i < candidate_count; i++)
+        {
+            printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
+        }
 
 
 }
