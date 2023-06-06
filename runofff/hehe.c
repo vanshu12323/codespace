@@ -83,6 +83,11 @@ int main(int argc, string argv[])
         printf("\n");
     }
 
+    for (int i = 0; i < voter_count; i++)
+    {
+        
+    }
+
     // Keep holding runoffs until winner exists
     while (true)
     {
