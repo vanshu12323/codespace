@@ -166,7 +166,13 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
-    
+    bool winner_present_or_not;
+
+    for (int i = 0; i < candidate_count; i++)
+    {
+        
+    }
+
 }
 
 // Return the minimum number of votes any remaining candidate has
