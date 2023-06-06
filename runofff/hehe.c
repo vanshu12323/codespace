@@ -205,9 +205,19 @@ bool print_winner(void)
 {
     bool winner_present_or_not;
 
+    int total_votes;
+    int n = candidate_count;
+
+    for(int i = 0; i < candidate_count; i++)
+    {
+        n = n * (i + 1);
+    }
+
+    total_votes = n * voter_count;
+
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].votes >= )
+        if (candidates[i].votes >= total_votes / 2)
         {
             winner_present_or_not = true;
             break;
