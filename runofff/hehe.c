@@ -109,11 +109,11 @@ int main(int argc, string argv[])
     while (true)
     {
         // Calculate votes given remaining candidates
-        tabulate();
+        //tabulate();
 
         // Check if election has been won
 
-        if (won == true)
+        if (won)
         {
             break;
         }
@@ -199,6 +199,8 @@ void tabulate(void)
     {
         printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
     }
+
+    return;
 }
 
 
