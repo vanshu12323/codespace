@@ -77,7 +77,7 @@ int main(int argc, string argv[])
     {
         for (int i = 0, k = 0; i < voter_count || k < candidate_count; i++ , k++)
         {
-            if ((strcmp(vote_name[i][j], candidates[k].name) == 0) && (candidates[k].votes == ))
+            if ((strcmp(vote_name[i][j], candidates[k].name) == 0) && (candidates[j].votes < candidates[k].votes))
             {
 
             }
