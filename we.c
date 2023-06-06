@@ -44,20 +44,20 @@ int main(int argc, string argv[])
     voter_count = get_int("Number of voters: ");
 
     // UPDATING NO. OF VOTES AND RANK OF EACH CANDIDATE
-    string votes[voter_count][candidate_count];
+    string vote_name[voter_count][candidate_count];
 
     for (int i = 0; i < voter_count; i++)
     {
-        votes[i] = get_string("Vote: ");
+        vote_name[i] = get_string("Vote: ");
 
         for (int j = 0; j < candidate_count; j++)
         {
-            if (strcmp(votes[i], candidates[j].name) == 0)
+            if (strcmp(vote_name[i], candidates[j].name) == 0)
             {
-                candidates[j].vote += 1;
+                candidates[j].votes += 1;
                 break;
             }
-            else if (j == argc - 2 && strcmp(votes[i], candidates[j].name) != 0)
+            else if (j == candidate_count - 1 && strcmp(vote_name[i], candidates[j].name) != 0)
             {
                 printf("Invalid vote.\n");
             }
