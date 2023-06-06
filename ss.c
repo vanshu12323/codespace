@@ -89,7 +89,7 @@ int main(int argc, string argv[])
 
     // PRINTING WINNER IF THERE IS ONE
     bool won = print_winner();
-    printf("won: %d", won);
+    printf("won: %d\n", won);
     if (won)
     {
         int n = candidate_count;
@@ -152,11 +152,21 @@ bool vote(int voter, int rank, string name)
 
 
 
+
 // UPDATING NUMBER OF VOTES BEFORE/AFTER ELIMINATION
 void tabulate(tabulate)
 {
 
 }
+
+
+
+
+
+
+
+
+
 
 
 
