@@ -77,7 +77,7 @@ int main(int argc, string argv[])
             if (!vote(i, j, name))
             {
                 printf("Invalid vote.\n");
-                return 4;
+                // return 4;
             }
         }
 
@@ -136,6 +136,7 @@ bool vote(int voter, int rank, string name)
         if (strcmp(name, candidates[i].name) == 0)
         {
             present_or_not = true;
+            break;
         }
         else if (i == candidate_count - 1 && strcmp(name, candidates[i].name) != 0)
         {
