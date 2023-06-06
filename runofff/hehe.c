@@ -203,7 +203,7 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
-    bool winner_present_or_not;
+    bool winner_present_or_not = false;
 
     int total_votes;
     int n = candidate_count;
@@ -222,9 +222,10 @@ bool print_winner(void)
             winner_present_or_not = true;
             break;
         }
-        else
+        else if (i == candidate_count - 1 && candidates[i].votes >= total_votes / 2)
         {
-            winner_present_or_not = false;
+            winner_present_or_not = true;
+            break;
         }
     }
 
