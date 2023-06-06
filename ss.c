@@ -87,30 +87,6 @@ int main(int argc, string argv[])
         printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
     }
 
-
-
-
-}
-
-// INVALID VOTE
-bool vote(int voter, int rank, string name)
-{
-    bool present_or_not;
-
-    for(int i = 0; i < candidate_count; i++)
-    {
-        if (strcmp(name, candidates[i].name) == 0)
-        {
-            present_or_not = true;
-            break;
-        }
-        else if (i == candidate_count - 1 && strcmp(name, candidates[i].name) != 0)
-        {
-            present_or_not = false;
-        }
-    }
-    return present_or_not;
-
     // PRINTING WINNER IF THERE IS ONE
     bool won = print_winner();
     printf("%d", won);
@@ -134,9 +110,30 @@ bool vote(int voter, int rank, string name)
         }
     }
 
+}
 
 
 
+
+
+// INVALID VOTE
+bool vote(int voter, int rank, string name)
+{
+    bool present_or_not;
+
+    for(int i = 0; i < candidate_count; i++)
+    {
+        if (strcmp(name, candidates[i].name) == 0)
+        {
+            present_or_not = true;
+            break;
+        }
+        else if (i == candidate_count - 1 && strcmp(name, candidates[i].name) != 0)
+        {
+            present_or_not = false;
+        }
+    }
+    return present_or_not;
 }
 
 
