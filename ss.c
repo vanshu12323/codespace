@@ -15,7 +15,7 @@ candidate;
 
 int voter_count;
 int candidate_count;
-int rank[MAX_VOTERS][MAX_CANDIDATES];
+int ranks[MAX_VOTERS][MAX_CANDIDATES];
 string voted_for[MAX_VOTERS][MAX_CANDIDATES];
 
 
@@ -72,7 +72,7 @@ int main(int argc, string argv[])
                 if (strcmp(voted_for[i][j], candidates[k].name) == 0)
                 {
                     candidates[k].votes += candidate_count - j;
-                    rank[i][j] = k + 1;
+                    ranks[i][j] = k + 1;
                     break;
                 }
             }
@@ -136,7 +136,7 @@ int main(int argc, string argv[])
         }
 
         // Eliminate anyone with minimum number of votes
-        eliminate(min);
+        //eliminate(min);
 
     }
 
