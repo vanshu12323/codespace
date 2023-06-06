@@ -288,9 +288,7 @@ int find_min(void)
             }
         }
     }
-
     return sorted[0];
-    printf("sorted[0] is : ", sorted[0]);
 }
 
 
