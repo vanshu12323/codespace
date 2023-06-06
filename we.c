@@ -73,7 +73,13 @@ int main(int argc, string argv[])
     }
 
 
-
+    for (int i = 0; i < candidate_count; i++)
+    {
+        for (int j = 0; j < voter_count; j++)
+        {
+            if ()
+        }
+    }
 
 
 
