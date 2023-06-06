@@ -48,7 +48,10 @@ int main(int argc, string argv[])
 
     for (int i = 0; i < voter_count; i++)
     {
-        vote_name[i] = get_string("Vote: ");
+        for (int k = 0; k < candidate_count; k++)
+        {
+            vote_name[i][k] = get_string("Rank %i: ", k + 1);
+        }
 
         for (int j = 0; j < candidate_count; j++)
         {
