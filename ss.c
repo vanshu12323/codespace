@@ -64,6 +64,8 @@ int main(int argc, string argv[])
         for (int j = 0; j < candidate_count; j++)
         {
             voted_for[i][j] = get_string("Rank %i: ", j + 1);
+
+            // UPDATING SCORES OF CANDIDATES
             for (int k = 0; k < candidate_count; k++)
             {
                 if (strcmp(voted_for[i][j], candidates[k].name) == 0)
