@@ -77,7 +77,7 @@ int main(int argc, string argv[])
     {
         for (int j = 0; j < voter_count; j++)
         {
-            if ()
+            if (vote_name[j][i])
         }
     }
 
