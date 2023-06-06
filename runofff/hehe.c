@@ -302,13 +302,14 @@ bool is_tie(int min)
 // Eliminate the candidate (or candidates) in last place
 void eliminate(int min)
 {
+    string new_names[];
     for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].votes = min)
         {
             for (int j = 0; j < i; j++)
             {
-                candidates[j].name = candidates[j].names
+                new_names[j] = candidates[j].names;
             }
         }
     }
