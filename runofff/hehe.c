@@ -186,6 +186,7 @@ bool print_winner(void)
         if (candidates[i].votes >= candidate_count * voter_count / 2)
         {
             winner_present_or_not = true;
+        ;
             break;
         }
         else
