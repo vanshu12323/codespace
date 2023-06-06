@@ -57,5 +57,7 @@ int main(int argc, string argv[])
         return 3;
     }
 
+    string voted_for[][];
+
 
 }
