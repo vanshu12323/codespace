@@ -71,8 +71,43 @@ int main(int argc, string argv[])
         }
         printf("\n");
     }
+    // SORTING THE CANDIDATES BASED ON THE NO. OF VOTES
+    int sorted_votes[candidate_count];
+    string voted_to[candidate_count];
 
-    int sorted_votes[canidate_count];
+    for (int i = 0; i < argc - 1; i++)
+    {
+        sorted_votes[i] = candidates[i].votes;
+        voted_to[i] = candidates[i].name;
+    }
+
+    for (int i = 0; i < argc - 1; i++)
+    {
+        for (int j = 0; j < argc - 1; j++)
+        {
+            if (sorted_votes[i] <= sorted_votes[j])
+            {
+                sorted_votes[i] = candidates[j].votes;
+                sorted_votes[j] = candidates[i].votes;
+                candidates[i].votes = sorted_votes[i];
+                candidates[j].votes = sorted_votes[j];
+
+                voted_to[i] = candidates[j].name;
+                voted_to[j] = candidates[i].name;
+                candidates[i].name = voted_to[i];
+                candidates[j].name = voted_to[j];
+            }
+        }
+    }
+
+    // PRINTING THE WIINER
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[i].votes == candidates[candidate_count - 1].votes)
+        {
+            printf("%s\n", candidates[i].name);
+        }
+    }
 
     for (int i = 0; i < candidate_count; i++)
     {
