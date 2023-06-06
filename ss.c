@@ -110,7 +110,36 @@ bool vote(int voter, int rank, string name)
         }
     }
     return present_or_not;
+
+    // PRINTING WINNER IF THERE IS ONE
+    bool won = print_winner();
+    if (won)
+    {
+        int n = candidate_count;
+
+        for (int i = 0; i < candidate_count; i++)
+        {
+            n = n * (i + 1);
+        }
+
+        int total_votes = voter_count * n;
+
+        for (int i = 0; i < candidate_count; i++)
+        {
+            if (candidates[i].votes >= (int)total_votes / 2)
+            {
+                printf("%s", candidates[i].name);
+            }
+        }
+    }
+
+
+
+
 }
+
+
+
 
 // UPDATING SCORES OF CANDIDATES
 void tabulate(void)
@@ -154,4 +183,9 @@ bool print_winner(void)
     }
 
     return winner;
+}
+
+int find_min(void)
+{
+    
 }
