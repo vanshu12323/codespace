@@ -25,7 +25,7 @@ candidate candidates[MAX_CANDIDATES];
 // Numbers of voters and candidates
 int voter_count;
 int candidate_count;
-string name[voter_count][candidate_count];
+string namee[MAX_VOTERS][MAX_CANDIDATES];
 
 // Function prototypes
 bool vote(int voter, int rank, string name);
@@ -72,17 +72,17 @@ int main(int argc, string argv[])
         // Query for each rank
         for (int j = 0; j < candidate_count; j++)
         {
-            name[i][j] = get_string("Rank %i: ", j + 1);
+            namee[i][j] = get_string("Rank %i: ", j + 1);
 
             for (int k = 0; k < candidate_count; k++)
             {
-                if (strcmp(name[i][j], candidates[k].name) == 0)
+                if (strcmp(namee[i][j], candidates[k].name) == 0)
                 {
                     candidates[k].votes += candidate_count - j;
                     break;
                 }
                 // Record vote, unless it's invalid
-                else if (!vote(i, j, name[i][j]))
+                else if (!vote(i, j, namee[i][j]))
                 {
                     printf("Invalid vote.\n");
                     // return 4;
@@ -97,7 +97,7 @@ int main(int argc, string argv[])
     {
         for (int j = 0; j < candidate_count; j++)
         {
-            if (strcmp(name[i][j], candidates[j].name) == 0)
+            if (strcmp(namee[i][j], candidates[j].name) == 0)
             {
                 preferences[i][j] = candidates[j].votes;
             }
@@ -185,7 +185,7 @@ void tabulate(void)
         {
             for (int k = 0; k < candidate_count; k++)
             {
-                if (strcmp(name[i][j], candidates[k].name) == 0)
+                if (strcmp(namee[i][j], candidates[k].name) == 0)
                 {
                     candidates[k].votes += candidate_count - j;
                     break;
