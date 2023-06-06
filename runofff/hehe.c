@@ -109,10 +109,7 @@ int main(int argc, string argv[])
     while (true)
     {
         // Calculate votes given remaining candidates
-        for (int i = 0; i < 1; i++)
-        {
-            tabulate();
-        }
+        //tabulate();
 
         // Check if election has been won
 
@@ -293,6 +290,7 @@ int find_min(void)
     }
 
     return sorted[0];
+    printf("sorted[0] is : ", sorted[0]);
 }
 
 
