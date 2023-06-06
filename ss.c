@@ -15,6 +15,7 @@ candidate;
 
 int voter_count;
 int candidate_count;
+string voted_for[voter_count][candidate_count];
 
 candidate candidates[MAX_CANDIDATES];
 
@@ -56,8 +57,6 @@ int main(int argc, string argv[])
         printf("Maximum number of voters is %i\n", MAX_VOTERS);
         return 3;
     }
-
-    string voted_for[voter_count][candidate_count];
 
     for (int i = 0; i < voter_count; i++)
     {
