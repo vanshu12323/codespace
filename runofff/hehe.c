@@ -82,7 +82,7 @@ int main(int argc, string argv[])
             {
                 printf("Invalid vote.\n");
                 // return 4;
-                
+
             }
         }
         printf("\n");
@@ -308,8 +308,13 @@ void eliminate(int min)
         {
             for (int j = 0; j < i; j++)
             {
-                new_names[j] = candidates[j].name;
+                candidates[j].name = candidates[j].name;
+            }
+            for (int k = i + 1; k < candidate_count; k++)
+            {
+                candidates[k].name = candidates[k].name;
             }
         }
     }
+    return;
 }
