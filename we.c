@@ -114,3 +114,9 @@ int main(int argc, string argv[])
         printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
     }
 }
+
+
+
+a - 18
+b - 19
+c - 17
