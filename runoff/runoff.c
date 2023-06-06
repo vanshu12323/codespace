@@ -6,7 +6,8 @@
 #define MAX_CANDIDATES 9
 
 // preferences[i][j] is jth preference for voter i
-int preferences[MAX_VOTERS][MAX_CANDIDATES];
+int preferences[MAX_VOTERS][MAX_CANDIDATES]; // MAX_VOTERS JITNE ELEMENTS OR UN ELEMNETS M MAX_CANDIDATES KI JGH LIKE ->
+// int n[2][3] = {{1,2,3} , {5,6,7}} // EK ARRAY M 2 ELEMENTS OR VO ELEMENTS BHI EK ARRAY HE H 3 ELEMENTS KI !
 
 // Candidates have name, vote count, eliminated status
 typedef struct
