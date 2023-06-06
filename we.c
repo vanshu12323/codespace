@@ -72,29 +72,6 @@ int main(int argc, string argv[])
         printf("\n");
     }
 
-
-    for (int j = 0; j < candidate_count; j++)
-    {
-        for (int i = 0; i < voter_count; i++)
-        {
-            for (int k = 0; k < candidate_count; k++)
-            {
-                for (int l = 0; l < candidate_count; l++)
-                {
-                    if ((strcmp(vote_name[i][j], candidates[k].name) == 0) && (candidates[k].votes < candidates[l].votes))
-                    {
-
-                    }
-                }
-            }
-        }
-    }
-
-
-
-
-
-
     // SORTING THE CANDIDATES BASED ON THE NO. OF VOTES
     int sorted_votes[candidate_count];
     string voted_to[candidate_count];
@@ -133,8 +110,8 @@ int main(int argc, string argv[])
         }
     }
 
-    for (int i = 0; i < candidate_count; i++)
-    {
-        printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
-    }
+    // for (int i = 0; i < candidate_count; i++)
+    // {
+    //     printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
+    // }
 }
