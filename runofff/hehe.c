@@ -136,6 +136,7 @@ bool vote(int voter, int rank, string name)
     {
         if (strcmp(name, candidates[i].name) == 0)
         {
+            candidates[i].votes += 1;
             present_or_not = true;
             break;
         }
