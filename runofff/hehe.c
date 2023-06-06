@@ -217,7 +217,6 @@ bool print_winner(void)
 // Return the minimum number of votes any remaining candidate has
 int find_min(void)
 {
-    int minimum;
     int n = candidate_count;
     int sorted[n];
     string names[n];
@@ -261,7 +260,7 @@ int find_min(void)
         }
     }
 
-    return 
+    return sorted[0];
 }
 
 
