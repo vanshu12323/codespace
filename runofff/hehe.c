@@ -75,7 +75,6 @@ int main(int argc, string argv[])
             if (strcmp(name[i][j], candidates[j].name) == 0)
             {
                 candidates[j].votes += 1;
-                break;
             }
 
             // Record vote, unless it's invalid
@@ -83,7 +82,7 @@ int main(int argc, string argv[])
             {
                 printf("Invalid vote.\n");
                 // return 4;
-                break;
+                
             }
         }
         printf("\n");
