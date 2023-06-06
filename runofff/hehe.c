@@ -72,12 +72,18 @@ int main(int argc, string argv[])
         for (int j = 0; j < candidate_count; j++)
         {
             name[i][j] = get_string("Rank %i: ", j + 1);
+            if (strcmp(name[i][j], candidates[j].name) == 0)
+            {
+                candidates[j].votes += 1;
+                break;
+            }
 
             // Record vote, unless it's invalid
-            if (!vote(i, j, name[i][j]))
+            else if (!vote(i, j, name[i][j]))
             {
                 printf("Invalid vote.\n");
                 // return 4;
+                break;
             }
         }
         printf("\n");
@@ -145,7 +151,7 @@ bool vote(int voter, int rank, string name)
     {
         if (strcmp(name, candidates[i].name) == 0)
         {
-            candidates[i].votes += 1;
+            //candidates[i].votes += 1;
             present_or_not = true;
             break;
         }
@@ -164,7 +170,7 @@ void tabulate(void)
     {
         for (int j = 0; j < candidate_count; j++)
         {
-            preferences[i][j] = 1;
+           // preferences[i][j] = 1;
             break;
         }
     }
