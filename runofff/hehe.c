@@ -279,7 +279,7 @@ bool is_tie(int min)
         {
 
         }
-        else if (candidates[candidate_count - 1].votes == min)
+        else if (i == candidate_count - 1 && candidates[candidate_count - 1].votes == min)
         {
             tie_or_not = true;
             break;
