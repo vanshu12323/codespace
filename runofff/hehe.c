@@ -200,7 +200,7 @@ void tabulate(void)
         printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
     }
 
-    break;
+    
 }
 
 
