@@ -59,6 +59,7 @@ int main(int argc, string argv[])
             {
                 if (strcmp(vote_name[i][k], candidates[j].name) == 0)
                 {
+                    candidates[j].votes += ;
                     break;
                 }
                 else if (j == candidate_count - 1 && strcmp(vote_name[i][k], candidates[j].name) != 0)
@@ -76,7 +77,7 @@ int main(int argc, string argv[])
     {
         for (int j = 0; j < candidate_count; j++)
         {
-            
+
         }
     }
 }
