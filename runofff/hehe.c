@@ -85,7 +85,13 @@ int main(int argc, string argv[])
 
     for (int i = 0; i < voter_count; i++)
     {
-        
+        for (int j = 0; j < candidate_count; j++)
+        {
+            if (strcmp(name[i][j], candidates[j].name) == 0)
+            {
+                preferences[i][j] = candidates[j].votes;
+            }
+        }
     }
 
     // Keep holding runoffs until winner exists
