@@ -15,7 +15,9 @@ candidate;
 
 int voter_count;
 int candidate_count;
+int rank[MAX_VOTERS][MAX_CANDIDATE];
 string voted_for[MAX_VOTERS][MAX_CANDIDATES];
+
 
 candidate candidates[MAX_CANDIDATES];
 
