@@ -155,15 +155,7 @@ void tabulate(void)
     {
         for (int j = 0; j < candidate_count; j++)
         {
-            preferences[i][j] = j + 1;
-        }
-    }
-
-    for (int i = 0; i < voter_count; i++)
-    {
-        for (int j = 0; j < candidate_count; j++)
-        {
-            preferences[i][j] =
+            preferences[i][j] = cand
         }
     }
 }
