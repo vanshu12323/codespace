@@ -128,6 +128,8 @@ int main(int argc, string argv[])
 
 
 
+
+
 // INVALID VOTE
 bool vote(int voter, int rank, string name)
 {
@@ -198,6 +200,8 @@ void tabulate(void)
 
 
 
+
+
 // CHECKING IF THERE IS A WINNER OR NOT
 bool print_winner(void)
 {
@@ -240,8 +244,80 @@ bool print_winner(void)
 // FINDING MINIMUM NUMBER OF VOTES BEFORE/AFTER ELIMINATION
 int find_min(void)
 {
+    int n = candidate_count;
+    int sorted[n];
+    string names[n];
+    int m = voter_count;
+
+    // PREPARING TO SORT
+
+    for (int i = 0; i < n; i++)
+    {
+        candidates[i].votes = candidates[i].votes / n; // IDK THE OUTPUT WAS n TIMES THE ACTUAL VOTES
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        sorted[i] = candidates[i].votes;
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        names[i] = candidates[i].name;
+    }
+
+    // SORTING THE CANDIDATES BASED ON THEIR NUMBER OF VOTES
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            if (sorted[i] <= sorted[j])
+            {
+                sorted[i] = candidates[j].votes;
+                sorted[j] = candidates[i].votes;
+                candidates[i].votes = sorted[i];
+                candidates[j].votes = sorted[j];
+
+                names[i] = candidates[j].name;
+                names[j] = candidates[i].name;
+                candidates[i].name = names[i];
+                candidates[j].name = names[j];
+            }
+        }
+    }
+
+    return sorted[0];
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// TIE OR NOT
+bool is_tie(int min)
+{
+    bool tie = false;
+
     for (int i = 0; i < candidate_count; i++)
     {
-        
+        if (candidates[i].votes == min)
+        {
+
+        }
+        else if (i == candidate_count - 1 && candidates[i].votes == min)
+        {
+            tie = true;
+        }
     }
+
+    return tie;
 }
