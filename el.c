@@ -8,24 +8,22 @@
 
 int main(void)
 {
-    int n[4] = {1,2,3,4};
+    int n[3] = {3,1,2};
+    int s[3];
 
-    for (int i = 0; i < 4; i++)
+    for (int i = 0; i < 1; i++)
     {
-        if (n[i] == 3)
+        for (int j = 0; j < 3; j++)
         {
-            for (int j = 0; j < i; j++)
+            if (n[i] >= n[j])
             {
-                n[j] = n[j];
-            }
-            for (int k = i + 1; k < 4; k++)
-            {
-                n[k - 1] = n[k];
+                s[i] = n[j];
+                s[j] = n[i];
             }
         }
     }
 
-    for (int i = 0; i < 4 ; i++)
+    for (int i = 0; i < 3 ; i++)
     {
         printf("%i ", n[i]);
     }
