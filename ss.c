@@ -64,14 +64,18 @@ int main(int argc, string argv[])
         for (int j = 0; j < candidate_count; j++)
         {
             voted_for[i][j] = get_string("Rank %i: ", j + 1);
+            for (int k = 0; k < candidate_count; k++)
+            {
+                if (vote(i, j, voted_for[i][j]))
+                {
+                    candidates[k].votes += candidate_count - j;
+                    break;
+                }
+            }
             if (!vote(i, j, voted_for[i][j]))
             {
                 printf("Invalid vote.\n");
                 break;
-            }
-            else
-            {
-                candidates[j].votes = candidate_count - j;
             }
         }
         printf("\n");
