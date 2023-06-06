@@ -87,29 +87,36 @@ int main(int argc, string argv[])
         printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
     }
 
-    // PRINTING WINNER IF THERE IS ONE
     bool won = print_winner();
     printf("won: %d\n", won);
-    if (won)
+
+    while (true)
     {
-        int n = candidate_count;
+        tabulate();
 
-        for (int i = 0; i < candidate_count; i++)
+        // PRINTING WINNER IF THERE IS ONE
+        if (won)
         {
-            n = n * (i + 1);
-        }
+            int n = candidate_count;
 
-        int total_votes = voter_count * n;
-
-        for (int i = 0; i < candidate_count; i++)
-        {
-            if (candidates[i].votes >= (int)total_votes / 2)
+            for (int i = 0; i < candidate_count; i++)
             {
-                printf("%s", candidates[i].name);
+                n = n * (i + 1);
+            }
+
+            int total_votes = voter_count * n;
+
+            for (int i = 0; i < candidate_count; i++)
+            {
+                if (candidates[i].votes >= (int)total_votes / 2)
+                {
+                    printf("%s", candidates[i].name);
+                }
             }
         }
-    }
 
+
+    }
 
 
 }
@@ -152,12 +159,6 @@ bool vote(int voter, int rank, string name)
 
 
 
-
-// UPDATING NUMBER OF VOTES BEFORE/AFTER ELIMINATION
-void tabulate(tabulate)
-{
-
-}
 
 
 
