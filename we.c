@@ -72,7 +72,7 @@ int main(int argc, string argv[])
         printf("\n");
     }
 
-    
+    int sorted_votes[canidate_count];
 
     for (int i = 0; i < candidate_count; i++)
     {
