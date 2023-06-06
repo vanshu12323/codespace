@@ -66,7 +66,7 @@ int main(int argc, string argv[])
             voted_for[i][j] = get_string("Rank %i: ", j + 1);
             for (int k = 0; k < candidate_count; k++)
             {
-                if (vote(i, j, voted_for[i][j]))
+                if (strcmp(voted_for[i][j], candidates[k].name) == 0)
                 {
                     candidates[k].votes += candidate_count - j;
                     break;
