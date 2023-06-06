@@ -306,9 +306,9 @@ void eliminate(int min)
     {
         if (candidates[i].votes = min)
         {
-            for (inr j = 0; j < candidate_count; j++)
+            for (int j = 0; j < i; j++)
             {
-                candidates[j].name = candidate
+                candidates[j].name = candidates[j].names
             }
         }
     }
