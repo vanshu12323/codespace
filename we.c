@@ -78,6 +78,7 @@ int main(int argc, string argv[])
         for (int j = 0; j < voter_count; j++)
         {
             if (vote_name[j][i])
+            if (strcmp(vote_name[j][i], candidates[i].name) == 0)
         }
     }
 
