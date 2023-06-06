@@ -60,10 +60,10 @@ int main(int argc, string argv[])
             {
                 if (strcmp(vote_name[i][p], candidates[j].name) == 0)
                 {
-                    candidates[j].votes += 1;
+                    //candidates[j].votes += 1;
                     break;
                 }
-                else if (j == candidate_count - 1 && strcmp(vote_name[i][p], candidates[j].name) != 0)
+                else if (j == candidate_count - 1 && strcmp(vote_name[i][p], candidates[candidate_count - 1].name) != 0)
                 {
                     printf("Invalid vote.\n");
                     break;
