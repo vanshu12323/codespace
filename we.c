@@ -5,7 +5,18 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-int main(void)
+typedef struct
 {
-    
+    string name;
+    int votes;
+} candidate;
+
+int main(int argc, string argv[])
+{
+    int n = argc - 1; // candidate_count
+
+    if (n < 2)
+    {
+        printf("Usage: ./runoff [candidates...]");
+    }
 }
