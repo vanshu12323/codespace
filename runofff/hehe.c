@@ -88,6 +88,7 @@ int main(int argc, string argv[])
         printf("\n");
     }
 
+    // SETTING PREFERENCES EQUAL YO NUMBER OF TOTAL VOTES
     for (int i = 0; i < voter_count; i++)
     {
         for (int j = 0; j < candidate_count; j++)
@@ -107,7 +108,7 @@ int main(int argc, string argv[])
 
         // Check if election has been won
         bool won = print_winner();
-        if (won)
+        if (won == true)
         {
             break;
         }
