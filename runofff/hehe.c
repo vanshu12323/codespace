@@ -71,7 +71,7 @@ int main(int argc, string argv[])
         // Query for each rank
         for (int j = 0; j < candidate_count; j++)
         {
-            string name = get_string("Rank %i: ", j + 1);
+            string name[i] = get_string("Rank %i: ", j + 1);
 
             // Record vote, unless it's invalid
             if (!vote(i, j, name))
@@ -164,7 +164,7 @@ void tabulate(void)
 
     for (int i = 0; i < candidate_count; i++)
     {
-        
+
     }
 }
 
