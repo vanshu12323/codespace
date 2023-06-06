@@ -52,10 +52,11 @@ int main(int argc, string argv[])
         {
             vote_name[i][k] = get_string("Rank %i: ", k + 1);
         }
-
+        
+        // CHECKING FOR ANYN INVALID VOTES
         for (int j = 0; j < candidate_count; j++)
         {
-            if (strcmp(vote_name[i], candidates[j].name) == 0)
+            if (strcmp(vote_name[i][j], candidates[j].name) == 0)
             {
                 candidates[j].votes += 1;
                 break;
