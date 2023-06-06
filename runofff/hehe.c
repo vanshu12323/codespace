@@ -64,6 +64,7 @@ int main(int argc, string argv[])
         return 3;
     }
 
+    string name[voter_count][candidate_count];
     // Keep querying for votes
     for (int i = 0; i < voter_count; i++)
     {
@@ -71,10 +72,10 @@ int main(int argc, string argv[])
         // Query for each rank
         for (int j = 0; j < candidate_count; j++)
         {
-            string name[i] = get_string("Rank %i: ", j + 1);
+            name[i][j] = get_string("Rank %i: ", j + 1);
 
             // Record vote, unless it's invalid
-            if (!vote(i, j, name))
+            if (!vote(i, j, name[i][j]))
             {
                 printf("Invalid vote.\n");
                 // return 4;
