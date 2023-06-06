@@ -94,6 +94,9 @@ int main(int argc, string argv[])
     printf("won: %d\n", won);
     int min = find_min();
     printf("min = %i\n", min);
+    bool tie = is_tie(min);
+    printf("tie or not = %d\n", tie);
+
 
     while (true)
     {
@@ -107,7 +110,7 @@ int main(int argc, string argv[])
 
         // Eliminate last-place candidates
         //int min = find_min();
-        bool tie = is_tie(min);
+        //bool tie = is_tie(min);
 
 
         // If tie, everyone wins
@@ -329,8 +332,7 @@ bool is_tie(int min)
         {
             if (candidates[i].votes == min && candidates[j].votes == min)
             {
-                tie = true;
-                break;
+                //tie = true;
             }
             else if (i == candidate_count - 1 && i == candidate_count - 1 && candidates[i].votes == min && candidates[j].votes == min)
             {
