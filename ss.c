@@ -124,11 +124,15 @@ int main(int argc, string argv[])
         }
 
         // Eliminate anyone with minimum number of votes
-        //eliminate(min);
+        eliminate(min);
 
+        //Reset vote counts back to zero
+        for (int i = 0; i < candidate_count; i++)
+        {
+            candidates[i].votes = 0;
+        }
     }
-
-
+    return 0;
 }
 
 
@@ -349,6 +353,9 @@ bool is_tie(int min)
 
 
 
+
+
+
 void eliminate(int min)
 {
     for (int i = 0; i < candidate_count; i++)
@@ -361,8 +368,9 @@ void eliminate(int min)
             }
             for (int k = i + 1; k < candidate_count; k++)
             {
-                candidates[k].name = candidates[k].name;
+                candidates[k - 1].name = candidates[k].name;
             }
         }
     }
+    return;
 }
