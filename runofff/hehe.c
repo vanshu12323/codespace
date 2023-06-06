@@ -130,7 +130,10 @@ bool vote(int voter, int rank, string name)
 {
     bool present_or_not;
 
-    for(int i = 0; i < )
+    for(int i = 0; i < candidate_count; i++)
+    {
+        
+    }
 }
 
 // Tabulate votes for non-eliminated candidates
