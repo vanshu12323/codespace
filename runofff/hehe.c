@@ -142,6 +142,11 @@ int main(int argc, string argv[])
     return 0;
 }
 
+
+
+
+
+
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
@@ -163,6 +168,10 @@ bool vote(int voter, int rank, string name)
     return present_or_not;
 }
 
+
+
+
+
 // Tabulate votes for non-eliminated candidates
 void tabulate(void)
 {
@@ -175,6 +184,10 @@ void tabulate(void)
         }
     }
 }
+
+
+
+
 
 // Print the winner of the election, if there is one
 bool print_winner(void)
@@ -197,15 +210,64 @@ bool print_winner(void)
     return winner_present_or_not;
 }
 
+
+
+
+
 // Return the minimum number of votes any remaining candidate has
 int find_min(void)
 {
     int minimum;
-    for (int i = 0; i < candidate_count; i++)
+    int n = candidate_count;
+    int sorted[n];
+    string names[n];
+    int m = voter_count;
+
+    // PREPARING TO SORT
+
+    for (int i = 0; i < n; i++)
     {
-        
+        //candidates[i].votes = candidates[i].votes / n; // IDK THE OUTPUT WAS n TIMES THE ACTUAL VOTES
     }
+
+    for (int i = 0; i < n; i++)
+    {
+        sorted[i] = candidates[i].votes;
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        names[i] = candidates[i].name;
+    }
+
+    // SORTING THE CANDIDATES BASED ON THEIR NUMBER OF VOTES
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            if (sorted[i] <= sorted[j])
+            {
+                sorted[i] = candidates[j].votes;
+                sorted[j] = candidates[i].votes;
+                candidates[i].votes = sorted[i];
+                candidates[j].votes = sorted[j];
+
+                names[i] = candidates[j].name;
+                names[j] = candidates[i].name;
+                candidates[i].name = names[i];
+                candidates[j].name = names[j];
+            }
+        }
+    }
+
+    return 
 }
+
+
+
+
+
 
 // Return true if the election is tied between all candidates, false otherwise
 bool is_tie(int min)
