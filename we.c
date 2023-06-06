@@ -72,12 +72,8 @@ int main(int argc, string argv[])
         printf("\n");
     }
 
-    // ASSIGNING SCORES TO EACH RANK
-    for (int i = 0; i < voter_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
-        for (int j = 0; j < candidate_count; j++)
-        {
-
-        }
+        printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
     }
 }
