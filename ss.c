@@ -111,15 +111,13 @@ bool vote(int voter, int rank, string name)
     return present_or_not;
 }
 
+// UPDATING SCORES OF CANDIDATES
 void tabulate(void)
 {
     for (int i = 0; i < voter_count; i++)
     {
         for (int j = 0; j < candidate_count; j++)
         {
-            voted_for[i][j] = get_string("Rank %i: ", j + 1);
-
-            // UPDATING SCORES OF CANDIDATES
             for (int k = 0; k < candidate_count; k++)
             {
                 if (strcmp(voted_for[i][j], candidates[k].name) == 0)
@@ -129,4 +127,5 @@ void tabulate(void)
                 }
             }
         }
+    }
 }
