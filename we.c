@@ -73,6 +73,6 @@ int main(int argc, string argv[])
 
     for (int i = 0; i < candidate_count; i++)
     {
-        printf("%s got a total of %i votes.", candidates[i].name, candidates[i].votes);
+        printf("%s got a total of %i votes.\n", candidates[i].name, candidates[i].votes);
     }
 }
