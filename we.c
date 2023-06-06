@@ -72,5 +72,8 @@ int main(int argc, string argv[])
     }
 
     // ASSIGNING SCORES TO EACH RANK
-    for (int i = 0; i < )
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if ()
+    }
 }
