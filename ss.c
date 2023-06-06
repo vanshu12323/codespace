@@ -100,22 +100,7 @@ int main(int argc, string argv[])
         // PRINTING WINNER IF THERE IS ONE
         if (won)
         {
-            int n = candidate_count;
-
-            for (int i = 0; i < candidate_count; i++)
-            {
-                n = n * (i + 1);
-            }
-
-            int total_votes = voter_count * n;
-
-            for (int i = 0; i < candidate_count; i++)
-            {
-                if (candidates[i].votes >= (int)total_votes / 2)
-                {
-                    printf("%s", candidates[i].name);
-                }
-            }
+           break;
         }
 
         // Eliminate last-place candidates
@@ -241,6 +226,7 @@ bool print_winner(void)
     {
         if (candidates[i].votes >= (float)total_votes / 2.0)
         {
+            printf("%s", candidates[i].name);
             winner = true;
         }
     }
