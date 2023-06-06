@@ -57,7 +57,12 @@ int main(int argc, string argv[])
         return 3;
     }
 
-    string voted_for[][];
+    string voted_for[voter_count][candidate_count];
+
+    for (int i = 0; i < voter_count; i++)
+    {
+        
+    }
 
 
 }
