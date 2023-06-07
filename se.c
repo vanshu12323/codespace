@@ -17,6 +17,7 @@ int voter_count;
 int candidate_count;
 int ranks[MAX_VOTERS][MAX_CANDIDATES];
 string voted_for[MAX_VOTERS][MAX_CANDIDATES];
+int minimum;
 
 candidate candidates[MAX_CANDIDATES];
 
@@ -29,6 +30,7 @@ void eliminate(int min);
 
 int main(int argc, string argv[])
 {
+
     // CLA
     if (argc < 2)
     {
@@ -94,13 +96,13 @@ int main(int argc, string argv[])
     bool won = print_winner();
     printf("WON : %d\n", won);
 
-    int min = find_min();
-    printf("MIN: %i\n", min);
+    minimum = find_min();
+    printf("MIN: %i\n", minimum);
 
-    bool tie_or_not = is_tie(min);
+    bool tie_or_not = is_tie(minimum);
     printf("TIE: %d\n", tie_or_not);
 
-    eliminate(min);
+    eliminate(minimum);
 
     for (int i = 0; i < candidate_count; i++)
     {
@@ -118,10 +120,10 @@ int main(int argc, string argv[])
     won = print_winner();
     printf("WON : %d\n", won);
 
-    min = find_min();
-    printf("MIN: %i\n", min);
+    minimum = find_min();
+    printf("MIN: %i\n", minimum);
 
-    tie_or_not = is_tie(min);
+    tie_or_not = is_tie(minimum);
     printf("TIE: %d\n", tie_or_not);
 
 
@@ -231,50 +233,6 @@ void tabulate(void)
 // WINNER OR NOT
 bool print_winner(void)
 {
-
-// --------------------------------
-
-    int n = candidate_count;
-    int sorted[n];
-    string names[n];
-    int m = voter_count;
-
-    // PREPARING TO SORT
-
-    for (int i = 0; i < n; i++)
-    {
-        sorted[i] = candidates[i].votes;
-    }
-
-    for (int i = 0; i < n; i++)
-    {
-        names[i] = candidates[i].name;
-    }
-
-    // SORTING THE CANDIDATES BASED ON THEIR NUMBER OF VOTES
-
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < n; j++)
-        {
-            if (sorted[i] <= sorted[j])
-            {
-                sorted[i] = candidates[j].votes;
-                sorted[j] = candidates[i].votes;
-                candidates[i].votes = sorted[i];
-                candidates[j].votes = sorted[j];
-
-                names[i] = candidates[j].name;
-                names[j] = candidates[i].name;
-                candidates[i].name = names[i];
-                candidates[j].name = names[j];
-            }
-        }
-    }
-
-// -------------------------------
-
-
     int total_votes;
     int nn = candidate_count;
     bool won = false;
@@ -290,7 +248,7 @@ bool print_winner(void)
     {
         if (candidates[i].votes >= total_votes / 2.0)
         {
-            if (candidates[i].votes == sorted[candidate_count])
+            if (candidates[i].votes > minimum)
             {
                 printf("WINNER = %s\n", candidates[i].name);
             }
