@@ -82,6 +82,13 @@ int main(int argc, string argv[])
             voted[i][j] = voted_for[i][j];
         }
     }
+
+    tabulate();
+
+    for(int i = 0; i < candidate_count; i++)
+    {
+        printf("%s got %i votes.", candidates[i].name, candidates[i].votes);
+    }
 }
 
 
@@ -132,6 +139,10 @@ bool vote(int voter, int rank, string name)
 
 
 
+
+
+
+
 // UPDATE NUMBER OF VOTES
 void tabulate(void)
 {
@@ -139,7 +150,7 @@ void tabulate(void)
     {
         for (int j = 0; j < candidate_count; j++)
         {
-            if (strcmp(candidates[j], voted_for[i][j]) == 0)
+            if (strcmp(candidates[j].name, voted_for[i][j]) == 0)
             {
                 candidates[j].votes = candidate_count - j;
             }
