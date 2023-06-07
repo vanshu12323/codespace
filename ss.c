@@ -99,6 +99,12 @@ int main(int argc, string argv[])
 
         bool won = print_winner();
         printf("won: %d\n", won);
+        
+        int min = find_min();
+        printf("min = %i\n", min);
+
+        bool tie = is_tie(min);
+        printf("tie or not = %d\n", tie);
 
 
         // PRINTING WINNER IF THERE IS ONE
@@ -110,12 +116,6 @@ int main(int argc, string argv[])
         // Eliminate last-place candidates
         // int min = find_min();
         // bool tie = is_tie(min);
-
-        int min = find_min();
-        printf("min = %i\n", min);
-
-        bool tie = is_tie(min);
-        printf("tie or not = %d\n", tie);
 
 
         // If tie, everyone wins
