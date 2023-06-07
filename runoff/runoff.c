@@ -75,7 +75,7 @@ int main(int argc, string argv[])
             preferences[i][j] = j;
 
             // Record vote, unless it's invalid
-            if (!vote(i, j, name))
+            if (!vote(i, j, voted_for[i][j]))
             {
                 printf("Invalid vote.\n");
             }
