@@ -246,7 +246,7 @@ bool print_winner(void)
 {
     bool winner = false;
     //vn = candidate_count;
-    for (int i = 1; i < candidate_count; i++)
+    for (int i = 1; i < cc; i++)
     {
         vn = vn * (i);
     }
