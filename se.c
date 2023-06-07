@@ -309,7 +309,7 @@ bool print_winner(void)
         }
     }
 
-    printf("VOTES REQ. TO WIN = %f\n", total_votes/2.0);
+    //printf("VOTES REQ. TO WIN = %f\n", total_votes/2.0);
 
     return won;
 }
@@ -453,13 +453,13 @@ void eliminate(int min)
 
     candidate_count = new_candidate_count;
 
-    printf("after elimination candidates left: ");
-    for (int i = 0; i < new_candidate_count; i++)
-    {
-        printf("%s ", candidates[i].name);
-    }
-    printf("\n");
+    // printf("after elimination candidates left: ");
+    // for (int i = 0; i < new_candidate_count; i++)
+    // {
+    //     printf("%s ", candidates[i].name);
+    // }
+    // printf("\n");
 
-    printf("%i candidates left after elimination\n", new_candidate_count);
+    //printf("%i candidates left after elimination\n", new_candidate_count);
     return;
 }
