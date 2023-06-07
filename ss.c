@@ -363,6 +363,7 @@ bool is_tie(int min)
 
 void eliminate(int min)
 {
+    int new_candidate_count = candidate_count;
     for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].votes == min)
@@ -382,9 +383,11 @@ void eliminate(int min)
                 candidates[k - 1].votes = candidates[k].votes;
             }
 
-            candidate_count = candidate_count - 1;
+            new_candidate_count = candidate_count - 1;
         }
     }
+
+    candidate_count = new_candidate_count;
 
     printf("after elimination candidates left: ");
     for (int i = 0; i < candidate_count; i++)
