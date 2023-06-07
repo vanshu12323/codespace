@@ -24,6 +24,7 @@ candidate candidates[MAX_CANDIDATES];
 // Numbers of voters and candidates
 int voter_count;
 int candidate_count;
+string voted_for[MAX_VOTERS][MAX_CANDIDATES];
 
 // Function prototypes
 bool vote(int voter, int rank, string name);
