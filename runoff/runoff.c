@@ -70,7 +70,7 @@ int main(int argc, string argv[])
         // Query for each rank
         for (int j = 0; j < candidate_count; j++)
         {
-            string name = get_string("Rank %i: ", j + 1);
+            voted_for[i][j] = get_string("Rank %i: ", j + 1);
             preferences[i][j] = j;
 
             // Record vote, unless it's invalid
@@ -172,7 +172,7 @@ void tabulate(void)
         {
             if (strcmp(names, candidates[j].names) == 0)
             {
-                
+
             }
         }
     }
