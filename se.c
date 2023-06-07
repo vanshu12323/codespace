@@ -307,9 +307,9 @@ bool print_winner(void)
 
 // -----------
 
-            for (int j = 0; j < candidate_count; j++)
+            for (int j = i + 1; j < candidate_count; j++)
             {
-                if (candidates[j].votes > candidates[i].votes && i != j)
+                if (candidates[j].votes > candidates[i].votes)
                 {
                     printf("WINNER = %s\n", candidates[j].name);
                     break;
