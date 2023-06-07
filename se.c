@@ -317,7 +317,7 @@ bool print_winner(void)
                 else
                 {
                     printf("WINNER = %s\n", candidates[i].name);
-                    //break;
+                    break;
                 }
             }
 // ------------
