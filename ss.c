@@ -14,9 +14,9 @@ typedef struct
 candidate;
 
 int voter_count;
-int cc;
+//int cc;
 int candidate_count;
-int vn;
+//int vn;
 int ranks[MAX_VOTERS][MAX_CANDIDATES];
 string voted_for[MAX_VOTERS][MAX_CANDIDATES];
 
@@ -32,8 +32,8 @@ void eliminate(int min);
 
 int main(int argc, string argv[])
 {
-    cc = argc - 1;
-    vn = cc;
+    // cc = argc - 1;
+    // vn = cc;
     // CLA
     if (argc < 2)
     {
@@ -245,8 +245,8 @@ void tabulate(void)
 bool print_winner(void)
 {
     bool winner = false;
-    //vn = candidate_count;
-    for (int i = 1; i < cc; i++)
+    int vn = candidate_count;
+    for (int i = 1; i < candidate_count; i++)
     {
         vn = vn * (i);
     }
