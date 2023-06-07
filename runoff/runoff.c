@@ -144,6 +144,9 @@ int main(int argc, string argv[])
     bool tie = is_tie(min);
     printf("TIE: %d\n", tie);
 
+    eliminate(min);
+
+
     return 0;
 }
 
@@ -315,6 +318,32 @@ bool is_tie(int min)
 // Eliminate the candidate (or candidates) in last place
 void eliminate(int min)
 {
-    // TODO
-    return;
+    for(int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[i].votes == min)
+        {
+            candidates[i].eliminated = true;
+            printf("ELIMINATED CANDIDATE IS : %s\n",candidates[i].name);
+            for (int j = 0; j < i; j++)
+            {
+                candidates[j].name = candidates[j].name;
+                candidates[j].votes = candidates[j].votes;
+            }
+            for (int k = i + 1; k < 5; k++)
+            {
+                candidates[k - 1].name = candidates[k].name;
+                candidates[k - 1].votes = candidates[k].votes;
+            }
+            candidate_count--;
+        }
+
+    }
+
+    printf("Candidates left after el: %i", candidate_count);
+    printf("Remaining candidates are: ");
+
+    for (int  i = 0; i < candidate_count; i++)
+    {
+        printf("%s ", candidates[i].name);
+    }
 }
