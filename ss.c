@@ -374,7 +374,7 @@ void eliminate(int min)
                 candidates[j].name = candidates[j].name;
                 candidates[j].votes = candidates[j].votes;
             }
-            
+
             for (int k = i + 1; k < candidate_count; k++)
             {
                 candidates[k - 1].name = candidates[k].name;
@@ -383,6 +383,12 @@ void eliminate(int min)
 
             candidate_count = candidate_count - 1;
         }
+    }
+
+    printf("after elimination");
+    for (int i = 0; i < candidate_count; i++)
+    {
+        printf("%s ", candidates[i].name);
     }
     return;
 }
