@@ -134,6 +134,9 @@ int main(int argc, string argv[])
         printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
     }
 
+    bool won = print_winner();
+    printf("WON: %d\n", won);
+
     return 0;
 }
 
@@ -213,6 +216,8 @@ bool print_winner(void)
             won = true;
         }
     }
+
+    return won;
 }
 
 
