@@ -404,5 +404,7 @@ void eliminate(int min)
     {
         printf("%s ", candidates[i].name);
     }
+    printf("\n");
+    printf("%i candidates left after elimination\n", new_candidate_count);
     return;
 }
