@@ -100,8 +100,15 @@ int main(int argc, string argv[])
     bool tie_or_not = is_tie(min);
     printf("TIE: %d\n", tie_or_not);
 
+    eliminate(min);
+    
+
 
 }
+
+
+
+
 
 
 
@@ -144,6 +151,9 @@ bool vote(int voter, int rank, string name)
     }
     return present_or_not;
 }
+
+
+
 
 
 
@@ -363,4 +373,14 @@ void eliminate(int min)
     }
 
     candidate_count = new_candidate_count;
+
+    printf("after elimination candidates left: ");
+    for (int i = 0; i < new_candidate_count; i++)
+    {
+        printf("%s ", candidates[i].name);
+    }
+    printf("\n");
+
+    printf("%i candidates left after elimination\n", new_candidate_count);
+    return;
 }
