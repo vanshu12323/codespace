@@ -202,15 +202,21 @@ bool vote(int voter, int rank, string name)
 // UPDATING SCORES OF CANDIDATES
 void tabulate(void)
 {
-    for (int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < voter_count; i++)
     {
-        if (candidates[i].eliminated)
+        for (int j = 0; j < candidate_count; j++)
         {
-            for (int j = 0; j < voter_count; j++)
+            if (candidates[j].eliminated)
             {
-                for (int k = 0; k < i; k++)
+                if (candidates[i].name == voted_for[i][j])
                 {
-                    voted_for[j][k]
+                    for (int l = 0; l < ; l++)
+                    {
+                        for (int k = 0; k < candidate_count; k++)
+                        {
+
+                        }
+                    }
                 }
             }
         }
