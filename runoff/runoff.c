@@ -123,6 +123,14 @@ int main(int argc, string argv[])
             candidates[i].votes = 0;
         }
     }
+
+    tabulate();
+    for(int i = 0; i < candidate_count; i++)
+    {
+        printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
+    }
+
+
     return 0;
 }
 
@@ -173,7 +181,7 @@ void tabulate(void)
         {
             if (strcmp(voted_for[preferences[i][0]][0], candidates[j].name) == 0)
             {
-
+                candidates[j].votes += 1;
             }
         }
     }
