@@ -115,6 +115,16 @@ int main(int argc, string argv[])
         printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
     }
 
+    won = print_winner();
+    printf("WON : %d\n", won);
+
+    min = find_min();
+    printf("MIN: %i\n", min);
+
+    tie_or_not = is_tie(min);
+    printf("TIE: %d\n", tie_or_not);
+
+
 }
 
 
