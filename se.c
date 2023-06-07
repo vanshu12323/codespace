@@ -109,3 +109,18 @@ bool vote(int voter, int rank, string name)
     }
     return present_or_not;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// UPDATE NUMBER OF VOTES
