@@ -126,5 +126,11 @@ bool vote(int voter, int rank, string name)
 // UPDATE NUMBER OF VOTES
 void tabulate(void)
 {
-    
+    for (i = 0; i < voter_count; i++)
+    {
+        for (int j = 0; j < candidate_count; j++)
+        {
+            ranks[i][j] = j + 1;
+        }
+    }
 }
