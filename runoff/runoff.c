@@ -233,12 +233,26 @@ bool print_winner(void)
 int find_min(void)
 {
     int sorting_votes[candidate_count];
+    int sorting_names[candidate_count];
     for (int  i = 0; i < candidate_count; i++)
     {
         sorting_votes[i] = candidates[i].votes;
+        sorting_names[i] = candidates[i].name;
     }
 
-    
+    for (int i = 0; i < candidate_count; i++)
+    {
+        for (int  j= 0; j < candidate_count; j++)
+        {
+            if (candidates[i].votes > candidates[j].votes])
+            {
+                sorting_votes[i] = candidates[j].votes;
+                sorting_votes[j] = candidates[i].votes;
+                candidates[i].votes = sorting_votes[i];
+                candidates[j].votes = sorting_votes[j];
+            }
+        }
+    }
 }
 
 
