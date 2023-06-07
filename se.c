@@ -146,14 +146,5 @@ bool vote(int voter, int rank, string name)
 // UPDATE NUMBER OF VOTES
 void tabulate(void)
 {
-    for (int i = 0; i < voter_count; i++)
-    {
-        for (int j = 0; j < candidate_count; j++)
-        {
-            if (strcmp(candidates[j].name, voted_for[i][j]) == 0)
-            {
-                candidates[j].votes = candidate_count - j;
-            }
-        }
-    }
+    
 }
