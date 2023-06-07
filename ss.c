@@ -99,7 +99,7 @@ int main(int argc, string argv[])
 
         bool won = print_winner();
         printf("won: %d\n", won);
-        
+
         int min = find_min();
         printf("min = %i\n", min);
 
