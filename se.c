@@ -85,47 +85,88 @@ int main(int argc, string argv[])
         }
     }
 
-    tabulate();
+    // tabulate();
 
-    for(int i = 0; i < candidate_count; i++)
+    // for(int i = 0; i < candidate_count; i++)
+    // {
+    //     printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
+    // }
+
+
+    // bool won = print_winner();
+    // printf("WON : %d\n", won);
+
+    // minimum = find_min();
+    // printf("MIN: %i\n", minimum);
+
+    // bool tie_or_not = is_tie(minimum);
+    // printf("TIE: %d\n", tie_or_not);
+
+    // eliminate(minimum);
+
+    // for (int i = 0; i < candidate_count; i++)
+    // {
+    //     candidates[i].votes = 0;
+    // }
+
+
+    // tabulate();
+
+    // for(int i = 0; i < candidate_count; i++)
+    // {
+    //     printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
+    // }
+
+    // won = print_winner();
+    // printf("WON : %d\n", won);
+
+    // minimum = find_min();
+    // printf("MIN: %i\n", minimum);
+
+    // tie_or_not = is_tie(minimum);
+    // printf("TIE: %d\n", tie_or_not);
+
+
+    while(true)
     {
-        printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
+        tabulate();
+
+        bool won = print_winner();
+        printf("WON : %d\n", won);
+
+        if(won)
+        {
+            break;
+        }
+
+        minimum = find_min();
+        printf("MIN: %i\n", minimum);
+
+        bool tie_or_not = is_tie(minimum);
+        printf("TIE: %d\n", tie_or_not);
+
+        if(tie_or_not)
+        {
+            for (int i = 0; i < candidate_count; i++)
+            {
+                if (!candidates[i].eliminated)
+                {
+                    printf("%s\n", candidates[i].name);
+                }
+            }
+
+            break;
+        }
+
+        eliminated(minimum);
+
+        for (int i = 0; i < candidate_count; i++)
+        {
+            candidates[i].votes = 0;
+        }
     }
 
-
-    bool won = print_winner();
-    printf("WON : %d\n", won);
-
-    minimum = find_min();
-    printf("MIN: %i\n", minimum);
-
-    bool tie_or_not = is_tie(minimum);
-    printf("TIE: %d\n", tie_or_not);
-
-    eliminate(minimum);
-
-    for (int i = 0; i < candidate_count; i++)
-    {
-        candidates[i].votes = 0;
-    }
-
-
-    tabulate();
-
-    for(int i = 0; i < candidate_count; i++)
-    {
-        printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
-    }
-
-    won = print_winner();
-    printf("WON : %d\n", won);
-
-    minimum = find_min();
-    printf("MIN: %i\n", minimum);
-
-    tie_or_not = is_tie(minimum);
-    printf("TIE: %d\n", tie_or_not);
-
+    return 0;
 
 }
 
@@ -390,6 +431,7 @@ void eliminate(int min)
     {
         if (candidates[i].votes == min)
         {
+            candidates[i].eliminated = true;
             for (int j = 0; j < i; j++)
             {
                 candidates[j].votes = candidates[j].votes;
