@@ -94,6 +94,9 @@ int main(int argc, string argv[])
     bool won = print_winner();
     printf("WON : %d\n", won);
 
+    int min = find_min();
+    printf("MIN: %i\n", min);
+
 }
 
 
