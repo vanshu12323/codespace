@@ -137,6 +137,9 @@ int main(int argc, string argv[])
     bool won = print_winner();
     printf("WON: %d\n", won);
 
+    int min = find_min();
+    printf("MIN. VOTES: %i\n", min);
+
     return 0;
 }
 
@@ -233,7 +236,7 @@ bool print_winner(void)
 int find_min(void)
 {
     int sorting_votes[candidate_count];
-    int sorting_name[candidate_count];
+    string sorting_name[candidate_count];
     for (int  i = 0; i < candidate_count; i++)
     {
         sorting_votes[i] = candidates[i].votes;
@@ -244,7 +247,7 @@ int find_min(void)
     {
         for (int  j= 0; j < candidate_count; j++)
         {
-            if (candidates[i].votes > candidates[j].votes])
+            if (candidates[i].votes > candidates[j].votes)
             {
                 sorting_votes[i] = candidates[j].votes;
                 sorting_votes[j] = candidates[i].votes;
