@@ -144,6 +144,11 @@ int main(int argc, string argv[])
     bool tie = is_tie(min);
     printf("TIE: %d\n", tie);
 
+    for(int i = 0; i < candidate_count; i++)
+    {
+        printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
+    }
+
     return 0;
 }
 
