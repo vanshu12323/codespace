@@ -101,8 +101,9 @@ int main(int argc, string argv[])
     printf("TIE: %d\n", tie_or_not);
 
     eliminate(min);
-    
 
+
+    tabulate();
 
 }
 
