@@ -141,6 +141,9 @@ int main(int argc, string argv[])
     int min = find_min();
     printf("MIN. VOTES: %i\n", min);
 
+    bool tie = is_tie(min);
+    printf("TIE: %d\n", tie);
+
     return 0;
 }
 
@@ -282,7 +285,21 @@ int find_min(void)
 // Return true if the election is tied between all candidates, false otherwise
 bool is_tie(int min)
 {
-    for (int i = 0)
+    bool tie = false;
+
+    for (int i = 0; i < candidate_count; i++)
+    {
+        for (int j = 0; j < candidate_count; j++)
+        {
+            if (candidates[i].votes == candidates[j].votes == min)
+            {
+                tie = true;
+                break;
+            }
+        }
+    }
+
+    return tie;
 }
 
 
