@@ -306,7 +306,7 @@ bool print_winner(void)
             }
 
             won = true;
-            break;
+            //break;
         }
     }
 
