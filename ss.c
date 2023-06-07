@@ -15,6 +15,7 @@ candidate;
 
 int voter_count;
 int candidate_count;
+const int vn = candidate_count;
 int ranks[MAX_VOTERS][MAX_CANDIDATES];
 string voted_for[MAX_VOTERS][MAX_CANDIDATES];
 
@@ -202,7 +203,7 @@ void tabulate(void)
     {
         if (candidates[i].eliminated)
         {
-            
+
         }
     }
     for (int i = 0; i < voter_count; i++)
@@ -241,12 +242,12 @@ void tabulate(void)
 bool print_winner(void)
 {
     bool winner = false;
-    int n = candidate_count;
+    vn = candidate_count;
     for (int i = 1; i < candidate_count; i++)
     {
-        n = n * (i);
+        vn = vn * (i);
     }
-    int total_votes = voter_count * n;
+    int total_votes = voter_count * vn;
 
     for (int i = 0; i < candidate_count; i++)
     {
