@@ -14,9 +14,8 @@ typedef struct
 candidate;
 
 int voter_count;
-//int cc;
 int candidate_count;
-//int vn;
+int minimum;
 int ranks[MAX_VOTERS][MAX_CANDIDATES];
 string voted_for[MAX_VOTERS][MAX_CANDIDATES];
 
@@ -32,8 +31,6 @@ void eliminate(int min);
 
 int main(int argc, string argv[])
 {
-    // cc = argc - 1;
-    // vn = cc;
     // CLA
     if (argc < 2)
     {
@@ -105,6 +102,7 @@ int main(int argc, string argv[])
         printf("won: %d\n", won);
 
         int min = find_min();
+        minimum = min;
         printf("min = %i\n", min);
 
         bool tie = is_tie(min);
@@ -202,26 +200,7 @@ bool vote(int voter, int rank, string name)
 // UPDATING SCORES OF CANDIDATES
 void tabulate(void)
 {
-    // for (int i = 0; i < voter_count; i++)
-    // {
-    //     for (int j = 0; j < candidate_count; j++)
-    //     {
-    //         if (candidates[j].eliminated)
-    //         {
-    //             if (candidates[j].name == voted_for[i][j])
-    //             {
-    //                 for (int l = 0; l < j; l++)
-    //                 {
-    //                     voted_for[i][l] = voted_for[i][l];
-    //                 }
-    //                 for (int r = j + 1; r < candidate_count; r++)
-    //                 {
-    //                     voted_for[i][r - 1] = voted_for[i][r];
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
+    eliminate(minimum);
 
     for (int i = 0; i < voter_count; i++)
     {
@@ -229,10 +208,13 @@ void tabulate(void)
         {
             for (int k = 0; k < candidate_count; k++)
             {
-                if (strcmp(voted_for[i][j], candidates[k].name) == 0)
+                if (!candidates[k].eliminated)
                 {
-                    candidates[k].votes += candidate_count - j;
-                    break;
+                    if (strcmp(voted_for[i][j], candidates[k].name) == 0)
+                    {
+                        candidates[k].votes += candidate_count - k;
+                        break;
+                    }
                 }
             }
         }
