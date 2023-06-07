@@ -158,7 +158,7 @@ int main(int argc, string argv[])
             break;
         }
 
-        eliminated(minimum);
+        eliminate(minimum);
 
         for (int i = 0; i < candidate_count; i++)
         {
