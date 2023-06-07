@@ -290,9 +290,18 @@ bool print_winner(void)
     {
         if (candidates[i].votes >= total_votes / 2.0)
         {
-            printf("WINNER = %s\n", candidates[i].name);
+            if (candidates[i].votes == sorted[candidate_count])
+            {
+                printf("WINNER = %s\n", candidates[i].name);
+            }
+
+            else
+            {
+                printf("WINNER = %s\n", candidates[i].name);
+                //won = true;
+            }
+
             won = true;
-            //break;
         }
     }
 
