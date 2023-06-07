@@ -311,7 +311,13 @@ bool print_winner(void)
             {
                 if (candidates[j].votes > candidates[i].votes)
                 {
+                    printf("WINNER = %s\n", candidates[j].name);
+                    break;
+                }
+                else
+                {
                     printf("WINNER = %s\n", candidates[i].name);
+                    break;
                 }
             }
 // ------------
