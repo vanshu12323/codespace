@@ -383,7 +383,7 @@ void eliminate(int min)
                 candidates[k - 1].votes = candidates[k].votes;
             }
 
-            new_candidate_count = candidate_count - 1;
+            new_candidate_count--;
         }
     }
 
