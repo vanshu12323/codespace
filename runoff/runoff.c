@@ -271,7 +271,7 @@ int find_min(void)
         }
     }
 
-    return sorting_votes[candidate_count];
+    return sorting_votes[candidate_count - 1];
 }
 
 
