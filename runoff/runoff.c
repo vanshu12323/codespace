@@ -128,11 +128,11 @@ int main(int argc, string argv[])
 
     //------------------------------------------------------------------
 
-    // tabulate();
-    // for(int i = 0; i < candidate_count; i++)
-    // {
-    //     printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
-    // }
+    tabulate();
+    for(int i = 0; i < candidate_count; i++)
+    {
+        printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
+    }
 
 
     return 0;
