@@ -90,19 +90,16 @@ int main(int argc, string argv[])
         printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
     }
 
-    bool won = print_winner();
-    printf("won: %d\n", won);
 
-    int min = find_min();
-    printf("min = %i\n", min);
-
-    bool tie = is_tie(min);
-    printf("tie or not = %d\n", tie);
 
 
     while (true)
     {
         tabulate();
+
+        bool won = print_winner();
+        printf("won: %d\n", won);
+
 
         // PRINTING WINNER IF THERE IS ONE
         if (won)
@@ -111,8 +108,14 @@ int main(int argc, string argv[])
         }
 
         // Eliminate last-place candidates
-        //int min = find_min();
-        //bool tie = is_tie(min);
+        // int min = find_min();
+        // bool tie = is_tie(min);
+
+        int min = find_min();
+        printf("min = %i\n", min);
+
+        bool tie = is_tie(min);
+        printf("tie or not = %d\n", tie);
 
 
         // If tie, everyone wins
