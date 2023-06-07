@@ -291,10 +291,10 @@ bool print_winner(void)
 
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].votes > total_votes / 2.0)
+        if (candidates[i].votes >= total_votes / 2.0)
         {
 
-            if (candidates[i].votes > total_votes / 2.0)
+            if (candidates[i].votes > find_min())
             {
                 printf("WINNER = %s\n", candidates[i].name);
                 break;
@@ -306,6 +306,7 @@ bool print_winner(void)
             }
 
             won = true;
+            break;
         }
     }
 
