@@ -208,8 +208,8 @@ void tabulate(void)
         {
             if (strcmp(voted_for[i][0], candidates[j].name) == 0)
             {
-                candidates[j].votes += 1;
-                preferences[i][j] = j;
+                candidates[preferences[i][j]].votes += 1;
+                //preferences[i][j] = j;
                 break;
             }
         }
