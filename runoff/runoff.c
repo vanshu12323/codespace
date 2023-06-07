@@ -217,7 +217,7 @@ bool print_winner(void)
         }
     }
 
-    printf("REQ. VOTES TO WIN: %\n");
+    printf("REQ. VOTES TO WIN: %i\n", max_votes);
 
     return won;
 }
