@@ -212,7 +212,11 @@ void tabulate(void)
                 {
                     for (int l = 0; l < j; l++)
                     {
-                        voted_for
+                        voted_for[i][l] = voted_for[i][l];
+                    }
+                    for (int r = j + 1; r < candidate_count; r++)
+                    {
+                        voted_for[i][r - 1] = voted_for[i][r];
                     }
                 }
             }
