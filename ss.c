@@ -369,7 +369,7 @@ void eliminate(int min)
         if (candidates[i].votes == min)
         {
             candidates[i].eliminated = true;
-            printf("Eliminated candidate: %s", candidates[i].name);
+            printf("Eliminated candidate: %s\n", candidates[i].name);
 
             for (int j = 0; j < i; j++)
             {
