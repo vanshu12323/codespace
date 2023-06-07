@@ -293,10 +293,12 @@ bool print_winner(void)
     {
         if (candidates[i].votes > total_votes / 2.0)
         {
-            printf("WINNER = %s\n", candidates[i].name);
-            break;
 
-
+            if (candidates[i].votes > total_votes / 2.0)
+            {
+                printf("WINNER = %s\n", candidates[i].name);
+                break;
+            }
             else if (i == candidate_count - 1 && candidates[i].votes >= find_min())
             {
                 printf("WINNER = %s\n", candidates[i].name);
