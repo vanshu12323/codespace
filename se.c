@@ -93,10 +93,7 @@ int main(int argc, string argv[])
 
     bool won = print_winner();
     printf("WON : %d\n", won);
-    if (won)
-    {
-        print_winner();
-    }
+
 }
 
 
@@ -162,13 +159,14 @@ void tabulate(void)
             {
                 if (strcmp(voted_for[i][j], candidates[k].name) == 0 )  // && candidates[i].eliminated == true)
                 {
-                    candidates[k].votes = candidate_count;
+                    candidates[k].votes += candidate_count - j;
                     break;
                 }
             }
         }
     }
 }
+
 
 
 
@@ -208,6 +206,8 @@ bool print_winner(void)
             break;
         }
     }
+
+    printf("VOTES REQ. TO WIN = %f\n", total_votes/2.0);
 
     return won;
 }
