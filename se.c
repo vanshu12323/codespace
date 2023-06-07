@@ -66,7 +66,42 @@ int main(int argc, string argv[])
             voted_for[i][j] = get_string("Rank %i: ", j + 1);
             ranks[i][j] = j + 1;
         }
-        
+
         printf("\n");
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// INVALID VOTE
+bool vote(int voter, int rank, string name)
+{
+    bool present_or_not;
+
+    for(int i = 0; i < candidate_count; i++)
+    {
+        if (strcmp(name, candidates[i].name) == 0)
+        {
+            present_or_not = true;
+            break;
+        }
+        else if (i == candidate_count - 1 && strcmp(name, candidates[i].name) != 0)
+        {
+            present_or_not = false;
+        }
+    }
+    return present_or_not;
 }
