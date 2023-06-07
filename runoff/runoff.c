@@ -217,6 +217,8 @@ bool print_winner(void)
         }
     }
 
+    printf("");
+
     return won;
 }
 
