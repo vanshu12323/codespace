@@ -179,11 +179,24 @@ void tabulate(void)
 // WINNER OR NOT
 bool print_winner(void)
 {
+    int total_votes;
+    int n = candidate_count;
+    bool won;
+
+    for (int i = 1; i < candidate_count; i++)
+    {
+        n = n * i;
+    }
+
+    total_votes = n * voter_count;
+
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].votes >= total_votes / 2)
+        if (candidates[i].votes >= total_votes / 2.0)
         {
-            printf("WINNER = %s");
+            printf("WINNER = %s\n", candidates[i].name);
+            won = true;
+            break;
         }
     }
 }
