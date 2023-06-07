@@ -92,6 +92,10 @@ int main(int argc, string argv[])
     {
         // Calculate votes given remaining candidates
         tabulate();
+        for(int i = 0; i < candidate_count; i++)
+        {
+            printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
+        }
 
         // Check if election has been won
         bool won = print_winner();
@@ -102,7 +106,10 @@ int main(int argc, string argv[])
 
         // Eliminate last-place candidates
         int min = find_min();
+        printf("MIN. VOTES: %i\n", min);
+
         bool tie = is_tie(min);
+        printf("TIE: %d\n", tie);
 
         // If tie, everyone wins
         if (tie)
