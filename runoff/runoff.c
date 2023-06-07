@@ -339,7 +339,7 @@ void eliminate(int min)
 
     }
 
-    printf("Candidates left after el: %i", candidate_count);
+    printf("Candidates left after el: %i\n", candidate_count);
     printf("Remaining candidates are: ");
 
     for (int  i = 0; i < candidate_count; i++)
