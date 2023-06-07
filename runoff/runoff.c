@@ -170,7 +170,7 @@ void tabulate(void)
     {
         for (int j = 0; j < candiodate_count; j++)
         {
-            candidates
+            candidates[preferences[i][j]].votes
         }
     }
 }
