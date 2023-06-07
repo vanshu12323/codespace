@@ -65,6 +65,10 @@ int main(int argc, string argv[])
         {
             voted_for[i][j] = get_string("Rank %i: ", j + 1);
             ranks[i][j] = j + 1;
+            if (!vote(i, j, voted_for[i][j]))
+            {
+                printf("Invalid vote.\n");
+            }
         }
 
         printf("\n");
