@@ -130,13 +130,13 @@ int main(int argc, string argv[])
     while(true)
     {
         tabulate();
-    //     for(int i = 0; i < candidate_count; i++)
-    // {
-    //     printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
-    // }
+        for(int i = 0; i < candidate_count; i++)
+    {
+        printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
+    }
 
         bool won = print_winner();
-        //printf("WON : %d\n", won);
+        printf("WON : %d\n", won);
 
         if(won)
         {
@@ -144,10 +144,10 @@ int main(int argc, string argv[])
         }
 
         minimum = find_min();
-        //printf("MIN: %i\n", minimum);
+        printf("MIN: %i\n", minimum);
 
         bool tie_or_not = is_tie(minimum);
-        //printf("TIE: %d\n", tie_or_not);
+        printf("TIE: %d\n", tie_or_not);
 
         if(tie_or_not)
         {
@@ -296,7 +296,7 @@ bool print_winner(void)
 
             if (candidates[i].votes > find_min())
             {
-                //printf("WINNER = %s\n", candidates[i].name);
+                printf("WINNER = %s\n", candidates[i].name);
                 break;
             }
             else if (i == candidate_count - 1 && candidates[candidate_count - 1].votes >= find_min())
@@ -310,7 +310,7 @@ bool print_winner(void)
         }
     }
 
-    //printf("VOTES REQ. TO WIN = %f\n", total_votes/2.0);
+    printf("VOTES REQ. TO WIN = %f\n", total_votes/2.0);
 
     return won;
 }
