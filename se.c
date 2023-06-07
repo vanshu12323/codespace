@@ -74,7 +74,14 @@ int main(int argc, string argv[])
         printf("\n");
     }
 
-    for (int )
+    string voted[voter_count][candidate_count];
+    for (int i = 0; i < voter_count; i++)
+    {
+        for (int j = 0; j < candidate_count; j++)
+        {
+            voted[i][j] = voted_for[i][j];
+        }
+    }
 }
 
 
