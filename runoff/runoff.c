@@ -146,8 +146,14 @@ bool vote(int voter, int rank, string name)
                 present = true;
                 break;
             }
+            else if (j == candidate_count - 1 && strcmp(name, candidates[j].name) != 0)
+            {
+                present = false;
+            }
         }
     }
+
+    return present;
 }
 
 
