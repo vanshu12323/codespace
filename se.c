@@ -130,13 +130,13 @@ int main(int argc, string argv[])
     while(true)
     {
         tabulate();
-        for(int i = 0; i < candidate_count; i++)
-    {
-        printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
-    }
+    //     for(int i = 0; i < candidate_count; i++)
+    // {
+    //     printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
+    // }
 
         bool won = print_winner();
-        printf("WON : %d\n", won);
+        //printf("WON : %d\n", won);
 
         if(won)
         {
@@ -311,12 +311,12 @@ bool print_winner(void)
             {
                 if (candidates[j].votes > candidates[i].votes)
                 {
-                    printf("WINNER = %s\n", candidates[j].name);
+                    printf("%s\n", candidates[j].name);
                     break;
                 }
                 else
                 {
-                    printf("WINNER = %s\n", candidates[i].name);
+                    printf("%s\n", candidates[i].name);
                     break;
                 }
             }
@@ -324,15 +324,15 @@ bool print_winner(void)
             won = true;
             break;
         }
-        else if (candidates[i].votes == total_votes / 2.0)
-        {
-          printf("WINNER = %s\n", candidates[i].name);
-          won = true;
-          break;
-        }
+        // else if (candidates[i].votes == total_votes / 2.0)
+        // {
+        //   printf("%s\n", candidates[i].name);
+        //   won = true;
+        //   break;
+        // }
     }
 
-    printf("VOTES REQ. TO WIN = %f\n", total_votes/2.0);
+    //printf("VOTES REQ. TO WIN = %f\n", total_votes/2.0);
 
     return won;
 }
