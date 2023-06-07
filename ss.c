@@ -14,8 +14,9 @@ typedef struct
 candidate;
 
 int voter_count;
+const int cc;
 int candidate_count;
-const int vn = candidate_count;
+const int vn;
 int ranks[MAX_VOTERS][MAX_CANDIDATES];
 string voted_for[MAX_VOTERS][MAX_CANDIDATES];
 
@@ -31,6 +32,7 @@ void eliminate(int min);
 
 int main(int argc, string argv[])
 {
+    cc = argc - 1;
     // CLA
     if (argc < 2)
     {
