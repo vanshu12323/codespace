@@ -134,7 +134,6 @@ int main(int argc, string argv[])
         printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
     }
 
-
     return 0;
 }
 
@@ -217,8 +216,10 @@ bool print_winner(void)
 // Return the minimum number of votes any remaining candidate has
 int find_min(void)
 {
-    // TODO
-    return 0;
+    for (int i = 0; i < candidate_count; i++)
+    {
+        for (int j = 0; j < )
+    }
 }
 
 
