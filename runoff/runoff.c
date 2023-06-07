@@ -233,6 +233,8 @@ bool print_winner(void)
 
 
 
+
+
 // Return the minimum number of votes any remaining candidate has
 int find_min(void)
 {
@@ -274,11 +276,13 @@ int find_min(void)
 
 
 
+
+
+
 // Return true if the election is tied between all candidates, false otherwise
 bool is_tie(int min)
 {
-    // TODO
-    return false;
+    for (int i = 0)
 }
 
 
