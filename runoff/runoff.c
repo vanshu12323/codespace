@@ -298,6 +298,10 @@ bool is_tie(int min)
             {
                 tie = true;
             }
+            else
+            {
+                tie = false;
+            }
         }
     }
 
