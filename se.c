@@ -16,7 +16,7 @@ candidate;
 int voter_count;
 int candidate_count;
 int ranks[MAX_VOTERS][MAX_CANDIDATES];
-string voted_for[MAX_VOTERS];
+string voted_for[MAX_VOTERS][MAX_CANDIDATES];
 
 candidate candidates[MAX_CANDIDATES];
 
@@ -61,6 +61,12 @@ int main(int argc, string argv[])
 
     for (int i = 0; i < voter_count; i++)
     {
-        voted_for[i] = get_string("Rank %i: ", i + 1);
+        for (int j = 0; j < candidate_count; j++)
+        {
+            voted_for[i][j] = get_string("Rank %i: ", j + 1);
+            ranks[i][j] = j + 1;
+        }
+
+        printf("\n");
     }
 }
