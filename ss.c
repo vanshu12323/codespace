@@ -322,7 +322,7 @@ int find_min(void)
         }
     }
 
-    return sorted[0];
+    return sorted[0]/2;
 }
 
 
