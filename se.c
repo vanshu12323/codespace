@@ -162,7 +162,7 @@ void tabulate(void)
             {
                 if (strcmp(voted_for[i][j], candidates[k].name) == 0 )  // && candidates[i].eliminated == true)
                 {
-                    candidates[k].votes = candidate_count - k;
+                    candidates[k].votes = candidate_count;
                     break;
                 }
             }
