@@ -312,12 +312,12 @@ bool print_winner(void)
                 if (candidates[j].votes > candidates[i].votes && i != j)
                 {
                     printf("WINNER = %s\n", candidates[j].name);
-                    break;
+                    //break;
                 }
                 else
                 {
                     printf("WINNER = %s\n", candidates[i].name);
-                    break;
+                    //break;
                 }
             }
 // ------------
