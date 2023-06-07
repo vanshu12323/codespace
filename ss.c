@@ -137,10 +137,10 @@ int main(int argc, string argv[])
         eliminate(min);
 
         //Reset vote counts back to zero
-        for (int i = 0; i < candidate_count; i++)
-        {
-            candidates[i].votes = 0;
-        }
+        // for (int i = 0; i < candidate_count; i++)
+        // {
+        //     candidates[i].votes = 0;
+        // }
     }
     return 0;
 }
