@@ -70,7 +70,7 @@ int main(int argc, string argv[])
         for (int j = 0; j < candidate_count; j++)
         {
             string name = get_string("Rank %i: ", j + 1);
-            preferences
+            preferences[i][j] = j;
 
             // Record vote, unless it's invalid
             if (!vote(i, j, name))
