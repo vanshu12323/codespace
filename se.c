@@ -302,6 +302,7 @@ bool print_winner(void)
             else if (i == candidate_count - 1 && candidates[i].votes >= find_min())
             {
                 printf("WINNER = %s\n", candidates[i].name);
+                //break;
                 //won = true;
             }
 
