@@ -314,11 +314,11 @@ bool print_winner(void)
                     printf("WINNER = %s\n", candidates[j].name);
                     break;
                 }
-                // else
-                // {
-                //     printf("WINNER = %s\n", candidates[i].name);
-                //     break;
-                // }
+                else
+                {
+                    printf("WINNER = %s\n", candidates[i].name);
+                    break;
+                }
             }
 // ------------
             won = true;
