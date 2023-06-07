@@ -360,7 +360,7 @@ bool is_tie(int min)
 
 
 
-
+// ELIMINATING CANDIDATE WITH LOWEST NUMBER OF VOTES
 void eliminate(int min)
 {
     int new_candidate_count = candidate_count;
