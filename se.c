@@ -320,5 +320,47 @@ bool is_tie(int min)
     }
 
     return tie;
+}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// elimination
+void eliminate(int min)
+{
+    int new_candidate_count = candidate_count;
+
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[i].votes == min)
+        {
+            for (int j = 0; j < i; j++)
+            {
+                candidates[j].votes = candidates[j].votes;
+                candidates[j].name = candidates[j].name;
+            }
+            for (int k = i + 1; k < candidate_count; k++)
+            {
+                candidates[k - 1].votes = candidates[k].votes;
+                candidates[k - 1].name = candidates[k].name;
+            }
+
+            new_candidate_count--;
+        }
+    }
+
+    candidate_count = new_candidate_count;
 }

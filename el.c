@@ -15,7 +15,7 @@ int main(void)
     {
         if (n[i] == 1)
         {
-            for (int j = 0; j < 5; j++)
+            for (int j = 0; j < i; j++)
             {
                 n[j] = n[j];
             }
