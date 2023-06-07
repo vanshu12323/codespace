@@ -9,7 +9,6 @@ typedef struct
 {
     string name;
     int votes;
-    int ranks;
     bool eliminated;
 }
 candidate;
@@ -65,7 +64,7 @@ int main(int argc, string argv[])
         for (int j = 0; j < candidate_count; j++)
         {
             voted_for[i][j] = get_string("Rank %i: ", j + 1);
-            ranks[i] = j + 1;
+            ranks[i][j] = j + 1;
             if (!vote(i, j, voted_for[i][j]))
             {
                 printf("Invalid vote.\n");
@@ -74,6 +73,8 @@ int main(int argc, string argv[])
 
         printf("\n");
     }
+
+    for (int )
 }
 
 
@@ -127,7 +128,7 @@ bool vote(int voter, int rank, string name)
 // UPDATE NUMBER OF VOTES
 void tabulate(void)
 {
-    for (i = 0; i < voter_count; i++)
+    for (int i = 0; i < voter_count; i++)
     {
         for (int j = 0; j < candidate_count; j++)
         {
