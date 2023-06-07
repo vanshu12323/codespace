@@ -217,7 +217,7 @@ bool print_winner(void)
         {
             printf("WINNER = %s\n", candidates[i].name);
             won = true;
-            
+            //break;
         }
     }
 
