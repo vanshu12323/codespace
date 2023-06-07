@@ -97,6 +97,10 @@ int main(int argc, string argv[])
     int min = find_min();
     printf("MIN: %i\n", min);
 
+    bool tie_or_not = is_tie(min);
+    printf("TIE: %d\n", tie_or_not);
+
+
 }
 
 
@@ -213,7 +217,7 @@ bool print_winner(void)
         {
             printf("WINNER = %s\n", candidates[i].name);
             won = true;
-            break;
+            
         }
     }
 
@@ -304,9 +308,17 @@ bool is_tie(int min)
 {
     bool tie = false;
 
-    for (int  i = 0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
-        
+        for (int j = 0; j < candidate_count; j++)
+        {
+            if (candidates[i].votes == candidates[j].votes == min)
+            {
+                tie = true;
+            }
+        }
     }
+
+    return tie;
 
 }
