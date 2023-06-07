@@ -245,7 +245,7 @@ void tabulate(void)
 bool print_winner(void)
 {
     bool winner = false;
-    vn = candidate_count;
+    //vn = candidate_count;
     for (int i = 1; i < candidate_count; i++)
     {
         vn = vn * (i);
