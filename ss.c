@@ -400,7 +400,7 @@ void eliminate(int min)
     candidate_count = new_candidate_count;
 
     printf("after elimination candidates left: ");
-    for (int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < new_candidate_count; i++)
     {
         printf("%s ", candidates[i].name);
     }
