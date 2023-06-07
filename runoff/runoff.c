@@ -1,4 +1,5 @@
 #include <cs50.h>
+#include <math.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -220,7 +221,7 @@ bool print_winner(void)
         }
     }
 
-    printf("REQ. VOTES TO WIN: %f\n", max_votes/2.0);
+    printf("REQ. VOTES TO WIN: %f\n", round(max_votes/2.0));
 
     return won;
 }
