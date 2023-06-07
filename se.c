@@ -114,6 +114,13 @@ int main(int argc, string argv[])
 
 
 
+
+
+
+
+
+
+
 // INVALID VOTE
 bool vote(int voter, int rank, string name)
 {
@@ -277,3 +284,29 @@ int find_min(void)
     return sorted[0];
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// IS A TIE OR NOT
+bool is_tie(int min)
+{
+    bool tie = false;
+
+    for (int  i = 0; i < candidate_count; i++)
+    {
+        
+    }
+
+}
