@@ -90,6 +90,8 @@ int main(int argc, string argv[])
         printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
     }
 
+
+    bool won = print_winner();
     if (won)
     {
         break;
