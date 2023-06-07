@@ -87,7 +87,12 @@ int main(int argc, string argv[])
 
     for(int i = 0; i < candidate_count; i++)
     {
-        printf("%s got %i votes.", candidates[i].name, candidates[i].votes);
+        printf("%s got %i votes.\n", candidates[i].name, candidates[i].votes);
+    }
+
+    if (won)
+    {
+        break;
     }
 }
 
@@ -181,7 +186,7 @@ bool print_winner(void)
 {
     int total_votes;
     int n = candidate_count;
-    bool won;
+    bool won = false;
 
     for (int i = 1; i < candidate_count; i++)
     {
@@ -199,4 +204,6 @@ bool print_winner(void)
             break;
         }
     }
+
+    return won;
 }
