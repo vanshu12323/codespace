@@ -220,7 +220,7 @@ bool print_winner(void)
 
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].votes >= max_votes / 2.0)
+        if (candidates[i].votes > max_votes / 2.0)
         {
             printf("WINNER: %s\n", candidates[i].name);
             won = true;
