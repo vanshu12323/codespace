@@ -200,7 +200,7 @@ bool vote(int voter, int rank, string name)
 // UPDATING SCORES OF CANDIDATES
 void tabulate(void)
 {
-    eliminate(minimum);
+    eliminate(find_min());
 
     for (int i = 0; i < voter_count; i++)
     {
