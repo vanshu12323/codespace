@@ -137,10 +137,10 @@ int main(int argc, string argv[])
         eliminate(min);
 
         //Reset vote counts back to zero
-        // for (int i = 0; i < candidate_count; i++)
-        // {
-        //     candidates[i].votes = 0;
-        // }
+        for (int i = 0; i < candidate_count; i++)
+        {
+            candidates[i].votes = 0;
+        }
     }
     return 0;
 }
@@ -399,10 +399,10 @@ void eliminate(int min)
 
     candidate_count = new_candidate_count;
 
-    for (int i = 0; i < candidate_count; i++)
-    {
-        candidates[i].votes = 0;
-    }
+    // for (int i = 0; i < candidate_count; i++)
+    // {
+    //     candidates[i].votes = 0;
+    // }
 
     printf("after elimination candidates left: ");
     for (int i = 0; i < new_candidate_count; i++)
